@@ -1,0 +1,12 @@
+There are four methods that are discussed, namely:
+
+1. Quick find
+2. QUick union
+3. Weighted Quick Union
+4. Weighted Quick Union path compression
+
+Out of these four the Weighted Quick Union path compression is the fastest that is because of the following reasons
+
+1. It has a time complexity of O(log * N)
+2. It can process a data set as large as 2 to the power of 65,536 in 6 seconds
+3. It flattens the tree making it much faster to access elements.
