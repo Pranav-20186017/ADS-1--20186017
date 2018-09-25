@@ -1,6 +1,6 @@
 class Percolation {
-    boolean[][] opened;
-    int top = 0;
+    private boolean[][] opened;
+    private int top = 0;
     int bottom;
     int size;
     WeightedQuickUnionPathCompressionUF uf;
