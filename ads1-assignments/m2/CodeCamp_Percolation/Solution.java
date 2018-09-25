@@ -10,7 +10,7 @@ final class Solution {
         //unused.
     }
     /**
-     * { function_description }
+     * main function.
      *
      * @param      args  The arguments
      */
