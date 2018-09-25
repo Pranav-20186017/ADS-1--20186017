@@ -1,0 +1,4 @@
+The tree that is obatined by constructing out of the id array given,
+doesnot form a weighted union quick union, it is so because
+It violates the basic properity of a weighted qucik union that a longer tree should
+always be the root node of a shorter tree.
