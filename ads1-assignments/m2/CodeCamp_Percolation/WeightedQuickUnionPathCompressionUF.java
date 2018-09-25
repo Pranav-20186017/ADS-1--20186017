@@ -1,4 +1,4 @@
-public class UF {
+public class WeightedQuickUnionPathCompressionUF {
     private int[] parent;  // parent[i] = parent of i
     private int[] size;    // size[i] = number of sites in tree rooted at i
                            // Note: not necessarily correct if i is not a root node
@@ -12,7 +12,7 @@ public class UF {
      * @param  n the number of sites
      * @throws IllegalArgumentException if {@code n < 0}
      */
-    public UF(int n) {
+    public WeightedQuickUnionPathCompressionUF(int n) {
         count = n;
         parent = new int[n];
         size = new int[n];

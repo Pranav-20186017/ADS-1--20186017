@@ -3,14 +3,14 @@ class Percolation {
     int top = 0;
     int bottom;
     int size;
-    UF uf;
+    WeightedQuickUnionPathCompressionUF uf;
     int count = 0;
 
     public Percolation(int N) {
         opened = new boolean[N][N];
         size = N;
         bottom = N * N + 1;
-        uf = new UF(N * N + 2);
+        uf = new WeightedQuickUnionPathCompressionUF(N * N + 2);
     }
 
     public void open(int row, int col) {
