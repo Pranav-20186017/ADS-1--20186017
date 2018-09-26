@@ -1,55 +1,66 @@
-import java.util.*;
-class Common {
-	int[] a;
-	int[] b;
-	int sizea = 0;
-	int sizeb = 0;
-	Common(int x, int y) {
-		a = new int[x];
-		b = new int[y];
-	}
-	void addToA(int val) {
-		a[sizea] = val;
-		sizea++;
-	}
-	void addToB(int val) {
-		b[sizeb] = val;
-		sizeb++;
-	}
-	String all() {
-		Set<Integer> s = new TreeSet<Integer>();
-		for (int i = 0 ; i < a.length; i++) {
-			s.add(a[i]);
-		}
-		for (int i = 0; i < b.length; i++) {
-			s.add(b[i]);
-		}
-		String opt = "";
-		for (Integer itr : s) {
-			opt += itr + ",";
-		}
-		return opt.substring(0,opt.length()-1);
-		
-	}
+import java.util.Scanner;
+/**SORTARRAY.**/
+final class Solution {
+    /**
+     * Solution.
+     */
+    private Solution() { }
+    /**
+     * @param args [description]
+     */
+    public static void main(final String[] args) {
+    Scanner s = new Scanner(System.in);
+    String s1 = s.nextLine();
+    String s2 = s.nextLine();
+    int num1 = Integer.parseInt(s1);
+    int num2 = Integer.parseInt(s2);
+    int total = num1 + num2;
+    String[] token = s.nextLine().split(",");
+    int[] a = new int[num1];
+    int[] b = new int[num2];
+    if (num1 > 0) {
+    for (int i = 0; i < token.length; i++) {
+        a[i] = Integer.parseInt(token[i]);
+    }
 }
-public class Solution {
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int x = Integer.parseInt(s.nextLine());
-		int y = Integer.parseInt(s.nextLine());
-		Common c = new Common(x,y);
-		String[] a = (s.nextLine().split(","));
-		String[] b = (s.nextLine().split(","));
-		int temp;
-		for (int i = 0; i < a.length; i++) {
-			temp = Integer.parseInt(a[i]);
-			c.addToA(temp);
-		}
-		for (int i = 0; i < b.length; i++) {
-			temp = Integer.parseInt(b[i]);
-			c.addToB(temp);
-		}
-		System.out.println(c.all());
-		
-	}
+    if (num2 > 0) {
+    String[] tokens = s.nextLine().split(",");
+    for (int j = 0; j < tokens.length; j++) {
+        b[j] = Integer.parseInt(tokens[j]);
+    }
 }
+    int[] c = new int[total];
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    while (i < num1 && j < num2) {
+        if (a[i] < b[j]) {
+            c[k] = a[i];
+            i++;
+            k++;
+        } else {
+            c[k] = b[j];
+            k++;
+            j++;
+
+        }
+
+    }
+    while (j < num2) {
+        c[k] = b[j];
+        k++;
+        j++;
+    }
+    while (i < num1) {
+        c[k] = a[i];
+        k++;
+        i++;
+    }
+    //System.out.println(total);
+    //System.out.println(Arrays.toString(token));
+    for (int l = 0; l < c.length - 1; l++) {
+        System.out.print(c[l] + ",");
+     }
+     System.out.print(c[c.length - 1]);
+    }
+    }
