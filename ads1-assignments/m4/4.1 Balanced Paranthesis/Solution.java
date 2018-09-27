@@ -20,13 +20,13 @@ final class Solution {
     static boolean isMatchingPair(final char character1,
     final char character2) {
        if (character1 == '(' && character2 == ')') {
-         return true; 
+         return true;
        } else if (character1 == '{' && character2 == '}') {
-         return true; 
+         return true;
        } else if (character1 == '[' && character2 == ']') {
-         return true; 
+         return true;
        } else {
-         return false; 
+         return false;
        }
     }
     /**
