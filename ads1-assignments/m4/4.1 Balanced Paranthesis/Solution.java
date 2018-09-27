@@ -74,7 +74,6 @@ final class Solution {
             System.out.println("YES");
           else
             System.out.println("NO");  
-        }  
-    } 
-  
+        }
+    }
 } 
