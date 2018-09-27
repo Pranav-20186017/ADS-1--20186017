@@ -38,12 +38,12 @@ final class Solution {
        stack st = new stack();
        for (int i = 0; i < exp.length; i++) {
           if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') {
-            st.push(exp[i]); 
+            st.push(exp[i]);
           }
-          if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') { 
-             if (st.isEmpty()) { 
+          if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
+             if (st.isEmpty()) {
                    return false; 
-               } else if (!isMatchingPair(st.pop(), exp[i]) ) { 
+               } else if (!isMatchingPair(st.pop(), exp[i]) ) {
                    return false; 
                } 
           }   
