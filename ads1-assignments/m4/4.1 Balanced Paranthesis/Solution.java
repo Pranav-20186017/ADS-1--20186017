@@ -47,15 +47,13 @@ final class Solution {
                } else if (!isMatchingPair(st.pop(), exp[i]) ) { 
                    return false; 
                } 
-          } 
-            
+          }   
        } 
        if (st.isEmpty()) {
          return true;
-       }
-       else {
-             return false; 
-         }  
+       } else {
+             return false;
+         }
     }
     /**
      * main function.
