@@ -3,9 +3,8 @@ public class Solution
 { 
     static class stack  
     { 
-        int top=-1; 
-        char items[] = new char[1000]; 
-  
+        int top = -1; 
+        char[] items = new char[1000]; 
         void push(char x)  
         { 
             if (top == 999)  
@@ -17,32 +16,23 @@ public class Solution
                 items[++top] = x; 
             } 
         } 
-  
-        char pop()  
-        { 
-            if (top == -1)  
-            { 
+        char pop() { 
+            if (top == -1) { 
                 System.out.println("Underflow error"); 
                 return '\0'; 
-            }  
-            else 
-            { 
+            } else { 
                 char element = items[top]; 
                 top--; 
                 return element; 
             } 
         } 
-  
-        boolean isEmpty()  
-        { 
+        boolean isEmpty() { 
             return (top == -1) ? true : false; 
         } 
-    } 
-      
+    }  
     /* Returns true if character1 and character2 
        are matching left and right Parenthesis */
-    static boolean isMatchingPair(char character1, char character2) 
-    { 
+    static boolean isMatchingPair(char character1, char character2) { 
        if (character1 == '(' && character2 == ')') 
          return true; 
        else if (character1 == '{' && character2 == '}') 
@@ -51,23 +41,19 @@ public class Solution
          return true; 
        else
          return false; 
-    } 
-      
+    }  
     /* Return true if expression has balanced  
        Parenthesis */
-    static boolean areParenthesisBalanced(char exp[]) 
-    { 
+    static boolean areParenthesisBalanced(char exp[]) { 
        /* Declare an empty character stack */
        stack st=new stack(); 
        
        /* Traverse the given expression to  
           check matching parenthesis */
-       for(int i=0;i<exp.length;i++) 
-       { 
-            
+       for(int i = 0; i < exp.length; i++) { 
           /*If the exp[i] is a starting  
             parenthesis then push it*/
-          if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') 
+          if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') {} 
             st.push(exp[i]); 
        
           /* If exp[i] is an ending parenthesis  
