@@ -9,4 +9,28 @@ The following are the sequence of operations that will take place
 3. pop() --> "was"
 4. push("the")
 5. push("best")
-6. 
+6. pop() --> "best"
+7. push("of")
+8. push("times")
+9. pop() --> "times"
+10. pop() --> "of"
+11. pop() --> "the"
+12. push("it")
+13. push("was")
+14. pop() --> "was"
+15. push("the")
+16. pop() --> "the"
+17. pop() -- > "it"
+
+All that remains in the stack is "it" that is first pushed into the stack
+
+The sequnce of strings that are the result due of the pop() operation is as follows
+
+was
+best
+times
+of
+the
+was
+the
+it
