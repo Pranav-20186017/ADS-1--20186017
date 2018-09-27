@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for stack x.
+ */
 class StackX {
     /**
      * { first }.
