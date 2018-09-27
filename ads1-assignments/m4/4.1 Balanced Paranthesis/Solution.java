@@ -19,7 +19,9 @@ final class Solution {
      */
     static boolean isMatchingPair(final char character1,
     final char character2) {
-       if (character1 == '(' && character2 == ')' || character1 == '{' && character2 == '}' || character1 == '[' && character2 == ']') {
+       if (character1 == '(' && character2 == ')'
+      || character1 == '{' && character2 == '}'
+      || character1 == '[' && character2 == ']') {
          return true;
        }
        return false;
