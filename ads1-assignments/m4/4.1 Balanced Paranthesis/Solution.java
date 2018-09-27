@@ -43,11 +43,11 @@ final class Solution {
           if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
              if (st.isEmpty()) {
                    return false; 
-               } else if (!isMatchingPair(st.pop(), exp[i]) ) {
+               } else if (!isMatchingPair(st.pop(), exp[i])) {
                    return false; 
-               } 
-          }   
-       } 
+               }
+          }
+       }
        if (st.isEmpty() == true) {
          return true;
        } else {
