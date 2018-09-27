@@ -1,0 +1,12 @@
+The String Given here is "it was - the best - of times - - - it was - the - -" where '-' denotes a pop() operation
+
+We have to use a Stack of Strings to evaluate this Sentence
+
+The following are the sequence of operations that will take place
+
+1. push("it")
+2. push("was")
+3. pop() --> "was"
+4. push("the")
+5. push("best")
+6. 
