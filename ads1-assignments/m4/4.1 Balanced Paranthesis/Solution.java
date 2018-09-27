@@ -17,17 +17,15 @@ final class Solution {
      *
      * @return     True if matching pair, False otherwise.
      */
-    static boolean isMatchingPair(final char character1, final char character2) { 
+    static boolean isMatchingPair(final char character1,
+    final char character2) {
        if (character1 == '(' && character2 == ')') {
          return true; 
-       }
-       else if (character1 == '{' && character2 == '}') {
+       } else if (character1 == '{' && character2 == '}') {
          return true; 
-       }
-       else if (character1 == '[' && character2 == ']') {
+       } else if (character1 == '[' && character2 == ']') {
          return true; 
-       }
-       else {
+       } else {
          return false; 
        }
     }
