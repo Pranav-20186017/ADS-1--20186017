@@ -34,10 +34,9 @@ final class Solution {
      * @param exp character array.
      * @return boolean
      */
-    static boolean areParenthesisBalanced(final char exp[]) { 
-       stack st = new stack(); 
-       for(int i=0;i<exp.length;i++) 
-       { 
+    static boolean areParenthesisBalanced(final char exp[]) {
+       stack st = new stack();
+       for(int i=0;i<exp.length;i++) { 
           if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') {
             st.push(exp[i]); 
           }
