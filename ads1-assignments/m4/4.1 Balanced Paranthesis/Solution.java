@@ -50,11 +50,7 @@ final class Solution {
           }
        }
        empty = st.isEmpty();
-       if (empty) {
-         return true;
-       } else {
-             return false;
-         }
+       return empty;
     }
     /**
      * main function.
