@@ -72,40 +72,40 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Stack PostFix = new Stack();
+        Stack Postfix = new Stack();
         Scanner scan = new Scanner(System.in);
         String line = scan.nextLine();
         String[] tokens = line.split(" ");
         String str = "+*-/";
         for (int i = 0; i < tokens.length; i++) {
             if (!str.contains(tokens[i])) {
-                PostFix.push(Integer.parseInt(tokens[i]));
+                Postfix.push(Integer.parseInt(tokens[i]));
                 } else {
                     switch (tokens[i]) {
                     case "+":
-                        int a = PostFix.pop();
-                        int b = PostFix.pop();
-                        PostFix.push(a + b);
+                        int a = Postfix.pop();
+                        int b = Postfix.pop();
+                        Postfix.push(a + b);
                         break;
                     case "-":
-                        a = PostFix.pop();
-                        b = PostFix.pop();
-                        PostFix.push(a - b);
+                        a = Postfix.pop();
+                        b = Postfix.pop();
+                        Postfix.push(a - b);
                         break;
                     case "*":
-                        a = PostFix.pop();
-                        b = PostFix.pop();
-                        PostFix.push(a * b);
+                        a = Postfix.pop();
+                        b = Postfix.pop();
+                        Postfix.push(a * b);
                         break;
                     case "/":
-                        a = PostFix.pop();
-                        b = PostFix.pop();
-                        PostFix.push(a / b);
+                        a = Postfix.pop();
+                        b = Postfix.pop();
+                        Postfix.push(a / b);
                         break;
                     default:
                     }
             }
         }
-        PostFix.print();
+        Postfix.print();
     }
 }
