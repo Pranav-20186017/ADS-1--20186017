@@ -42,9 +42,9 @@ final class Solution {
           }
           if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
              if (st.isEmpty()) {
-                   return false; 
+                   return false;
                } else if (!isMatchingPair(st.pop(), exp[i])) {
-                   return false; 
+                   return false;
                }
           }
        }
