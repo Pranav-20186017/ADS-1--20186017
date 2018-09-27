@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Stack {
+class StackX {
     /**
      * { first }.
      */
@@ -72,40 +72,40 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Stack operands = new Stack();
+        Stack PostFix = new Stack();
         Scanner scan = new Scanner(System.in);
         String line = scan.nextLine();
         String[] tokens = line.split(" ");
         String str = "+*-/";
         for (int i = 0; i < tokens.length; i++) {
             if (!str.contains(tokens[i])) {
-                operands.push(Integer.parseInt(tokens[i]));
+                PostFix.push(Integer.parseInt(tokens[i]));
                 } else {
                     switch (tokens[i]) {
                     case "+":
-                        int a = operands.pop();
-                        int b = operands.pop();
-                        operands.push(a + b);
+                        int a = PostFix.pop();
+                        int b = PostFix.pop();
+                        PostFix.push(a + b);
                         break;
                     case "-":
-                        a = operands.pop();
-                        b = operands.pop();
-                        operands.push(a - b);
+                        a = PostFix.pop();
+                        b = PostFix.pop();
+                        PostFix.push(a - b);
                         break;
                     case "*":
-                        a = operands.pop();
-                        b = operands.pop();
-                        operands.push(a * b);
+                        a = PostFix.pop();
+                        b = PostFix.pop();
+                        PostFix.push(a * b);
                         break;
                     case "/":
-                        a = operands.pop();
-                        b = operands.pop();
-                        operands.push(a / b);
+                        a = PostFix.pop();
+                        b = PostFix.pop();
+                        PostFix.push(a / b);
                         break;
                     default:
                     }
             }
         }
-        operands.print();
+        PostFix.print();
     }
 }
