@@ -36,7 +36,7 @@ final class Solution {
      */
     static boolean areParenthesisBalanced(final char[] exp) {
        stack st = new stack();
-       for (int i = 0; i < exp.length; i++) {
+        for (int i = 0; i < exp.length; i++) {
           if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') {
             st.push(exp[i]);
           }
