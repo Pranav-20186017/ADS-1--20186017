@@ -62,12 +62,12 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args)  { 
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine());
         char[] exp;
         String string;
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
           string = s.nextLine();
           exp = string.toCharArray();
           if (areParenthesisBalanced(exp)) {
