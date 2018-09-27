@@ -7,11 +7,11 @@ public class Solution
     static class stack  
     { 
         int top=-1; 
-        char items[] = new char[100]; 
+        char items[] = new char[1000]; 
   
         void push(char x)  
         { 
-            if (top == 99)  
+            if (top == 999)  
             { 
                 System.out.println("Stack full"); 
             }  
