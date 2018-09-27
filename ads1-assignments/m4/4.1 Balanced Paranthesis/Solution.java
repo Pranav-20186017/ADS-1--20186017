@@ -48,7 +48,7 @@ final class Solution {
                }
           }
        }
-       if (st.isEmpty() == true) {
+       if (st.isEmpty()) {
          return true;
        } else {
              return false;
