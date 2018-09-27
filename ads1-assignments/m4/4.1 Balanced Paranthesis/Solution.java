@@ -1,17 +1,14 @@
-
-// Java program for checking 
-// balanced Parenthesis 
-import java.util.*;
-public class Solution 
+import java.util.Scanner;
+public class Solution  
 { 
     static class stack  
     { 
         int top=-1; 
-        char items[] = new char[1000]; 
+        char items[] = new char[100]; 
   
         void push(char x)  
         { 
-            if (top == 999)  
+            if (top == 99)  
             { 
                 System.out.println("Stack full"); 
             }  
@@ -108,21 +105,21 @@ public class Solution
          {   /*not balanced*/
              return false; 
          }  
-    }
- public static void main(String[] args)  
+    }  
+    public static void main(String[] args)  
     { 
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine());
         char[] exp;
         String string;
         for(int i = 0; i < n; i++) {
-        	string = s.nextLine();
-        	exp = string.toCharArray();
-        	if (areParenthesisBalanced(exp)) 
+          string = s.nextLine();
+          exp = string.toCharArray();
+          if (areParenthesisBalanced(exp)) 
             System.out.println("YES");
           else
             System.out.println("NO");  
         }  
     } 
   
-}  
+} 
