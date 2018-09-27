@@ -23,7 +23,7 @@ final class Solution {
          return true;
        } else if (character1 == '{' && character2 == '}') {
          return true;
-       } else if (character1 == '[') {
+       } else if (character1 == '[' && character2 == ']') {
          return true;
        } else {
          return false;
