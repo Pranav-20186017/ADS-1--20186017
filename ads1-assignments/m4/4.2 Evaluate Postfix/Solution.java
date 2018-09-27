@@ -45,13 +45,16 @@ class Stack {
         first = first.next;
         return item;
     }
+    /**
+     * prints the node.
+     */
     public void print() {
         Node testnode = first;
         while (testnode != null) {
             System.out.println(testnode.data);
             testnode = testnode.next;
         }
-	}
+    }
 }
 /**
  * Class for solution.
