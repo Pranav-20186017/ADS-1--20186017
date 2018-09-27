@@ -44,7 +44,7 @@ final class Solution {
              if (st.isEmpty()) {
                    return false;
                } else if (!isMatchingPair(st.pop(), exp[i])) {
-                   return false;
+                   return false; 
                }
           }
        }
