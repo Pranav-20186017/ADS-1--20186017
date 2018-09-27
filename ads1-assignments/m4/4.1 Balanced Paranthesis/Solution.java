@@ -70,10 +70,11 @@ final class Solution {
         for(int i = 0; i < n; i++) {
           string = s.nextLine();
           exp = string.toCharArray();
-          if (areParenthesisBalanced(exp)) 
+          if (areParenthesisBalanced(exp)) {
             System.out.println("YES");
-          else
-            System.out.println("NO");  
+          } else {
+            System.out.println("NO");
+          }
         }
     }
-} 
+}
