@@ -1,8 +1,24 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution  
 { 
-    static boolean isMatchingPair(char character1, char character2) 
-    { 
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+      //unused.
+    }
+    /**
+     * Determines if matching pair.
+     *
+     * @param      character1  The character 1
+     * @param      character2  The character 2
+     *
+     * @return     True if matching pair, False otherwise.
+     */
+    static boolean isMatchingPair(final char character1, final char character2) { 
        if (character1 == '(' && character2 == ')') {
          return true; 
        }
@@ -15,9 +31,12 @@ public class Solution
        else {
          return false; 
        }
-    } 
-    static boolean areParenthesisBalanced(char exp[]) 
-    { 
+    }
+    /**
+     * Determines if Parans are balanced.
+     * @param exp character array.
+     */
+    static boolean areParenthesisBalanced(final char exp[]) { 
        stack st = new stack(); 
        for(int i=0;i<exp.length;i++) 
        { 
@@ -39,7 +58,12 @@ public class Solution
        else {
              return false; 
          }  
-    }  
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args)  { 
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine());
