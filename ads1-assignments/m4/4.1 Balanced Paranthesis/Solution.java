@@ -32,6 +32,7 @@ final class Solution {
     /**
      * Determines if Parans are balanced.
      * @param exp character array.
+     * @return boolean
      */
     static boolean areParenthesisBalanced(final char exp[]) { 
        stack st = new stack(); 
