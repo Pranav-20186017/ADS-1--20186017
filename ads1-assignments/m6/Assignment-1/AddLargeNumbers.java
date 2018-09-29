@@ -3,12 +3,12 @@
  */
 class AddLargeNumbers {
     public static LinkedList numberToDigits(String number) {
-        LinkedList values = new LinkedList();
+        LinkedList vals = new LinkedList();
         for(int i = number.length() - 1; i >= 0; i--) {
             String element = "" + number.charAt(i);
-            values.push(Integer.parseInt(element));
+            vals.push(Integer.parseInt(element));
         }
-        return values;
+        return vals;
     }
 
     public static String digitsToNumber(LinkedList list) {
@@ -24,9 +24,7 @@ class AddLargeNumbers {
             int out = 0;
             String result = "";
             while (!list1.isEmpty()) {
-                out = carry.pop()
-                      + list1.newpop(list1.size)
-                      + list2.newpop(list2.size);
+                out = carry.pop()+ list1.newpop(list1.size) + list2.newpop(list2.size);
                 result =  (out % ten) + result;
                 if (out > nine) {
                     carry.push(out / ten);
