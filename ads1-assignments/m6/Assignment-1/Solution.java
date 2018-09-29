@@ -21,7 +21,7 @@ class LinkedList {
     String print() {
         Node temp = first;
         String val = "";
-        while(temp.next != null) {
+        while(temp != null) {
             val = val + temp.data;
             temp = temp.next;
         }
