@@ -4,6 +4,7 @@ class LinkedList {
     class Node {
         int data;
         Node next;
+        int size;
         Node(int input) {
             this.data = input;
         }
@@ -27,6 +28,15 @@ class LinkedList {
         }
         return val;
     }
+    int getsize() {
+        Node temp = first;
+        int size = 0;
+        while(temp != null) {
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 
 }
 class AddLargeNumbers {
@@ -45,7 +55,7 @@ class AddLargeNumbers {
     }
 
     // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-
+    //     return list1.size;
     // }
 }
 
@@ -64,10 +74,10 @@ public class Solution {
                 break;
 
             // case "addLargeNumbers":
-            //     LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
-            //     LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
+            //     pDigits = AddLargeNumbers.numberToDigits(p);
+            //     qDigits = AddLargeNumbers.numberToDigits(q);
             //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-            //     System.out.println(AddLargeNumbers.digitsToNumber(result));
+            //     // System.out.println(AddLargeNumbers.digitsToNumber(result));
             //     break;
         }
     }
