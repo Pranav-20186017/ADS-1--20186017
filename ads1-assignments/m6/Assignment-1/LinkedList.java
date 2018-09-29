@@ -19,20 +19,20 @@ class LinkedList {
 	}
 	int newpop(int values) {
 		Node temp = first;
-		int counter = 0;
-		while (counter < values - 1) {
+		int count = 0;
+		while (count < values - 1) {
 			temp = temp.next;
-			counter++;
+			count++;
 		}
 		int res = temp.data;
 		size--;
 		return res;
 	}
 	int pop() {
-		int output = first.data;
+		int opt = first.data;
 		first = first.next;
 		size--;
-		return output;
+		return opt;
 	}
 	String print() {
 		Node test = first;
