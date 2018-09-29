@@ -17,16 +17,16 @@ class LinkedList {
 		first = newNode;
 		size++;
 	}
-	int newpop(int iteratorval) {
-		Node test = first;
+	int newpop(int values) {
+		Node temp = first;
 		int counter = 0;
-		while (counter < iteratorval - 1) {
-			test = test.next;
+		while (counter < values - 1) {
+			temp = temp.next;
 			counter++;
 		}
-		int value = test.data;
+		int res = temp.data;
 		size--;
-		return value;
+		return res;
 	}
 	int pop() {
 		int output = first.data;
