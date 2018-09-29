@@ -20,12 +20,12 @@ class LinkedList {
     }
     String print() {
         Node temp = first;
-        String num = "";
-        while(temp != null) {
-            num = num + temp.data;
+        String val = "";
+        while(temp.next != null) {
+            val = val + temp.data;
             temp = temp.next;
         }
-        return num;
+        return val;
     }
 
 }
