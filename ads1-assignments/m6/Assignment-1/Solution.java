@@ -2,10 +2,10 @@
 import java.util.*;
 class LinkedList {
     Node first = null;
+    int size = 0;
     class Node {
         int data;
         Node next;
-        int size;
         Node(int input) {
             this.data = input;
         }
@@ -14,6 +14,7 @@ class LinkedList {
         Node newnode = new Node(item);
         newnode.next = first;
         first = newnode;
+        size++;
     }
     int pop() {
         int opt = first.data;
@@ -29,14 +30,22 @@ class LinkedList {
         }
         return val;
     }
-    int getsize() {
-        Node temp = first;
-        int size = 0;
-        while(temp != null) {
-            size++;
-            temp = temp.next;
+    boolean isEmpty() {
+        return size == 0;
+    }
+    int newpop(int val) {
+        Node test = first;
+        int count = 0;
+        while (count < val - 1) {
+            test = test.next;
+            count++;
         }
-        return size;
+        int value = test.data;
+        size--;
+        return value;
+    }
+    int size() {
+        return this.size;
     }
 
 }
@@ -55,25 +64,52 @@ class AddLargeNumbers {
         return list.print();
     }
 
-    // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    //     Stack<Integer> s1 = new Stack<Integer>();
-    //     Stack<Integer> s2 = new Stack<Integer>();
-    //     String one = list1.print();
-    //     String two = list2.print();
-    //     System.out.println(one);
-    //     System.out.println(two);
-    //     for (int i = 0; i < one.length(); i++) {
-    //         String t = one.charAt(i);
-    //         int temp = Integer.parseInt(t);
-    //         s1.push(temp);
-    //     }
-    //     for (int i = 0; i < two.length(); i++) {
-    //         String t = two.charAt(i);
-    //         int temp = Integer.parseInt(t);
-    //         s2.push(temp);
-    //     }
-    //     return null;
-    // }
+   public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+        LinkedList carry = new LinkedList();
+        final int ten = 10;
+        final int nine = 9;
+        carry.push(0);
+        if (list1.size() <= list2.size()) {
+            int out = 0;
+            String result = "";
+            while (!list1.isEmpty()) {
+                out = carry.pop()
+                      + list1.newpop(list1.size)
+                      + list2.newpop(list2.size);
+                result =  (out % ten) + result;
+                if (out > nine) {
+                    carry.push(out / ten);
+                } else {
+                    carry.push(0);
+                }
+            }
+            while (!list2.isEmpty()) {
+                result =  list2.newpop(list2.size) + carry.pop() + result;
+                carry.push(0);
+            }
+            if (carry.first.data != 0) {
+                result = carry.pop() + result;
+            }
+            return numberToDigits(result);
+        } else {
+            int out = 0;
+            String result = "";
+            while (!list2.isEmpty()) {
+                out = carry.pop()
+                      + list1.newpop(list1.size)
+                      + list2.newpop(list2.size);
+                result = result + (out % ten);
+                if (out > nine) {
+                    carry.push(out / ten);
+                }
+            }
+            while (!list1.isEmpty()) {
+                result = result + list1.newpop(list1.size) + carry.pop();
+                carry.push(0);
+            }
+            return numberToDigits(result);
+        }
+    }
 }
 
 public class Solution {
@@ -90,12 +126,12 @@ public class Solution {
                 System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
                 break;
 
-            // case "addLargeNumbers":
-            //     pDigits = AddLargeNumbers.numberToDigits(p);
-            //     qDigits = AddLargeNumbers.numberToDigits(q);
-            //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-            //     System.out.println(AddLargeNumbers.digitsToNumber(result));
-            //     break;
+            case "addLargeNumbers":
+                pDigits = AddLargeNumbers.numberToDigits(p);
+                qDigits = AddLargeNumbers.numberToDigits(q);
+                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+                System.out.println(AddLargeNumbers.digitsToNumber(result));
+                break;
         }
     }
     
