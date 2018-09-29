@@ -17,46 +17,44 @@ class AddLargeNumbers {
 
    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList carry = new LinkedList();
-        final int ten = 10;
-        final int nine = 9;
         carry.push(0);
         if (list1.size() <= list2.size()) {
-            int out = 0;
-            String result = "";
+            int output = 0;
+            String answer = "";
             while (!list1.isEmpty()) {
-                out = carry.pop()+ list1.newpop(list1.size) + list2.newpop(list2.size);
-                result =  (out % ten) + result;
-                if (out > nine) {
-                    carry.push(out / ten);
+                output = carry.pop()+ list1.newpop(list1.size) + list2.newpop(list2.size);
+                answer =  (output % 10) + answer;
+                if (output > 9) {
+                    carry.push(output / 10);
                 } else {
                     carry.push(0);
                 }
             }
             while (!list2.isEmpty()) {
-                result =  list2.newpop(list2.size) + carry.pop() + result;
+                answer =  list2.newpop(list2.size) + carry.pop() + answer;
                 carry.push(0);
             }
             if (carry.first.data != 0) {
-                result = carry.pop() + result;
+                answer = carry.pop() + answer;
             }
-            return numberToDigits(result);
+            return numberToDigits(answer);
         } else {
-            int out = 0;
-            String result = "";
+            int output = 0;
+            String answer = "";
             while (!list2.isEmpty()) {
-                out = carry.pop()
+                output = carry.pop()
                       + list1.newpop(list1.size)
                       + list2.newpop(list2.size);
-                result = result + (out % ten);
-                if (out > nine) {
-                    carry.push(out / ten);
+                answer = answer + (output % 10);
+                if (output > 9) {
+                    carry.push(output / 10);
                 }
             }
             while (!list1.isEmpty()) {
-                result = result + list1.newpop(list1.size) + carry.pop();
+                answer = answer + list1.newpop(list1.size) + carry.pop();
                 carry.push(0);
             }
-            return numberToDigits(result);
+            return numberToDigits(answer);
         }
     }
 }
