@@ -1,4 +1,5 @@
-import java.util.Scanner;
+// import java.util.Scanner;
+import java.util.*;
 class LinkedList {
     Node first = null;
     class Node {
@@ -42,12 +43,12 @@ class LinkedList {
 class AddLargeNumbers {
     
     public static LinkedList numberToDigits(String number) {
-        LinkedList numtodig = new LinkedList();
+        LinkedList values = new LinkedList();
         for(int i = number.length() - 1; i >= 0; i--) {
-            String ele = "" + number.charAt(i);
-            numtodig.push(Integer.parseInt(ele));
+            String element = "" + number.charAt(i);
+            values.push(Integer.parseInt(element));
         }
-        return numtodig;
+        return values;
     }
 
     public static String digitsToNumber(LinkedList list) {
@@ -55,7 +56,23 @@ class AddLargeNumbers {
     }
 
     // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    //     return list1.size;
+    //     Stack<Integer> s1 = new Stack<Integer>();
+    //     Stack<Integer> s2 = new Stack<Integer>();
+    //     String one = list1.print();
+    //     String two = list2.print();
+    //     System.out.println(one);
+    //     System.out.println(two);
+    //     for (int i = 0; i < one.length(); i++) {
+    //         String t = one.charAt(i);
+    //         int temp = Integer.parseInt(t);
+    //         s1.push(temp);
+    //     }
+    //     for (int i = 0; i < two.length(); i++) {
+    //         String t = two.charAt(i);
+    //         int temp = Integer.parseInt(t);
+    //         s2.push(temp);
+    //     }
+    //     return null;
     // }
 }
 
@@ -77,7 +94,7 @@ public class Solution {
             //     pDigits = AddLargeNumbers.numberToDigits(p);
             //     qDigits = AddLargeNumbers.numberToDigits(q);
             //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-            //     // System.out.println(AddLargeNumbers.digitsToNumber(result));
+            //     System.out.println(AddLargeNumbers.digitsToNumber(result));
             //     break;
         }
     }
