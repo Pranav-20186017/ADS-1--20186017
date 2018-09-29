@@ -4,8 +4,8 @@ class LinkedList {
     class Node {
         int data;
         Node next;
-        Node(int inputdata) {
-            this.data = inputdata;
+        Node(int input) {
+            this.data = input;
         }
     }
     void push(int item) {
@@ -14,16 +14,16 @@ class LinkedList {
         first = newnode;
     }
     int pop() {
-        int output = first.data;
+        int opt = first.data;
         first = first.next;
-        return output;
+        return opt;
     }
     String print() {
-        Node test = first;
+        Node temp = first;
         String num = "";
-        while(test != null) {
-            num = num + test.data;
-            test = test.next;
+        while(temp != null) {
+            num = num + temp.data;
+            temp = temp.next;
         }
         return num;
     }
