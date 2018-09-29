@@ -43,5 +43,8 @@ class LinkedList {
 		}
 		return num;
 	}
+	int size() {
+		return this.size;
+	}
 
 }
