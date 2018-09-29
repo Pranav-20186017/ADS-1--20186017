@@ -42,9 +42,7 @@ class AddLargeNumbers {
             int output = 0;
             String answer = "";
             while (!list2.isEmpty()) {
-                output = carry.pop()
-                      + list1.newpop(list1.size)
-                      + list2.newpop(list2.size);
+                output = carry.pop() + list1.newpop(list1.size) + list2.newpop(list2.size);
                 answer = answer + (output % 10);
                 if (output > 9) {
                     carry.push(output / 10);
