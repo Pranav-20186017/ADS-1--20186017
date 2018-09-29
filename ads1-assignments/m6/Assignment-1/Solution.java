@@ -2,14 +2,14 @@ import java.util.Scanner;
 class LinkedList {
     Node first = null;
     class Node {
-    int data;
-    Node next;
-    Node(int input) {
-        this.data = input;
+        int data;
+        Node next;
+        Node(int inputdata) {
+            this.data = inputdata;
         }
     }
-    void push(int ptr) {
-        Node newnode = new Node(ptr);
+    void push(int item) {
+        Node newnode = new Node(item);
         newnode.next = first;
         first = newnode;
     }
@@ -19,16 +19,16 @@ class LinkedList {
         return output;
     }
     String print() {
-        Node temp = first;
+        Node test = first;
         String num = "";
-        while(temp != null) {
-            num = num + temp.data;
-            temp = temp.next;
+        while(test != null) {
+            num = num + test.data;
+            test = test.next;
         }
         return num;
-
-        }
     }
+
+}
 class AddLargeNumbers {
     
     public static LinkedList numberToDigits(String number) {
