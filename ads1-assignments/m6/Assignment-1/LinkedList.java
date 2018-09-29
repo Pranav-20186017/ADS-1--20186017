@@ -11,10 +11,10 @@ class LinkedList {
 	boolean isEmpty() {
 		return size == 0;
 	}
-	void push(int item) {
-		Node newnode = new Node(item);
-		newnode.next = first;
-		first = newnode;
+	void push(int data) {
+		Node newNode = new Node(data);
+		newNode.next = first;
+		first = newNode;
 		size++;
 	}
 	int newpop(int iteratorval) {
