@@ -35,11 +35,11 @@ class LinkedList {
 		return opt;
 	}
 	String print() {
-		Node test = first;
+		Node temp = first;
 		String num = "";
-		while (test != null) {
-			num = num + test.data;
-			test = test.next;
+		while (temp != null) {
+			num = num + temp.data;
+			temp = temp.next;
 		}
 		return num;
 	}

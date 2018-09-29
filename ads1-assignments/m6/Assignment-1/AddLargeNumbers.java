@@ -1,3 +1,6 @@
+/**
+ * Class for add large numbers.
+ */
 class AddLargeNumbers {
     public static LinkedList numberToDigits(String number) {
         LinkedList values = new LinkedList();
