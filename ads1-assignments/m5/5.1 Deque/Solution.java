@@ -1,4 +1,9 @@
 import java.util.Scanner;
+/**
+ * Class for deque.
+ *
+ * @param      <Item>  The item
+ */
 class Deque<Item> {
     Node first = null;
     Node last = null;
@@ -36,7 +41,6 @@ class Deque<Item> {
         first = new Node(element);
         if (isEmpty()) {
             last = first;
-
             size++;
             printList();
             return;
@@ -59,7 +63,6 @@ class Deque<Item> {
         size--;
         printList();
         return d;
-
     }
     public Item popRight() {
         if (size == 0) {
@@ -72,7 +75,6 @@ class Deque<Item> {
         }
         int s = 0;
         Node get = first;
-
         while (s < size - 2) {
             get = get.next;
             s++;
@@ -101,9 +103,19 @@ class Deque<Item> {
         pr += str[size-1] + "]";
         System.out.println(pr);
     }
-
 }
-public class Solution {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    private Solution() {
+        //unused.
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Deque<Integer> q = new Deque<>();
