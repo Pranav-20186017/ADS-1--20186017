@@ -8,11 +8,14 @@ class Deque<Item> {
     /**
      * node pointer pointing towards head.
      */
-    Node first = null;
+    private Node first = null;
     /**
      * node pointer pointing towards tail.
      */
-    Node last = null;
+    private Node last = null;
+    /**
+     * size of the data strucure.
+     */
     private int size = 0;
     class Node {
         private Item data;
