@@ -21,12 +21,27 @@ class Deque<Item> {
             this.data = data;
         }
     }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return size == 0;
     }
+    /**
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
         return size;
     }
+    /**
+     * Pushes an element right.
+     *
+     * @param      element  The element
+     */
     public void pushRight(Item element) {
         Node oldleft = last;
         last = new Node(element);
@@ -42,6 +57,11 @@ class Deque<Item> {
         size++;
         printList();
     }
+    /**
+     * Pushes an element left.
+     *
+     * @param      element  The element
+     */
     public void pushLeft(Item element) {
         Node oldright = first;
         first = new Node(element);
@@ -56,6 +76,11 @@ class Deque<Item> {
         size++;
         printList();
     }
+    /**
+     * pops the item to the left.
+     *
+     * @return     {is of type item.}
+     */
     public Item popLeft() {
         if (size == 0) {
             System.out.println("Deck is empty");
@@ -70,6 +95,11 @@ class Deque<Item> {
         printList();
         return d;
     }
+    /**
+     * pops the item to the right.
+     *
+     * @return     {is of type Item.}
+     */
     public Item popRight() {
         if (size == 0) {
             System.out.println("Deck is empty");
@@ -90,6 +120,9 @@ class Deque<Item> {
         printList();
         return d;
     }
+    /**
+     * prints the data structure.
+     */
     public void printList() {
         if (size == 0) {
             System.out.println("[]");
@@ -103,10 +136,10 @@ class Deque<Item> {
         }
         String[] str = s.split(",");
         String pr = "[";
-        for(int i = 0;i<size-1;i++) {
+        for (int i = 0; i < size - 1; i++) {
             pr += str[i] + ", ";
         }
-        pr += str[size-1] + "]";
+        pr += str[size - 1] + "]";
         System.out.println(pr);
     }
 }
@@ -114,6 +147,9 @@ class Deque<Item> {
  * Class for solution.
  */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         //unused.
     }
@@ -122,7 +158,7 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         Deque<Integer> q = new Deque<>();
         while (scan.hasNext()) {
