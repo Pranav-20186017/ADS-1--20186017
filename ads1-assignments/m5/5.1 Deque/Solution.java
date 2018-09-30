@@ -17,8 +17,17 @@ class Deque<Item> {
      * size of the data strucure.
      */
     private int size = 0;
+    /**
+     * Class for node.
+     */
     class Node {
+        /**
+         * data of type item.
+         */
         private Item data;
+        /**
+         * pointer to next placeholder.
+         */
         private Node next;
         /**
          * Constructs the object.
