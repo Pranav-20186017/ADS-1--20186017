@@ -5,9 +5,15 @@ import java.util.Scanner;
  * @param      <Item>  The item
  */
 class Deque<Item> {
+    /**
+     * node pointer pointing towards head.
+     */
     Node first = null;
+    /**
+     * node pointer pointing towards tail.
+     */
     Node last = null;
-    int size = 0;
+    private int size = 0;
     class Node {
         Item data;
         Node next;
