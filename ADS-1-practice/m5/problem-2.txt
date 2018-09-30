@@ -1,0 +1,18 @@
+Stack stack = new Stack();
+while(!q.isEmpty())
+	stack.push(q.dqueue)
+while(!stack.isEmpty())
+	q.enqueue(stack.pop())
+
+
+From the top
+Stack stack = new Stack(); creates a new object for class stack
+
+the first while loop pushes the elements into the stack that are dequeued from the queue, therefore the queue is now empty at the end of this loop
+
+
+the second while loop pops the elements from the stack and enqueues them into the queue thereby emptying the stack.
+
+
+
+The end result of these operations is that the elements that are stored in the queue in the first place are now stored in reverse order.
