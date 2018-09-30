@@ -15,10 +15,15 @@ class Deque<Item> {
     Node last = null;
     private int size = 0;
     class Node {
-        Item data;
-        Node next;
-        Node(Item data) {
-            this.data = data;
+        private Item data;
+        private Node next;
+        /**
+         * Constructs the object.
+         *
+         * @param      information  The information
+         */
+        Node(final Item information) {
+            this.data = information;
         }
     }
     /**
@@ -42,7 +47,7 @@ class Deque<Item> {
      *
      * @param      element  The element
      */
-    public void pushRight(Item element) {
+    public void pushRight(final Item element) {
         Node oldleft = last;
         last = new Node(element);
         if (isEmpty()) {
@@ -62,7 +67,7 @@ class Deque<Item> {
      *
      * @param      element  The element
      */
-    public void pushLeft(Item element) {
+    public void pushLeft(final Item element) {
         Node oldright = first;
         first = new Node(element);
         if (isEmpty()) {
