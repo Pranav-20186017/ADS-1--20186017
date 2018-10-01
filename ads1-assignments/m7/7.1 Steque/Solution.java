@@ -37,13 +37,13 @@ class LinkedList {
 		Node node = new Node();
 		node.data = value;
 		node.next = null;
-		if (tail == null) {
+		if (head == null) {
 			tail = node;
-			head = node;
+			head = tail;
 			size++;
 			return;
 		}
-		node.next = tail;
+		tail.next = node;
 		tail = node;
 		size++;
 	}
