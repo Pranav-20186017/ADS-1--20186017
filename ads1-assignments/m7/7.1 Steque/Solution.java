@@ -4,8 +4,8 @@ class Solution {
 		Scanner s = new Scanner(System.in);
 		int n = Integer.parseInt(s.nextLine());
 		String[] tokens;
-		for (int i = 0; i < n; i++) {
-			System.out.println(s.nextLine());
+		while(s.hasNext()) {
+			tokens = s.nextLine().split("\n");
 		}
 	}
 }
