@@ -1,74 +1,61 @@
 import java.util.Scanner;
-/**
- * Class to construct LinkedList
- */
 class LinkedList {
-	/**
-	 * Constructor of the LinkedList Class.
-	 */
-	protected LinkedList() {
-		//unused constructor.
-	}
 	class Node {
 		int data;
-		Node next;	
+		Node next;
 	}
 	Node head;
 	Node tail;
 	int size = 0;
-	public void push(int value) {
-		Node node = new Node();
-		node.data = value;
-		node.next = null;
-		if (head == null) {
-			head = node;
-			tail = node;
-			size++;
-			return;
-		}
-		node.next = head;
-		head = node;
-		size++;
-	}
-	public int getSize() {
-		return size;
-	}
-	public void enqueue(int value) {
-		Node node = new Node();
-		node.data = value;
-		node.next = null;
-		if (head == null) {
-			tail = node;
-			head = tail;
-			size++;
-			return;
-		}
-		tail.next = node;
-		tail = node;
-		size++;
-	}
-	public void pop() {
-		head = head.next;
-		size--;
-	}
-	public boolean isEmpty() {
-		return getSize() == 0;
-	}
-	public String print() {
-		if (isEmpty()) {
-			return "Steque is empty";
-		}
-		Node thead = head;
-		int capacity = getSize();
-		String result = "";
-		while (capacity > 0) {
-			result = result + thead.data + ", ";
-			thead = thead.next;
-			capacity--;
-		}
-		String finalresult = result.substring(0, result.length() - 2);
-		return finalresult;
-	}
+	public void push(int val) {
+        Node node = new Node();
+        node.data = val;
+        node.next = null;
+        if (head == null) {
+            head = node;
+            tail = node;
+            size++;
+            return;
+        }
+        node.next = head;
+        head = node;
+        size++;
+    }
+    public void enqueue(int val) {
+    	Node node = new Node();
+    	node.data = val;
+    	node.next = null;
+    	if (head == null) {
+    		tail = node;
+    		head = tail;
+    		size++;
+    		return;
+    	}
+    	tail.next = node;
+    	tail = node;
+    	size++;
+    }
+    public void pop() {
+    	head = head.next;
+    	size--;
+    }
+    public boolean isEmpty() {
+    	return size == 0;
+    }
+    public String print() {
+    	if (size == 0) {
+    		return "Steque is empty.";
+    	}
+    	Node prhead = head;
+    	int capacity = size;
+    	String result = "";
+    	while (capacity > 0) {
+    		result = result + Integer.toString(prhead.data) + ", ";
+    		prhead = prhead.next;
+    		capacity--;
+    	}
+    	return result.substring(0, result.length() - 2);
+    }
 }
 class Solution {
 	public static void main(String[] args) {
