@@ -15,7 +15,8 @@ class LinkedList {
         private int data;
         private Node next;
     }
-    private Node head, tail;
+    private Node head;
+    private Node tail;
     private int size = 0;
     /**
      * { function_description }
@@ -56,7 +57,10 @@ class LinkedList {
         size++;
     }
     /**
-     * { function_description }
+     * Note: This function is used to pop the elements from the stack end.
+     * Time Complexity O(1) - Constant Time.
+     * The time taken to severe the head is always constant irrespective of the size
+     * of the linked list that is used to implement the stequeue.
      */
     public void pop() {
         head = head.next;
@@ -64,16 +68,17 @@ class LinkedList {
     }
     /**
      * Determines if empty.
-     *
+     * Time Complexity O(1) -- Constant Time
+     * Since only one varible i.e. size has to be accessed, this function always takes constant time.
      * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return (size == 0);
     }
     /**
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
+     * this function prints the contents of the stequeue.
+     * time complexity O(N) -- Linear Time.
+     * @return     {a String containing elments from the stequeue in the specified format}
      */
     public String print() {
         if (size == 0) {
