@@ -3,8 +3,11 @@ import java.util.Scanner;
  * Class for solution.
  */
 final class Solution {
+    /**
+     * Constructs the object for the class Solution.
+     */
     private Solution() {
-    	//unused constructor.
+        //unused constructor.
     }
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
