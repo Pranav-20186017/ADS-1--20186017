@@ -87,6 +87,7 @@ class LinkedList {
             prhead = prhead.next;
             capacity--;
         }
-        return str.substring(0, str.length() - 2);
+        String finalResult = str.substring(0, str.length() - 2);
+        return finalResult;
     }
 }
