@@ -1,14 +1,28 @@
+/**
+ * Class for LinkedList.
+ */
 class LinkedList {
+	/**
+	 * Constructs the object for the class LinkedList.
+	 */
     protected LinkedList() {
-
+    	//unused constructor.
     }
+    /**
+     * Class for node.
+     */
     class Node {
         private int data;
         private Node next;
     }
     private Node head, tail;
     private int size = 0;
-    public void push(int val) {
+    /**
+     * { function_description }
+     *
+     * @param      val   The value
+     */
+    public void push(final int val) {
         Node node = new Node();
         node.data = val;
         node.next = null;
@@ -22,7 +36,12 @@ class LinkedList {
         head = node;
         size++;
     }
-    public void enqueue(int val) {
+    /**
+     * { function_description }
+     *
+     * @param      val   The value
+     */
+    public void enqueue(final int val) {
         Node node = new Node();
         node.data = val;
         node.next = null;
@@ -36,13 +55,26 @@ class LinkedList {
         tail = node;
         size++;
     }
+    /**
+     * { function_description }
+     */
     public void pop() {
         head = head.next;
         size--;
     }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return (size == 0);
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String print() {
         if (size == 0) {
             return "Steque is empty.";
@@ -51,7 +83,7 @@ class LinkedList {
         int capacity = size;
         String str = "";
         while (capacity > 0) {
-            str += Integer.toString(prhead.data) + ", ";
+            str += prhead.data + ", ";
             prhead = prhead.next;
             capacity--;
         }
