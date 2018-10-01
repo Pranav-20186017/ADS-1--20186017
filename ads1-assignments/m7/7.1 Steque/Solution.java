@@ -87,7 +87,6 @@ class Solution {
 					default : break;
 				}
 				n--;
-				System.out.println();
 			}
 		}
 		
