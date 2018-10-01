@@ -1,5 +1,8 @@
 import java.util.Scanner;
-class Solution {
+/**
+ * Class for solution.
+ */
+final class Solution {
     private Solution() {
     	//unused constructor.
     }
