@@ -2,19 +2,19 @@
  * Class for LinkedList.
  */
 class LinkedList {
-	/**
-	 * Constructs the object for the class LinkedList.
-	 */
+    /**
+     * Constructs the object for the class LinkedList.
+     */
     protected LinkedList() {
-    	//unused constructor.
+        //unused constructor.
     }
     /**
      * Class for node.
      */
     class Node {
-    	/**
-    	 * variable to hold data.
-    	 */
+        /**
+         * variable to hold data.
+         */
         private int data;
         /**
          * variable to point towards the next Link.
@@ -43,9 +43,9 @@ class LinkedList {
      * @param      val {is of type integer}.
      */
     public void push(final int val) {
-    	/**
-    	 * create a new node in the Linked List.
-    	 */
+        /**
+         * create a new node in the Linked List.
+         */
         Node node = new Node();
         node.data = val;
         node.next = null;
@@ -69,9 +69,9 @@ class LinkedList {
      * @param      val   {is of type integer}
      */
     public void enqueue(final int val) {
-    	/**
-    	 * create a new node in the Linked List.
-    	 */
+        /**
+         * create a new node in the Linked List.
+         */
         Node node = new Node();
         node.data = val;
         node.next = null;

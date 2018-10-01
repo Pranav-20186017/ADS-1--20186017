@@ -11,7 +11,10 @@ final class Solution {
     }
     /**
      * {Main Method}.
-     *
+     *Time Complexity of this method is O(N^2).
+     *Since one loop is written inside the other.
+     *One loop is for counting the number of testcases.
+     *the other is to run the opetaions specified in the test case.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
