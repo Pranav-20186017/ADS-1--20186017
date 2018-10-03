@@ -11,6 +11,7 @@ class Solution {
 			for (int i = 0; i < tokens.length; i++) {
 				vals[i] = Integer.parseInt(tokens[i]);
 			}
+			Arrays.sort(vals);
 			System.out.println(Arrays.toString(vals));
 		}
 	}
