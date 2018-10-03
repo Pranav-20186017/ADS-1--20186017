@@ -11,16 +11,11 @@ class Merge {
         for (int k = low; k <= high; k++) {
             if (i > mid) {
                 aux[k] = array[j++];
-            }
-
-            else if (j > high) {
+            } else if (j > high) {
                 aux[k] = array[i++];
-            }
-
-            else if (less(array[j], array[i])) {
+            } else if (less(array[j], array[i])) {
                 aux[k] = array[j++];
-            }
-            else {
+            } else {
                 aux[k] = array[i++];
             }
         }
@@ -29,18 +24,18 @@ class Merge {
      * Time complexity is O(1)
      */
     private void sort(Comparable[] array, Comparable[] aux, int low, int high) {
-        if (high<=low+CUTOFF) {
+        if (high <= low + CUTOFF) {
             insertionSort(aux, low, high);
             System.out.println("Insertion sort method invoked...");
             return;
         }
-        int mid = low+(high-low)/2;
+        int mid = low + (high - low) / 2;
         sort(aux, array, low, mid);
-        sort(aux, array, mid+1, high);
+        sort(aux, array, mid + 1, high);
 
-        if (!less(array[mid+1], array[mid])) {
-           for (int i=low; i<=high; i++) {
-            aux[i]=array[i];
+        if (!less(array[mid + 1], array[mid])) {
+           for (int i = low; i <= high; i++) {
+            aux[i] = array[i];
             }
             System.out.println("Array is already sorted. So, skipped the call to merge...");
            return;
