@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 class Merge {
     final int CUTOFF = 7;
     Merge() {
