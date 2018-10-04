@@ -1,18 +1,32 @@
 import java.util.Scanner;
+/**
+ * class for LinkedList.
+ */
 class LinkedList {
     private Node head;
     private Node tail;
     public int size;
     private static int index;
+    /**
+     * Class for node.
+     */
     private class Node {
         private int value;
         private Node next;
     }
+    /**
+     * Constructs the object.
+     */
     LinkedList() {
         head = null;
         tail = null;
     }
-    public void insertFront(final int value){
+    /**
+     * inserts data at the begnining of the linked list.
+     *
+     * @param      value  The data to be inserted.
+     */
+    public void insertFront(final int value) {
         if (head == null) {
             Node oldHead = head;
             head = new Node();
@@ -27,6 +41,11 @@ class LinkedList {
         }
         size++;
     }
+    /**
+     * insert data at the end of the linked list.
+     *
+     * @param      value  The data to be inserted.
+     */
     public void insertBack(final int value){
         if (tail == null) {
             Node oldTail = tail;
@@ -36,7 +55,7 @@ class LinkedList {
            head = tail;
         }
         else {
-            Node oldTail = tail;
+           Node oldTail = tail;
            tail = new Node();
            tail.value = value;
            tail.next = null;
@@ -44,12 +63,18 @@ class LinkedList {
         }
         size++;
     }
+    /**
+     * Removes element from the front of the linked list.
+     */
     public void removeFront(){
         if (head != null) {
             head = head.next;
             size--;
         }
     }
+    /**
+     * Remove element from the end of the linked list.
+     */
     public void removeBack(){
         if (tail != null) {
             Node temp = null;
@@ -64,10 +89,23 @@ class LinkedList {
             size--;
         }
     }
-    public void insertAt(int position, int value) {
+    /**
+     * insert data at paticular position.
+     *
+     * @param      position  The position
+     * @param      value     The value
+     */
+    public void insertAt(final int position, final int value) {
         insertAt(head, position, value);
     }
-    public void insertAt(Node head, int position, int value) {
+    /**
+     * insert data at paticular position.
+     *
+     * @param      head      The head
+     * @param      position  The position
+     * @param      value     The value
+     */
+    public void insertAt(final Node head, final int position, final int value) {
         if (position == 0) {
             insertFront(value);
             return;
@@ -83,10 +121,20 @@ class LinkedList {
         index++;
         insertAt(head.next, position, value);
     }
+    /**
+     * reverses the linked list.
+     */
     public void reverse() {
         head = reverseRecursive(head);
     }
-    public Node reverseRecursive(Node head) {
+    /**
+     * recursively reverses the linked list.
+     *
+     * @param      head  The head
+     *
+     * @return     { returns the node }
+     */
+    public Node reverseRecursive(final Node head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -95,12 +143,27 @@ class LinkedList {
         head.next = null; 
         return temp;
     }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return head == null;
     }
+    /**
+     * returns size of the linked list.
+     *
+     * @return     { size of the linked list }
+     */
     public int size() {
         return size;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size != 0) {
             String str = "";
@@ -114,11 +177,22 @@ class LinkedList {
         return "";
     }
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
     private Solution() {
         //unused.
     }
-    public static void main(String[] args) {
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         LinkedList list = new LinkedList();
         Scanner s = new Scanner(System.in);
         while (s.hasNextLine()) {
