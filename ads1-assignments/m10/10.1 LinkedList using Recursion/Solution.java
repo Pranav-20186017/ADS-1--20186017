@@ -150,17 +150,17 @@ class LinkedList {
      * recursively reverses the linked list.
      * Time Complexity - O(N).
      *
-     * @param      head  The head
+     * @param      headptr  The head
      *
      * @return     { returns the node }
      */
-    public Node reverseRecursive(final Node head) {
-        if (head == null || head.next == null) {
+    public Node reverseRecursive(final Node headptr) {
+        if (headptr == null || headptr.next == null) {
             return head;
         }
-        Node temp = reverseRecursive(head.next);
-        head.next.next = head;
-        head.next = null;
+        Node temp = reverseRecursive(headptr.next);
+        headptr.next.next = head;
+        headptr.next = null;
         return temp;
     }
     /**
