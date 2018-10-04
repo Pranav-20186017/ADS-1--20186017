@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for factorial.
+ */
 class Factorial {
 	public long getfactorial(long n) {
 		if (n == 0) {
