@@ -123,7 +123,7 @@ class LinkedList {
      * @param      position  The position
      * @param      value     The value
      */
-    public void insertAt(final Node head, final int position, final int value) {
+    public void insertAt(final Node headptr, final int position, final int value) {
         if (position == 0) {
             insertFront(value);
             return;
@@ -131,13 +131,13 @@ class LinkedList {
         if (index + 1 == position) {
             Node newnode = new Node();
             newnode.value = value;
-            newnode.next = head.next;
-            head.next = newnode;
+            newnode.next = headptr.next;
+            headptr.next = newnode;
             index = 0;
             return;
         }
         index++;
-        insertAt(head.next, position, value);
+        insertAt(headptr.next, position, value);
     }
     /**
      * reverses the linked list.
