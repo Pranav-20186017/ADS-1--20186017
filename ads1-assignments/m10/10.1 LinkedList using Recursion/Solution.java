@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -20,7 +20,7 @@ public class Solution {
         while (s.hasNextLine()) {
             String line = s.nextLine();
             String[] tokens = line.split(" ");
-            switch(tokens[0]) {
+            switch (tokens[0]) {
                 case "insertAt":
                     if (Integer.parseInt(tokens[1]) < 0 || Integer.parseInt(
                         tokens[1]) > list.size() + 1) {

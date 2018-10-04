@@ -1,6 +1,4 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:5: Class Solution should be declared as final. [FinalClass]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:23:19: 'switch' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
