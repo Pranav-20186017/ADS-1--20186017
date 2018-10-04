@@ -3,9 +3,9 @@ import java.util.Scanner;
  * class for LinkedList.
  */
 class LinkedList {
-	/**
-	 * head of the linked list.
-	 */
+    /**
+     * head of the linked list.
+     */
     private Node head;
     /**
      * tail of the linked list.
@@ -23,7 +23,13 @@ class LinkedList {
      * Class for node.
      */
     private class Node {
+        /**
+         * data inside the linked list link.
+         */
         private int value;
+        /**
+         * pointer to next link in the linked list.
+         */
         private Node next;
     }
     /**
@@ -193,9 +199,9 @@ class LinkedList {
  * Class for solution.
  */
 public class Solution {
-	/**
-	 * Constructs the object.
-	 */
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         //unused.
     }
