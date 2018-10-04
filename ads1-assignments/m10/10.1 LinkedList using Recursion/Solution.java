@@ -123,7 +123,8 @@ class LinkedList {
      * @param      position  The position
      * @param      value     The value
      */
-    public void insertAt(final Node headptr, final int position, final int value) {
+    public void insertAt(final Node headptr,
+        final int position, final int value) {
         if (position == 0) {
             insertFront(value);
             return;
