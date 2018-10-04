@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:122:8: Unused @param tag for 'head'. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:126: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:126:37: Expected @param tag for 'headptr'. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:156:45: 'head' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 2 errors.

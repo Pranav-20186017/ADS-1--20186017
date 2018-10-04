@@ -119,7 +119,7 @@ class LinkedList {
      * insert data at paticular position.
      * Best Case Complexity - omega(1).
      * Average and Worst Case Complexity - O(N) and thetha(N).
-     * @param      head      The head
+     * @param      headptr      The head
      * @param      position  The position
      * @param      value     The value
      */
