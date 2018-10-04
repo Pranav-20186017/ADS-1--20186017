@@ -44,7 +44,7 @@ class LinkedList {
      *
      * @param      value  The data to be inserted.
      */
-    public void insertFront(final int value) {
+    public void insertFront (final int value) {
         if (head == null) {
             Node oldHead = head;
             head = new Node();
@@ -64,7 +64,7 @@ class LinkedList {
      *
      * @param      value  The data to be inserted.
      */
-    public void insertBack(final int value){
+    public void insertBack (final int value) {
         if (tail == null) {
             Node oldTail = tail;
            tail = new Node();
@@ -84,7 +84,7 @@ class LinkedList {
     /**
      * Removes element from the front of the linked list.
      */
-    public void removeFront(){
+    public void removeFront () {
         if (head != null) {
             head = head.next;
             size--;
@@ -93,7 +93,7 @@ class LinkedList {
     /**
      * Remove element from the end of the linked list.
      */
-    public void removeBack(){
+    public void removeBack () {
         if (tail != null) {
             Node temp = null;
             Node pop = tail;
@@ -113,7 +113,7 @@ class LinkedList {
      * @param      position  The position
      * @param      value     The value
      */
-    public void insertAt(final int position, final int value) {
+    public void insertAt (final int position, final int value) {
         insertAt(head, position, value);
     }
     /**
@@ -123,7 +123,7 @@ class LinkedList {
      * @param      position  The position
      * @param      value     The value
      */
-    public void insertAt(final Node head, final int position, final int value) {
+    public void insertAt (final Node head, final int position, final int value) {
         if (position == 0) {
             insertFront(value);
             return;
