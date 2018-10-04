@@ -3,9 +3,21 @@ import java.util.Scanner;
  * class for LinkedList.
  */
 class LinkedList {
+	/**
+	 * head of the linked list.
+	 */
     private Node head;
+    /**
+     * tail of the linked list.
+     */
     private Node tail;
-    public int size;
+    /**
+     * size of the linked list.
+     */
+    private int size;
+    /**
+     * index of the linked list.
+     */
     private static int index;
     /**
      * Class for node.
