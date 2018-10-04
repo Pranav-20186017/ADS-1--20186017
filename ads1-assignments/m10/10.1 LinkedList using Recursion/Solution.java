@@ -159,7 +159,7 @@ class LinkedList {
         }
         Node temp = reverseRecursive(head.next);
         head.next.next = head;
-        head.next = null; 
+        head.next = null;
         return temp;
     }
     /**
