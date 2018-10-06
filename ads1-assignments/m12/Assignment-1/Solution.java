@@ -1,150 +1,130 @@
 import java.util.Scanner;
-/**
- * Class for insertion sort.
- */
-class Insertionsort {
-    /**
-     * exchanges the elements of an array.
-     * @param      list  The list
-     * @param      lo    The lower
-     * @param      hi    The higher
-     */
-    void exchange(final Studentinfo[] list, final int lo, final int hi) {
-        Studentinfo temp = list[lo];
-        list[lo] = list[hi];
-        list[hi] = temp;
-    }
-    /**
-     * returns the boolean value for the comparison of two objects.
-     *
-     * @param      one   One
-     * @param      two   Two
-     *
-     * @return     { description_of_the_return_value }
-     */
-    boolean less(final Studentinfo one, final Studentinfo two) {
-        return one.compareTo(two) == -1;
-    }
-    /**
-     * sort the elements.
-     * Time Complexity - O(N^2) - Average Case and Worst Case.
-     * Time Complexity - Omega(N) - Best Case.
-     *
-     * @param      students  The students
-     */
-    void sort(final Studentinfo[] students) {
-        for (int i = 1; i < students.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (less(students[j - 1], students[j])) {
-                    exchange(students, j - 1, j);
-                } else {
-                    break;
-                }
-            }
-        }
-    }
-}
-/**
- * Class for solution.
- */
-final class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //unused
-    }
-    /**
-     * main function.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        final int three = 3;
-        final int four = 4;
-        final int five = 5;
-        final int six = 6;
-        Scanner s =  new Scanner(System.in);
-        int num = Integer.parseInt(s.nextLine());
-        Studentinfo[] students = new Studentinfo[num];
-        int vac = Integer.parseInt(s.nextLine());
-        int unres = Integer.parseInt(s.nextLine());
-        int bcvac = Integer.parseInt(s.nextLine());
-        int scvac = Integer.parseInt(s.nextLine());
-        int stvac = Integer.parseInt(s.nextLine());
-        for (int i = 0; i < num; i++) {
-            String line = s.nextLine();
-            String[] tokens = line.split(",");
-            Studentinfo eachstudentdata = new Studentinfo(tokens[0], tokens[1],
-                    Integer.parseInt(tokens[2]),
-                    Integer.parseInt(tokens[three]),
-                    Integer.parseInt(tokens[four]),
-                    Integer.parseInt(tokens[five]), tokens[six]);
-            students[i] = eachstudentdata;
-        }
-        Insertionsort insertion = new Insertionsort();
-        insertion.sort(students);
-        print(students);
-        System.out.println();
-        fillMerit(students, vac, unres, bcvac, scvac, stvac);
-    }
-    /**
-     * fill the merit list with students.
-     *
-     * @param      list   The list.
-     * @param      vacant    The vacancies.
-     * @param      unreserved  The unreserved seats.
-     * @param      back     The bc quota seats.
-     * @param      sec     The sc quota seats
-     * @param      set     The st quota seats.
-     */
-     public static void fillMerit(final Studentinfo[] list, final int vacant,
-        final int unreserved, final int back,
-        final int sec, final int set) {
-        int vac = vacant;
-        int unres = unreserved;
-        int bc = back;
-        int sc = sec;
-        int st = set;
-        for (int i = 0; i < list.length && vac > 0; i++) {
-            if (unres > 0) {
-                System.out.println(list[i].sname + ","
-                                   + list[i].totalvals + ","
-                                   + list[i].rescat);
-                unres--;
-            } else if (list[i].rescat.equals("BC")
-                || list[i].rescat.equals("SC")
-                || list[i].rescat.equals("ST")) {
-                if (list[i].rescat.equals("BC") && bc > 0) {
-                    System.out.println(list[i].sname + ","
-                                       + list[i].totalvals + ","
-                                       + list[i].rescat);
-                    bc--;
-                } else if (list[i].rescat.equals("SC") && sc > 0) {
-                    System.out.println(list[i].sname + ","
-                                       + list[i].totalvals + ","
-                                       + list[i].rescat);
-                    sc--;
-                } else if (list[i].rescat.equals("ST") && st > 0) {
-                    System.out.println(list[i].sname + ","
-                                       + list[i].totalvals + ","
-                                       + list[i].rescat);
-                    st--;
-                }
-            }
-        }
-        vac--;
-    }
-    /**
-     * print the detials of the students.
-     *
-     * @param      list  The list of student objects
-     */
-     public static void print(final Studentinfo[] list) {
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i].sname + ","
-                               + list[i].totalvals + ","
-                               + list[i].rescat);
-        }
-    }
+import java.util.Arrays;
+import java.util.ArrayList;
+public class Solution {
+	static ArrayList<Student> students = new ArrayList<>();
+	static ArrayList<Student> vacanciesList = new ArrayList<>();
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int noLines = Integer.parseInt(scan.nextLine());
+		int vacancies = Integer.parseInt(scan.nextLine());
+		int unres = Integer.parseInt(scan.nextLine());
+		int bc = Integer.parseInt(scan.nextLine());
+		int sc = Integer.parseInt(scan.nextLine());
+		int st = Integer.parseInt(scan.nextLine());
+
+		while (scan.hasNext()) {
+			String[] tokens = scan.nextLine().split(",");
+			Student s = new Student(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6]);
+			students.add(s);
+		}
+		selectionSort();
+
+		for (int i = 0; i < students.size(); i++) {
+			System.out.println(students.get(i).name + "," + students.get(i).tmarks + "," + students.get(i).rc);
+		}
+		System.out.println();
+
+		fillVacancies(vacancies, unres, bc, sc, st);
+
+	}
+	public static void fillVacancies(int vacancies, int unres, int bc, int sc, int st) {
+		int u = 0;
+		int b = 0;
+		int c = 0;
+		int t = 0;
+		int v = 0;
+		for (int i = 0; i < students.size(); i++) {
+			if(u == unres) break;
+				vacanciesList.add(students.get(i));
+				u++;
+				v++;
+			
+		}
+		for (int i = 0; i < students.size(); i++) {
+			if(b == bc) break;
+			if(students.get(i).rc.equals("BC")) {
+				if(!vacanciesList.contains(students.get(i))) {
+					vacanciesList.add(students.get(i));
+					b++;
+					v++;
+				}
+				
+			}
+			
+		}
+		for (int i = 0; i < students.size(); i++) {
+			if(c == sc) break;
+			if(students.get(i).rc.equals("SC")) {
+				if(!vacanciesList.contains(students.get(i))) {
+
+					vacanciesList.add(students.get(i));
+					c++;
+					v++;
+				}
+			}
+			
+		}
+		//add st
+		for (int i = 0; i < students.size(); i++) {
+			if(t == st) break;
+			if(students.get(i).rc.equals("ST")) {
+				if(!vacanciesList.contains(students.get(i))) {
+					vacanciesList.add(students.get(i));
+					t++;
+					v++;
+				}
+			}
+			
+		}
+		for (int i = 0; i < students.size(); i++) {
+			if(v == vacancies) break;
+			if(!vacanciesList.contains(students.get(i))) {
+				vacanciesList.add(students.get(i));
+				v++;
+			}
+		}
+		sortAgain();
+		for (int i = 0; i < vacanciesList.size(); i++) {
+			if( i == vacancies) break;
+			System.out.println(vacanciesList.get(i).name + "," + vacanciesList.get(i).tmarks + "," + vacanciesList.get(i).rc);
+		}
+		
+
+	}
+	public static void sortAgain() {
+		for (int i = vacanciesList.size() - 1; i >= 0; i--) {
+			Student max = vacanciesList.get(i);
+			int index = -1;
+			for (int j = i - 1; j >= 0; j--) {
+				if (max.compareTo(vacanciesList.get(j)) == 1) {
+					max = vacanciesList.get(j);
+					index = j;
+				}
+			}
+			Student temp = vacanciesList.get(i);
+			vacanciesList.set(i, max);
+			if (index != -1) {
+				vacanciesList.set(index, temp);
+			}
+		}
+	}
+	public static void selectionSort() {
+		for (int i = students.size() - 1; i >= 0; i--) {
+			Student max = students.get(i);
+			int index = -1;
+			for (int j = i - 1; j >= 0; j--) {
+				if (max.compareTo(students.get(j)) == 1) {
+					max = students.get(j);
+					index = j;
+				}
+			}
+			Student temp = students.get(i);
+			students.set(i, max);
+			if (index != -1) {
+				students.set(index, temp);
+			}
+		}
+	}
+
 }
