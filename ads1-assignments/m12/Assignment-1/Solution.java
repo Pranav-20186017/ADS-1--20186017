@@ -122,11 +122,22 @@ class Studentinfo implements Comparable<Studentinfo> {
     }
 
 }
-class Solution {
-    Solution() {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
         //unused
     }
-    public static void main(String[] args) {
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         final int three = 3;
         final int four = 4;
         final int five = 5;
@@ -143,7 +154,8 @@ class Solution {
             String line = s.nextLine();
             String[] tokens = line.split(",");
             Studentinfo eachstudentdata = new Studentinfo(tokens[0], tokens[1],
-                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[three]),
+                    Integer.parseInt(tokens[2]),
+                    Integer.parseInt(tokens[three]),
                     Integer.parseInt(tokens[four]),
                     Integer.parseInt(tokens[five]), tokens[six]);
             students[i] = eachstudentdata;

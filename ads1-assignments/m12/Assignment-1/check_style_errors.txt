@@ -23,11 +23,5 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:112: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:115: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:118: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:125: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:125:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:126:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:129:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:129:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:146: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 30 errors.
+Checkstyle ends with 24 errors.
