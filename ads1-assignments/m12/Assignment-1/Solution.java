@@ -13,8 +13,12 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         Scanner scanner = new Scanner(System.in);
-        int Lines = Integer.parseInt(scanner.nextLine());
+        int lines = Integer.parseInt(scanner.nextLine());
         int vacancies = Integer.parseInt(scanner.nextLine());
         int unres = Integer.parseInt(scanner.nextLine());
         int bc = Integer.parseInt(scanner.nextLine());
@@ -23,8 +27,8 @@ final class Solution {
         while (scanner.hasNext()) {
             String[] tokens = scanner.nextLine().split(",");
             Student s = new Student(tokens[0], tokens[1],
-                tokens[2], tokens[3], tokens[4],
-                tokens[5], tokens[6]);
+                tokens[2], tokens[three], tokens[four],
+                tokens[five], tokens[six]);
             students.add(s);
         }
         selectionSort();
@@ -36,6 +40,15 @@ final class Solution {
         System.out.println();
         meritFill(vacancies, unres, bc, sc, st);
     }
+    /**
+     * fills the seats by merit.
+     *
+     * @param      vacancies  The vacancies
+     * @param      unres      The unres
+     * @param      bc         { parameter_description }
+     * @param      sc         The screen
+     * @param      st         { parameter_description }
+     */
     public static void meritFill(final int vacancies,
         final int unres, final int bc, final int sc, final int st) {
         int ucount = 0;
@@ -44,44 +57,43 @@ final class Solution {
         int tcount = 0;
         int vcount = 0;
         for (int i = 0; i < students.size(); i++) {
-            if(ucount == unres) {
+            if (ucount == unres) {
                 break;
-            } 
+            }
                 vaclist.add(students.get(i));
                 ucount++;
                 vcount++;
         }
         for (int i = 0; i < students.size(); i++) {
-            if(bcount == bc) {
+            if (bcount == bc) {
                 break;
             }
-            if(students.get(i).rescat.equals("BC")) {
-                if(!vaclist.contains(students.get(i))) {
+            if (students.get(i).rescat.equals("BC")) {
+                if (!vaclist.contains(students.get(i))) {
                     vaclist.add(students.get(i));
                     bcount++;
                     vcount++;
-                }   
+                }
             }
         }
         for (int i = 0; i < students.size(); i++) {
-            if(ccount == sc) {
+            if (ccount == sc) {
                 break;
             }
-            if(students.get(i).rescat.equals("SC")) {
-                if(!vaclist.contains(students.get(i))) {
-
+            if (students.get(i).rescat.equals("SC")) {
+                if (!vaclist.contains(students.get(i))) {
                     vaclist.add(students.get(i));
                     ccount++;
                     vcount++;
                 }
-            }   
+            }
         }
         for (int i = 0; i < students.size(); i++) {
-            if(tcount == st) {
+            if (tcount == st) {
                 break;
             }
-            if(students.get(i).rescat.equals("ST")) {
-                if(!vaclist.contains(students.get(i))) {
+            if (students.get(i).rescat.equals("ST")) {
+                if (!vaclist.contains(students.get(i))) {
                     vaclist.add(students.get(i));
                     tcount++;
                     vcount++;
@@ -89,17 +101,17 @@ final class Solution {
             }
         }
         for (int i = 0; i < students.size(); i++) {
-            if(vcount == vacancies) {
+            if (vcount == vacancies) {
                 break;
-            } 
-            if(!vaclist.contains(students.get(i))) {
+            }
+            if (!vaclist.contains(students.get(i))) {
                 vaclist.add(students.get(i));
                 vcount++;
             }
         }
         sortfinal();
         for (int i = 0; i < vaclist.size(); i++) {
-            if( i == vacancies) {
+            if (i == vacancies) {
                 break;
             }
             System.out.println(vaclist.get(i).name
@@ -107,6 +119,9 @@ final class Solution {
                 + vaclist.get(i).rescat);
         }
     }
+    /**
+     * sorts the data one last time.
+     */
     public static void sortfinal() {
         for (int i = vaclist.size() - 1; i >= 0; i--) {
             Student max = vaclist.get(i);
@@ -124,6 +139,9 @@ final class Solution {
             }
         }
     }
+    /**
+     * Sorting using selection sort.
+     */
     public static void selectionSort() {
         for (int i = students.size() - 1; i >= 0; i--) {
             Student max = students.get(i);

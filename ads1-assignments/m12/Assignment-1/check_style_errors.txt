@@ -41,9 +41,9 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:25:107: Expected @param tag for 'res'. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:38:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:77:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:78:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:78:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:79: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:82:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:82:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Student.java:83: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
 Checkstyle ends with 46 errors.
