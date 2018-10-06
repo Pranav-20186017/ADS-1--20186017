@@ -77,11 +77,23 @@ class Studentinfo implements Comparable<Studentinfo> {
         this.totalvals = total;
         this.rescat = category;
     }
-    String[] splitDate() {
+    /**
+     * Splits a date.
+     *
+     * @return     {String array of date split with a delimiter}
+     */
+    public String[] splitDate() {
         String[] splitdate = bday.split("-");
         return splitdate;
     }
-    public int compareTo(Studentinfo other) {
+    /**
+     * compares two objects of same class.
+     *
+     * @param      other  The other
+     *
+     * @return     { returns an integer based on the truth value }
+     */
+    public int compareTo(final Studentinfo other) {
         if (this.totalvals > other.totalvals) {
             return 1;
         }
