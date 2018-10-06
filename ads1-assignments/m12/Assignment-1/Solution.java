@@ -3,6 +3,12 @@ import java.util.Scanner;
  * Class for insertionsort.
  */
 class Insertionsort {
+    /**
+     * exchanges the elements of an array.
+     * @param      list  The list
+     * @param      lo    The lower
+     * @param      hi    The higher
+     */
     void exchange(final studentinfo[] list, final int lo, final int hi) {
         studentinfo temp = list[lo];
         list[lo] = list[hi];
@@ -12,9 +18,9 @@ class Insertionsort {
         return one.compareTo(two) == -1;
     }
     /**
-     * sort the elements
-     * Time Complexity - O(N^2) - Average Case and Worst Case
-     * Time Complexity - Omega(N) - Best Case
+     * sort the elements.
+     * Time Complexity - O(N^2) - Average Case and Worst Case.
+     * Time Complexity - Omega(N) - Best Case.
      *
      * @param      students  The students
      */
