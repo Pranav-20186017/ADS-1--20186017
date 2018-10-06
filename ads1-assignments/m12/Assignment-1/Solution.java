@@ -19,39 +19,6 @@ final class Solution {
      */
     static ArrayList<Student> students = new ArrayList<>();
     /**
-     * main method.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        final int three = 3;
-        final int four = 4;
-        final int five = 5;
-        final int six = 6;
-        Scanner scanner = new Scanner(System.in);
-        int lines = Integer.parseInt(scanner.nextLine());
-        int vacancies = Integer.parseInt(scanner.nextLine());
-        int unres = Integer.parseInt(scanner.nextLine());
-        int bc = Integer.parseInt(scanner.nextLine());
-        int sc = Integer.parseInt(scanner.nextLine());
-        int st = Integer.parseInt(scanner.nextLine());
-        while (scanner.hasNext()) {
-            String[] tokens = scanner.nextLine().split(",");
-            Student s = new Student(tokens[0], tokens[1],
-                tokens[2], tokens[three], tokens[four],
-                tokens[five], tokens[six]);
-            students.add(s);
-        }
-        selectionSort();
-        for (int i = 0; i < students.size(); i++) {
-            System.out.println(students.get(i).name
-                + "," + students.get(i).total
-                + "," + students.get(i).rescat);
-        }
-        System.out.println();
-        meritFill(vacancies, unres, bc, sc, st);
-    }
-    /**
      * fills the seats by merit.
      *
      * @param      vacancies  The vacancies
@@ -169,6 +136,39 @@ final class Solution {
                 students.set(index, temp);
             }
         }
+    }
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
+        Scanner scanner = new Scanner(System.in);
+        int lines = Integer.parseInt(scanner.nextLine());
+        int vacancies = Integer.parseInt(scanner.nextLine());
+        int unres = Integer.parseInt(scanner.nextLine());
+        int bc = Integer.parseInt(scanner.nextLine());
+        int sc = Integer.parseInt(scanner.nextLine());
+        int st = Integer.parseInt(scanner.nextLine());
+        while (scanner.hasNext()) {
+            String[] tokens = scanner.nextLine().split(",");
+            Student s = new Student(tokens[0], tokens[1],
+                tokens[2], tokens[three], tokens[four],
+                tokens[five], tokens[six]);
+            students.add(s);
+        }
+        selectionSort();
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(students.get(i).name
+                + "," + students.get(i).total
+                + "," + students.get(i).rescat);
+        }
+        System.out.println();
+        meritFill(vacancies, unres, bc, sc, st);
     }
 
 }
