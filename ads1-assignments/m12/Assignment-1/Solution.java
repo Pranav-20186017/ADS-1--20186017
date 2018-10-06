@@ -6,7 +6,7 @@ public class Solution {
 	static ArrayList<Student> vaclist = new ArrayList<>();
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int noLines = Integer.parseInt(scan.nextLine());
+		int Lines = Integer.parseInt(scan.nextLine());
 		int vacancies = Integer.parseInt(scan.nextLine());
 		int unres = Integer.parseInt(scan.nextLine());
 		int bc = Integer.parseInt(scan.nextLine());
@@ -25,10 +25,10 @@ public class Solution {
 		}
 		System.out.println();
 
-		fillVacancies(vacancies, unres, bc, sc, st);
+		meritFill(vacancies, unres, bc, sc, st);
 
 	}
-	public static void fillVacancies(int vacancies, int unres, int bc, int sc, int st) {
+	public static void meritFill(int vacancies, int unres, int bc, int sc, int st) {
 		int ucount = 0;
 		int bcount = 0;
 		int ccount = 0;
