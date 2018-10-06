@@ -159,7 +159,12 @@ class Solution {
      * @param      sc     The sc quota seats
      * @param      st     The st quota seats.
      */
-     public static void fillMerit(Studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
+     public static void fillMerit(final Studentinfo[] list, final int vacant, final int unreserved, final int back, final int sec, final int set) {
+        int vac = vacant;
+        int unres = unreserved;
+        int bc = back;
+        int sc = sec;
+        int st = set;
         for (int i = 0; i < list.length && vac > 0; i++) {
             if (unres > 0) {
                 System.out.println(list[i].sname + ","
