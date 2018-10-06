@@ -1,14 +1,24 @@
 import java.util.Scanner;
+/**
+ * Class for insertionsort.
+ */
 class Insertionsort {
-    void exchange(studentinfo[] list, int lo, int hi) {
+    void exchange(final studentinfo[] list, final int lo, final int hi) {
         studentinfo temp = list[lo];
         list[lo] = list[hi];
         list[hi] = temp;
     }
-    boolean less(studentinfo one, studentinfo two) {
+    boolean less(final studentinfo one, final studentinfo two) {
         return one.compareTo(two) == -1;
     }
-    void sort(studentinfo[] students) {
+    /**
+     * sort the elements
+     * Time Complexity - O(N^2) - Average Case and Worst Case
+     * Time Complexity - Omega(N) - Best Case
+     *
+     * @param      students  The students
+     */
+    void sort(final studentinfo[] students) {
         for (int i = 1; i < students.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (less(students[j - 1], students[j])) {
@@ -20,6 +30,9 @@ class Insertionsort {
         }
     }
 }
+/**
+ * Class for studentinfo.
+ */
 class studentinfo implements Comparable<studentinfo> {
     String sname;
     String bday;
@@ -28,6 +41,17 @@ class studentinfo implements Comparable<studentinfo> {
     int m3;
     int totalvals;
     String rescat;
+    /**
+     * Constructs the object.
+     *
+     * @param      name      The name
+     * @param      dob       The dob
+     * @param      sub1      The sub 1
+     * @param      sub2      The sub 2
+     * @param      sub3      The sub 3
+     * @param      total     The total
+     * @param      category  The category
+     */
     studentinfo(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
         this.sname = name;
         this.bday = dob;
