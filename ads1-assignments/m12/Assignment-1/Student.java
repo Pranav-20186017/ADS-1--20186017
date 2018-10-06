@@ -23,20 +23,42 @@ class Student implements Comparable<Student> {
 
 	}
 	public int compareTo(Student other) {
-		if (this.total > other.total) return 1;
-		if (this.total < other.total) return -1;
-		if (this.m3 > other.m3) return 1;
-		if (this.m3 < other.m3) return -1;
-		if (this.m2 > other.m2) return 1;
-		if (this.m2 < other.m2) return -1;
-		if (this.year > other.year) return 1;
-		if (this.year < other.year) return -1;
-		if (this.month > other.month) return 1;
-		if (this.month < other.month) return -1;
-		if (this.day < other.day) return 1;
-		if (this.day > other.day) return -1;
-		
-
+		if (this.total > other.total) {
+			return 1;
+		}
+		if (this.total < other.total) {
+			 return -1;
+		}
+		if (this.m3 > other.m3) {
+			return 1;
+		}
+		if (this.m3 < other.m3) {
+			return -1;
+		}
+		if (this.m2 > other.m2) {
+			return 1;
+		}
+		if (this.m2 < other.m2) {
+			return -1;
+		}
+		if (this.year > other.year) {
+			return 1;
+		}
+		if (this.year < other.year) {
+			return -1;
+		}
+		if (this.month > other.month) {
+			return 1;
+		}
+		if (this.month < other.month) {
+			return -1;
+		}
+		if (this.day < other.day) {
+			return 1;
+		}
+		if (this.day > other.day) {
+			return -1;
+		}
 		return 0;
 	}
 	public int compare(Student other) {
