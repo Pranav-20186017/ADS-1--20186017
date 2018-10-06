@@ -100,22 +100,28 @@ class Studentinfo implements Comparable<Studentinfo> {
         if (this.m2 < other.m2) {
             return -1;
         }
-        if (Integer.parseInt(this.splitDate()[2]) > Integer.parseInt(other.splitDate()[2])) {
+        if (Integer.parseInt(this.splitDate()[2])
+            > Integer.parseInt(other.splitDate()[2])) {
             return 1;
         }
-        if (Integer.parseInt(this.splitDate()[2]) < Integer.parseInt(other.splitDate()[2])) {
+        if (Integer.parseInt(this.splitDate()[2])
+            < Integer.parseInt(other.splitDate()[2])) {
             return -1;
         }
-        if (Integer.parseInt(this.splitDate()[1]) > Integer.parseInt(other.splitDate()[1])) {
+        if (Integer.parseInt(this.splitDate()[1])
+            > Integer.parseInt(other.splitDate()[1])) {
             return 1;
         }
-        if (Integer.parseInt(this.splitDate()[1]) < Integer.parseInt(other.splitDate()[1])) {
+        if (Integer.parseInt(this.splitDate()[1])
+            < Integer.parseInt(other.splitDate()[1])) {
             return -1;
         }
-        if (Integer.parseInt(this.splitDate()[0]) > Integer.parseInt(other.splitDate()[0])) {
+        if (Integer.parseInt(this.splitDate()[0])
+            > Integer.parseInt(other.splitDate()[0])) {
             return 1;
         }
-        if (Integer.parseInt(this.splitDate()[0]) < Integer.parseInt(other.splitDate()[0])) {
+        if (Integer.parseInt(this.splitDate()[0])
+            < Integer.parseInt(other.splitDate()[0])) {
             return -1;
         }
         return 0;
