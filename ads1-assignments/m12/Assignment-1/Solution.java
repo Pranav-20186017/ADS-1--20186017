@@ -1,102 +1,149 @@
 import java.util.Scanner;
-// class Insertionsort() {
-
-// }
-class Student {
-    String sname;
-    String dob;
-    int m1;
-    int m2;
-    int m3;
-    int total;
-    String rescat;
-    String[] date;
-    Student(String name, String age, int marks1, int marks2, int marks3, int sum, String res) {
-        this.sname = name;
-        this.dob = age;
-        this.m1 = marks1;
-        this.m2 = marks2;
-        this.m3 = marks3;
-        this.total = sum;
-        this.rescat = res;
-        this.date = dob.split("-");
+class Insertionsort {
+    void exchange(studentdata[] array, int lo, int hi) {
+        studentdata temp = array[lo];
+        array[lo] = array[hi];
+        array[hi] = temp;
     }
-    public int compareTo(Student other) {
-        if (this.total > other.total) {
+    boolean less(studentdata one, studentdata two) {
+        return one.compareTo(two) == -1;
+    }
+    void sort(studentdata[] students) {
+        for (int i = 1; i < students.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (less(students[j - 1], students[j])) {
+                    exchange(students, j - 1, j);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+}
+class studentdata implements Comparable<studentdata> {
+    String studentname;
+    String birthdate;
+    int sub1marks;
+    int sub2marks;
+    int sub3marks;
+    int totalmarks;
+    String rescategory;
+    studentdata(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
+        this.studentname = name;
+        this.birthdate = dob;
+        this.sub1marks = sub1;
+        this.sub2marks = sub2;
+        this.sub3marks = sub3;
+        this.totalmarks = total;
+        this.rescategory = category;
+    }
+    String[] datesplit() {
+        String[] splitdate = birthdate.split("-");
+        return splitdate;
+    }
+    public int compareTo(studentdata other) {
+        if (this.totalmarks > other.totalmarks) {
             return 1;
         }
-        if (this.total < other.total) {
+        if (this.totalmarks < other.totalmarks) {
             return -1;
         }
-        if (this.m1 > other.m1) {
+        if (this.sub3marks > other.sub3marks) {
             return 1;
         }
-        if (this.m2 > other.m2) {
+        if (this.sub3marks < other.sub3marks) {
+            return -1;
+        }
+        if (this.sub2marks > other.sub2marks) {
             return 1;
         }
-        if (this.m3 > other.m3) {
+        if (this.sub2marks < other.sub2marks) {
+            return -1;
+        }
+        if (Integer.parseInt(this.datesplit()[2]) > Integer.parseInt(other.datesplit()[2])) {
             return 1;
         }
-        if (this.m1 < other.m1) {
+        if (Integer.parseInt(this.datesplit()[2]) < Integer.parseInt(other.datesplit()[2])) {
             return -1;
         }
-        if (this.m2 < other.m2) {
-            return -1;
-        }
-        if (this.m3 < other.m3) {
-            return -1;
-        }
-        if (Integer.parseInt(this.date[2]) > Integer.parseInt(other.date[2])) {
+        if (Integer.parseInt(this.datesplit()[1]) > Integer.parseInt(other.datesplit()[1])) {
             return 1;
         }
-        if (Integer.parseInt(this.date[1]) > Integer.parseInt(other.date[1])) {
+        if (Integer.parseInt(this.datesplit()[1]) < Integer.parseInt(other.datesplit()[1])) {
+            return -1;
+        }
+        if (Integer.parseInt(this.datesplit()[0]) > Integer.parseInt(other.datesplit()[0])) {
             return 1;
         }
-        if (Integer.parseInt(this.date[0]) > Integer.parseInt(other.date[0])) {
-            return -1;
-        }
-         if (Integer.parseInt(this.date[2]) < Integer.parseInt(other.date[2])) {
-            return -1;
-        }
-        if (Integer.parseInt(this.date[1]) < Integer.parseInt(other.date[1])) {
-            return -1;
-        }
-        if (Integer.parseInt(this.date[0]) < Integer.parseInt(other.date[0])) {
+        if (Integer.parseInt(this.datesplit()[0]) < Integer.parseInt(other.datesplit()[0])) {
             return -1;
         }
         return 0;
     }
+
 }
 class Solution {
-    private Solution() {
-
+    Solution() {
+        //unused
     }
-    public static void print() {
-
+    public static void meritfill(studentdata[] array, int vacancy, int open, int bc, int sc, int st) {
+        for (int i = 0; i < array.length && vacancy > 0; i++) {
+            if (open > 0) {
+                System.out.println(array[i].studentname + "," +
+                                   array[i].totalmarks + "," +
+                                   array[i].rescategory);
+                open--;
+            } else if (array[i].rescategory.equals("BC") || array[i].rescategory.equals("SC") || array[i].rescategory.equals("ST")) {
+                if (array[i].rescategory.equals("BC") && bc > 0) {
+                    System.out.println(array[i].studentname + "," +
+                                       array[i].totalmarks + "," +
+                                       array[i].rescategory);
+                    bc--;
+                } else if (array[i].rescategory.equals("SC") && sc > 0) {
+                    System.out.println(array[i].studentname + "," +
+                                       array[i].totalmarks + "," +
+                                       array[i].rescategory);
+                    sc--;
+                } else if (array[i].rescategory.equals("ST") && st > 0) {
+                    System.out.println(array[i].studentname + "," +
+                                       array[i].totalmarks + "," +
+                                       array[i].rescategory);
+                    st--;
+                } else {
+                }
+            }
+        }
+        vacancy--;
+    }
+    public static void print(studentdata[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i].studentname + "," +
+                               array[i].totalmarks + "," +
+                               array[i].rescategory);
+        }
     }
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        while(s.hasNext()) {
-            int num = Integer.parseInt(s.nextLine());
-            // Student[] student = new Student[num];
-            int vac = Integer.parseInt(s.nextLine());
-            int unreserved = Integer.parseInt(s.nextLine());
-            int bcvac = Integer.parseInt(s.nextLine());
-            int scvac = Integer.parseInt(s.nextLine());
-            int stvac = Integer.parseInt(s.nextLine());
-            for (int i = 0 ; i < num; i++) {
-                String line = s.nextLine();
-                String[] tokens = line.split(",");
-                Student student = new Student(tokens[0],tokens[1],
-                Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),
-                Integer.parseInt(tokens[4]),Integer.parseInt(tokens[5]),
-                tokens[6]);
-            }
-            // Insertionsort in = new Insertionsort();
-            // in.sort();
-            print();
-
+        Scanner s =  new Scanner(System.in);
+        int num = Integer.parseInt(s.nextLine());
+        studentdata[] students = new studentdata[num];
+        int vac = Integer.parseInt(s.nextLine());
+        int open = Integer.parseInt(s.nextLine());
+        int bcvac = Integer.parseInt(s.nextLine());
+        int scvac = Integer.parseInt(s.nextLine());
+        int stvac = Integer.parseInt(s.nextLine());
+        for (int i = 0; i < num; i++) {
+            String line = s.nextLine();
+            String[] tokens = line.split(",");
+            studentdata eachstudentdata = new studentdata(tokens[0], tokens[1],
+                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
+                    Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
+            students[i] = eachstudentdata;
         }
-
+        Insertionsort insertion = new Insertionsort();
+        insertion.sort(students);
+        print(students);
+        System.out.println();
+        meritfill(students, vac, open, bcvac, scvac, stvac);
     }
+
 }
