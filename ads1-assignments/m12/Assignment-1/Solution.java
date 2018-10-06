@@ -66,7 +66,9 @@ class Studentinfo implements Comparable<Studentinfo> {
      * @param      total     The total
      * @param      category  The category
      */
-    Studentinfo(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
+    Studentinfo(final String name, final String dob, final int sub1,
+    	final int sub2, final int sub3,
+    	final int total, final String category) {
         this.sname = name;
         this.bday = dob;
         this.m1 = sub1;
