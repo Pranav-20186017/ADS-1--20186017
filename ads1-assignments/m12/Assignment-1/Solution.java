@@ -5,6 +5,12 @@ import java.util.ArrayList;
  */
 final class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
+    /**
      * list for vacancies.
      */
     static ArrayList<Student> vaclist = new ArrayList<>();
