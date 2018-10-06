@@ -14,6 +14,14 @@ class Insertionsort {
         list[lo] = list[hi];
         list[hi] = temp;
     }
+    /**
+     * returns the boolean value for the comparison of two objects.
+     *
+     * @param      one   One
+     * @param      two   Two
+     *
+     * @return     { description_of_the_return_value }
+     */
     boolean less(final Studentinfo one, final Studentinfo two) {
         return one.compareTo(two) == -1;
     }
