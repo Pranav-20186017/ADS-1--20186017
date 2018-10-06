@@ -1,11 +1,16 @@
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.ArrayList;
 /**
  * Class for solution.
  */
 final class Solution {
+    /**
+     * list for vacancies.
+     */
     static ArrayList<Student> vaclist = new ArrayList<>();
+    /**
+     * list for students.
+     */
     static ArrayList<Student> students = new ArrayList<>();
     /**
      * main method.
