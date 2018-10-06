@@ -1,4 +1,7 @@
 import java.util.Scanner;
+// class Insertionsort() {
+
+// }
 class Student {
     String sname;
     String dob;
@@ -68,6 +71,9 @@ class Solution {
     private Solution() {
 
     }
+    public static void print() {
+
+    }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         while(s.hasNext()) {
@@ -86,6 +92,10 @@ class Solution {
                 Integer.parseInt(tokens[4]),Integer.parseInt(tokens[5]),
                 tokens[6]);
             }
+            // Insertionsort in = new Insertionsort();
+            // in.sort();
+            print();
+
         }
 
     }
