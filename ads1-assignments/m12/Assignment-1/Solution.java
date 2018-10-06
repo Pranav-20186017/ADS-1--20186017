@@ -149,6 +149,16 @@ class Solution {
         System.out.println();
         fillMerit(students, vac, unres, bcvac, scvac, stvac);
     }
+    /**
+     * fill the merit list with students.
+     *
+     * @param      list   The list.
+     * @param      vac    The vacancies.
+     * @param      unres  The unreserved seats.
+     * @param      bc     The bc quota seats.
+     * @param      sc     The sc quota seats
+     * @param      st     The st quota seats.
+     */
 	 public static void fillMerit(Studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
         for (int i = 0; i < list.length && vac > 0; i++) {
             if (unres > 0) {
@@ -178,11 +188,16 @@ class Solution {
         }
         vac--;
     }
-	 public static void print(Studentinfo[] list) {
+    /**
+     * print the detials of the students.
+     *
+     * @param      list  The list of student objects
+     */
+	 public static void print(final Studentinfo[] list) {
         for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i].sname + "," +
-                               list[i].totalvals + "," +
-                               list[i].rescat);
+            System.out.println(list[i].sname + ","
+                               + list[i].totalvals + ","
+                               + list[i].rescat);
         }
     }
 
