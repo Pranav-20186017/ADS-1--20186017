@@ -127,6 +127,10 @@ class Solution {
         //unused
     }
     public static void main(String[] args) {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         Scanner s =  new Scanner(System.in);
         int num = Integer.parseInt(s.nextLine());
         Studentinfo[] students = new Studentinfo[num];
@@ -139,8 +143,9 @@ class Solution {
             String line = s.nextLine();
             String[] tokens = line.split(",");
             Studentinfo eachstudentdata = new Studentinfo(tokens[0], tokens[1],
-                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
-                    Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
+                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[three]),
+                    Integer.parseInt(tokens[four]),
+                    Integer.parseInt(tokens[five]), tokens[six]);
             students[i] = eachstudentdata;
         }
         Insertionsort insertion = new Insertionsort();
@@ -160,7 +165,7 @@ class Solution {
      * @param      set     The st quota seats.
      */
      public static void fillMerit(final Studentinfo[] list, final int vacant,
-        final int unreserved, final int back, 
+        final int unreserved, final int back,
         final int sec, final int set) {
         int vac = vacant;
         int unres = unreserved;

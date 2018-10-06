@@ -28,11 +28,6 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:126:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:129:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:129:29: Parameter args should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:142:74: '3' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:45: '4' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:74: '5' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:86: '6' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:163: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:146: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 35 errors.
+Checkstyle ends with 30 errors.
