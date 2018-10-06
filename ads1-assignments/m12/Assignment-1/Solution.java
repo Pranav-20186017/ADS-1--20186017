@@ -133,6 +133,7 @@ final class Solution {
                 }
             }
         }
+
         vac--;
     }
     /**
@@ -147,5 +148,4 @@ final class Solution {
                                + list[i].rescat);
         }
     }
-
 }
