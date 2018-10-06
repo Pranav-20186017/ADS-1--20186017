@@ -31,11 +31,7 @@ tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -79,11 +75,7 @@ Raj,87,BC
 Aditya,80,ST
 priya,72,SC
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -102,11 +94,7 @@ divya,99,Open
 Aditya,80,ST
 priya,76,SC
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -128,11 +116,7 @@ priya,76,SC
 Ajay,76,Open
 Tanya,66,BC
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -181,11 +165,7 @@ Ajay,76,Open
 Amit,76,Open
 Arjun,75,Open
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -236,9 +216,5 @@ rahul,73,Open
 priya,72,SC
 varsha,66,BC
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Ajay,12-06-1993,32,33,11,76,Open"
-	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:71)
+
 ----------------------------------------

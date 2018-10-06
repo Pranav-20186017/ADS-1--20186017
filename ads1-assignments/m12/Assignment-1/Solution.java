@@ -22,6 +22,9 @@ class Student {
         if (this.total > other.total) {
             return 1;
         }
+        if (this.total < other.total) {
+            return -1;
+        }
         if (this.m1 > other.m1) {
             return 1;
         }
@@ -69,12 +72,20 @@ class Solution {
         Scanner s = new Scanner(System.in);
         while(s.hasNext()) {
             int num = Integer.parseInt(s.nextLine());
-            Student[] student = new Student[num];
+            // Student[] student = new Student[num];
             int vac = Integer.parseInt(s.nextLine());
             int unreserved = Integer.parseInt(s.nextLine());
             int bcvac = Integer.parseInt(s.nextLine());
             int scvac = Integer.parseInt(s.nextLine());
             int stvac = Integer.parseInt(s.nextLine());
+            for (int i = 0 ; i < num; i++) {
+                String line = s.nextLine();
+                String[] tokens = line.split(",");
+                Student student = new Student(tokens[0],tokens[1],
+                Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),
+                Integer.parseInt(tokens[4]),Integer.parseInt(tokens[5]),
+                tokens[6]);
+            }
         }
 
     }
