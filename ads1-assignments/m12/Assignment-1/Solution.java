@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * Class for insertionsort.
+ * Class for insertion sort.
  */
 class Insertionsort {
     /**
@@ -9,12 +9,12 @@ class Insertionsort {
      * @param      lo    The lower
      * @param      hi    The higher
      */
-    void exchange(final studentinfo[] list, final int lo, final int hi) {
-        studentinfo temp = list[lo];
+    void exchange(final Studentinfo[] list, final int lo, final int hi) {
+        Studentinfo temp = list[lo];
         list[lo] = list[hi];
         list[hi] = temp;
     }
-    boolean less(final studentinfo one, final studentinfo two) {
+    boolean less(final Studentinfo one, final Studentinfo two) {
         return one.compareTo(two) == -1;
     }
     /**
@@ -24,7 +24,7 @@ class Insertionsort {
      *
      * @param      students  The students
      */
-    void sort(final studentinfo[] students) {
+    void sort(final Studentinfo[] students) {
         for (int i = 1; i < students.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (less(students[j - 1], students[j])) {
@@ -37,9 +37,9 @@ class Insertionsort {
     }
 }
 /**
- * Class for studentinfo.
+ * Class for Studentinfo.
  */
-class studentinfo implements Comparable<studentinfo> {
+class Studentinfo implements Comparable<Studentinfo> {
     String sname;
     String bday;
     int m1;
@@ -58,7 +58,7 @@ class studentinfo implements Comparable<studentinfo> {
      * @param      total     The total
      * @param      category  The category
      */
-    studentinfo(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
+    Studentinfo(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
         this.sname = name;
         this.bday = dob;
         this.m1 = sub1;
@@ -71,7 +71,7 @@ class studentinfo implements Comparable<studentinfo> {
         String[] splitdate = bday.split("-");
         return splitdate;
     }
-    public int compareTo(studentinfo other) {
+    public int compareTo(Studentinfo other) {
         if (this.totalvals > other.totalvals) {
             return 1;
         }
@@ -119,7 +119,7 @@ class Solution {
     public static void main(String[] args) {
         Scanner s =  new Scanner(System.in);
         int num = Integer.parseInt(s.nextLine());
-        studentinfo[] students = new studentinfo[num];
+        Studentinfo[] students = new Studentinfo[num];
         int vac = Integer.parseInt(s.nextLine());
         int unres = Integer.parseInt(s.nextLine());
         int bcvac = Integer.parseInt(s.nextLine());
@@ -128,7 +128,7 @@ class Solution {
         for (int i = 0; i < num; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(",");
-            studentinfo eachstudentdata = new studentinfo(tokens[0], tokens[1],
+            Studentinfo eachstudentdata = new Studentinfo(tokens[0], tokens[1],
                     Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
                     Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
             students[i] = eachstudentdata;
@@ -139,7 +139,7 @@ class Solution {
         System.out.println();
         fillMerit(students, vac, unres, bcvac, scvac, stvac);
     }
-	 public static void fillMerit(studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
+	 public static void fillMerit(Studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
         for (int i = 0; i < list.length && vac > 0; i++) {
             if (unres > 0) {
                 System.out.println(list[i].sname + "," +
@@ -168,7 +168,7 @@ class Solution {
         }
         vac--;
     }
-	 public static void print(studentinfo[] list) {
+	 public static void print(Studentinfo[] list) {
         for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].sname + "," +
                                list[i].totalvals + "," +
