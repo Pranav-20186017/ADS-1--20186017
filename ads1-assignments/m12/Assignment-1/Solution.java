@@ -86,7 +86,30 @@ class Solution {
     Solution() {
         //unused
     }
-    public static void fillMerit(studentdata[] list, int vac, int unres, int bc, int sc, int st) {
+    public static void main(String[] args) {
+        Scanner s =  new Scanner(System.in);
+        int num = Integer.parseInt(s.nextLine());
+        studentdata[] students = new studentdata[num];
+        int vac = Integer.parseInt(s.nextLine());
+        int unres = Integer.parseInt(s.nextLine());
+        int bcvac = Integer.parseInt(s.nextLine());
+        int scvac = Integer.parseInt(s.nextLine());
+        int stvac = Integer.parseInt(s.nextLine());
+        for (int i = 0; i < num; i++) {
+            String line = s.nextLine();
+            String[] tokens = line.split(",");
+            studentdata eachstudentdata = new studentdata(tokens[0], tokens[1],
+                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
+                    Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
+            students[i] = eachstudentdata;
+        }
+        Insertionsort insertion = new Insertionsort();
+        insertion.sort(students);
+        print(students);
+        System.out.println();
+        fillMerit(students, vac, unres, bcvac, scvac, stvac);
+    }
+	 public static void fillMerit(studentdata[] list, int vac, int unres, int bc, int sc, int st) {
         for (int i = 0; i < list.length && vac > 0; i++) {
             if (unres > 0) {
                 System.out.println(list[i].sname + "," +
@@ -115,35 +138,12 @@ class Solution {
         }
         vac--;
     }
-    public static void print(studentdata[] list) {
+	 public static void print(studentdata[] list) {
         for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].sname + "," +
                                list[i].totalvals + "," +
                                list[i].rescat);
         }
-    }
-    public static void main(String[] args) {
-        Scanner s =  new Scanner(System.in);
-        int num = Integer.parseInt(s.nextLine());
-        studentdata[] students = new studentdata[num];
-        int vac = Integer.parseInt(s.nextLine());
-        int unres = Integer.parseInt(s.nextLine());
-        int bcvac = Integer.parseInt(s.nextLine());
-        int scvac = Integer.parseInt(s.nextLine());
-        int stvac = Integer.parseInt(s.nextLine());
-        for (int i = 0; i < num; i++) {
-            String line = s.nextLine();
-            String[] tokens = line.split(",");
-            studentdata eachstudentdata = new studentdata(tokens[0], tokens[1],
-                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
-                    Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
-            students[i] = eachstudentdata;
-        }
-        Insertionsort insertion = new Insertionsort();
-        insertion.sort(students);
-        print(students);
-        System.out.println();
-        fillMerit(students, vac, unres, bcvac, scvac, stvac);
     }
 
 }
