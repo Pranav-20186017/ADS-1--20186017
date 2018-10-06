@@ -5,23 +5,21 @@ public class Solution {
 	static ArrayList<Student> students = new ArrayList<>();
 	static ArrayList<Student> vaclist = new ArrayList<>();
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int Lines = Integer.parseInt(scan.nextLine());
-		int vacancies = Integer.parseInt(scan.nextLine());
-		int unres = Integer.parseInt(scan.nextLine());
-		int bc = Integer.parseInt(scan.nextLine());
-		int sc = Integer.parseInt(scan.nextLine());
-		int st = Integer.parseInt(scan.nextLine());
-
-		while (scan.hasNext()) {
-			String[] tokens = scan.nextLine().split(",");
+		Scanner scanner = new Scanner(System.in);
+		int Lines = Integer.parseInt(scanner.nextLine());
+		int vacancies = Integer.parseInt(scanner.nextLine());
+		int unres = Integer.parseInt(scanner.nextLine());
+		int bc = Integer.parseInt(scanner.nextLine());
+		int sc = Integer.parseInt(scanner.nextLine());
+		int st = Integer.parseInt(scanner.nextLine());
+		while (scanner.hasNext()) {
+			String[] tokens = scanner.nextLine().split(",");
 			Student s = new Student(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6]);
 			students.add(s);
 		}
 		selectionSort();
-
 		for (int i = 0; i < students.size(); i++) {
-			System.out.println(students.get(i).name + "," + students.get(i).tmarks + "," + students.get(i).rc);
+			System.out.println(students.get(i).name + "," + students.get(i).total + "," + students.get(i).rescat);
 		}
 		System.out.println();
 
@@ -43,7 +41,7 @@ public class Solution {
 		}
 		for (int i = 0; i < students.size(); i++) {
 			if(bcount == bc) break;
-			if(students.get(i).rc.equals("BC")) {
+			if(students.get(i).rescat.equals("BC")) {
 				if(!vaclist.contains(students.get(i))) {
 					vaclist.add(students.get(i));
 					bcount++;
@@ -51,31 +49,27 @@ public class Solution {
 				}
 				
 			}
-			
 		}
 		for (int i = 0; i < students.size(); i++) {
 			if(ccount == sc) break;
-			if(students.get(i).rc.equals("SC")) {
+			if(students.get(i).rescat.equals("SC")) {
 				if(!vaclist.contains(students.get(i))) {
 
 					vaclist.add(students.get(i));
 					ccount++;
 					vcount++;
 				}
-			}
-			
+			}	
 		}
-		//add st
 		for (int i = 0; i < students.size(); i++) {
 			if(tcount == st) break;
-			if(students.get(i).rc.equals("ST")) {
+			if(students.get(i).rescat.equals("ST")) {
 				if(!vaclist.contains(students.get(i))) {
 					vaclist.add(students.get(i));
 					tcount++;
 					vcount++;
 				}
 			}
-			
 		}
 		for (int i = 0; i < students.size(); i++) {
 			if(vcount == vacancies) break;
@@ -87,10 +81,8 @@ public class Solution {
 		sortfinal();
 		for (int i = 0; i < vaclist.size(); i++) {
 			if( i == vacancies) break;
-			System.out.println(vaclist.get(i).name + "," + vaclist.get(i).tmarks + "," + vaclist.get(i).rc);
+			System.out.println(vaclist.get(i).name + "," + vaclist.get(i).total + "," + vaclist.get(i).rescat);
 		}
-		
-
 	}
 	public static void sortfinal() {
 		for (int i = vaclist.size() - 1; i >= 0; i--) {
