@@ -1,9 +1,9 @@
 import java.util.Scanner;
 class Insertionsort {
-    void exchange(studentdata[] array, int lo, int hi) {
-        studentdata temp = array[lo];
-        array[lo] = array[hi];
-        array[hi] = temp;
+    void exchange(studentdata[] list, int lo, int hi) {
+        studentdata temp = list[lo];
+        list[lo] = list[hi];
+        list[hi] = temp;
     }
     boolean less(studentdata one, studentdata two) {
         return one.compareTo(two) == -1;
@@ -21,61 +21,61 @@ class Insertionsort {
     }
 }
 class studentdata implements Comparable<studentdata> {
-    String studentname;
-    String birthdate;
-    int sub1marks;
-    int sub2marks;
-    int sub3marks;
-    int totalmarks;
-    String rescategory;
+    String sname;
+    String bday;
+    int m1;
+    int m2;
+    int m3;
+    int totalvals;
+    String rescat;
     studentdata(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
-        this.studentname = name;
-        this.birthdate = dob;
-        this.sub1marks = sub1;
-        this.sub2marks = sub2;
-        this.sub3marks = sub3;
-        this.totalmarks = total;
-        this.rescategory = category;
+        this.sname = name;
+        this.bday = dob;
+        this.m1 = sub1;
+        this.m2 = sub2;
+        this.m3 = sub3;
+        this.totalvals = total;
+        this.rescat = category;
     }
-    String[] datesplit() {
-        String[] splitdate = birthdate.split("-");
+    String[] splitDate() {
+        String[] splitdate = bday.split("-");
         return splitdate;
     }
     public int compareTo(studentdata other) {
-        if (this.totalmarks > other.totalmarks) {
+        if (this.totalvals > other.totalvals) {
             return 1;
         }
-        if (this.totalmarks < other.totalmarks) {
+        if (this.totalvals < other.totalvals) {
             return -1;
         }
-        if (this.sub3marks > other.sub3marks) {
+        if (this.m3 > other.m3) {
             return 1;
         }
-        if (this.sub3marks < other.sub3marks) {
+        if (this.m3 < other.m3) {
             return -1;
         }
-        if (this.sub2marks > other.sub2marks) {
+        if (this.m2 > other.m2) {
             return 1;
         }
-        if (this.sub2marks < other.sub2marks) {
+        if (this.m2 < other.m2) {
             return -1;
         }
-        if (Integer.parseInt(this.datesplit()[2]) > Integer.parseInt(other.datesplit()[2])) {
+        if (Integer.parseInt(this.splitDate()[2]) > Integer.parseInt(other.splitDate()[2])) {
             return 1;
         }
-        if (Integer.parseInt(this.datesplit()[2]) < Integer.parseInt(other.datesplit()[2])) {
+        if (Integer.parseInt(this.splitDate()[2]) < Integer.parseInt(other.splitDate()[2])) {
             return -1;
         }
-        if (Integer.parseInt(this.datesplit()[1]) > Integer.parseInt(other.datesplit()[1])) {
+        if (Integer.parseInt(this.splitDate()[1]) > Integer.parseInt(other.splitDate()[1])) {
             return 1;
         }
-        if (Integer.parseInt(this.datesplit()[1]) < Integer.parseInt(other.datesplit()[1])) {
+        if (Integer.parseInt(this.splitDate()[1]) < Integer.parseInt(other.splitDate()[1])) {
             return -1;
         }
-        if (Integer.parseInt(this.datesplit()[0]) > Integer.parseInt(other.datesplit()[0])) {
+        if (Integer.parseInt(this.splitDate()[0]) > Integer.parseInt(other.splitDate()[0])) {
             return 1;
         }
-        if (Integer.parseInt(this.datesplit()[0]) < Integer.parseInt(other.datesplit()[0])) {
+        if (Integer.parseInt(this.splitDate()[0]) < Integer.parseInt(other.splitDate()[0])) {
             return -1;
         }
         return 0;
@@ -86,40 +86,40 @@ class Solution {
     Solution() {
         //unused
     }
-    public static void meritfill(studentdata[] array, int vacancy, int open, int bc, int sc, int st) {
-        for (int i = 0; i < array.length && vacancy > 0; i++) {
-            if (open > 0) {
-                System.out.println(array[i].studentname + "," +
-                                   array[i].totalmarks + "," +
-                                   array[i].rescategory);
-                open--;
-            } else if (array[i].rescategory.equals("BC") || array[i].rescategory.equals("SC") || array[i].rescategory.equals("ST")) {
-                if (array[i].rescategory.equals("BC") && bc > 0) {
-                    System.out.println(array[i].studentname + "," +
-                                       array[i].totalmarks + "," +
-                                       array[i].rescategory);
+    public static void fillMerit(studentdata[] list, int vac, int unres, int bc, int sc, int st) {
+        for (int i = 0; i < list.length && vac > 0; i++) {
+            if (unres > 0) {
+                System.out.println(list[i].sname + "," +
+                                   list[i].totalvals + "," +
+                                   list[i].rescat);
+                unres--;
+            } else if (list[i].rescat.equals("BC") || list[i].rescat.equals("SC") || list[i].rescat.equals("ST")) {
+                if (list[i].rescat.equals("BC") && bc > 0) {
+                    System.out.println(list[i].sname + "," +
+                                       list[i].totalvals + "," +
+                                       list[i].rescat);
                     bc--;
-                } else if (array[i].rescategory.equals("SC") && sc > 0) {
-                    System.out.println(array[i].studentname + "," +
-                                       array[i].totalmarks + "," +
-                                       array[i].rescategory);
+                } else if (list[i].rescat.equals("SC") && sc > 0) {
+                    System.out.println(list[i].sname + "," +
+                                       list[i].totalvals + "," +
+                                       list[i].rescat);
                     sc--;
-                } else if (array[i].rescategory.equals("ST") && st > 0) {
-                    System.out.println(array[i].studentname + "," +
-                                       array[i].totalmarks + "," +
-                                       array[i].rescategory);
+                } else if (list[i].rescat.equals("ST") && st > 0) {
+                    System.out.println(list[i].sname + "," +
+                                       list[i].totalvals + "," +
+                                       list[i].rescat);
                     st--;
                 } else {
                 }
             }
         }
-        vacancy--;
+        vac--;
     }
-    public static void print(studentdata[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i].studentname + "," +
-                               array[i].totalmarks + "," +
-                               array[i].rescategory);
+    public static void print(studentdata[] list) {
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i].sname + "," +
+                               list[i].totalvals + "," +
+                               list[i].rescat);
         }
     }
     public static void main(String[] args) {
@@ -127,7 +127,7 @@ class Solution {
         int num = Integer.parseInt(s.nextLine());
         studentdata[] students = new studentdata[num];
         int vac = Integer.parseInt(s.nextLine());
-        int open = Integer.parseInt(s.nextLine());
+        int unres = Integer.parseInt(s.nextLine());
         int bcvac = Integer.parseInt(s.nextLine());
         int scvac = Integer.parseInt(s.nextLine());
         int stvac = Integer.parseInt(s.nextLine());
@@ -143,7 +143,7 @@ class Solution {
         insertion.sort(students);
         print(students);
         System.out.println();
-        meritfill(students, vac, open, bcvac, scvac, stvac);
+        fillMerit(students, vac, unres, bcvac, scvac, stvac);
     }
 
 }
