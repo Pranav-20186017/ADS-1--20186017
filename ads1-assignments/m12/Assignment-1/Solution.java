@@ -159,7 +159,9 @@ class Solution {
      * @param      sc     The sc quota seats
      * @param      st     The st quota seats.
      */
-     public static void fillMerit(final Studentinfo[] list, final int vacant, final int unreserved, final int back, final int sec, final int set) {
+     public static void fillMerit(final Studentinfo[] list, final int vacant,
+        final int unreserved, final int back, 
+        final int sec, final int set) {
         int vac = vacant;
         int unres = unreserved;
         int bc = back;
