@@ -1,7 +1,7 @@
 /**
  * Class for Studentinfo.
  */
-class Studentinfo implements Comparable<Studentinfo> {
+public class Studentinfo implements Comparable<Studentinfo> {
     /**
      * name of the student.
      */
