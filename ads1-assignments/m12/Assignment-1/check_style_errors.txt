@@ -33,16 +33,6 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:45: '4' is a magic number. [MagicNumber]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:74: '5' is a magic number. [MagicNumber]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:143:86: '6' is a magic number. [MagicNumber]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:156:8: Unused @param tag for 'vac'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:157:8: Unused @param tag for 'unres'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:158:8: Unused @param tag for 'bc'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:159:8: Unused @param tag for 'sc'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:160:8: Unused @param tag for 'st'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:162:71: Expected @param tag for 'vacant'. [JavadocMethod]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:163: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:163:19: Expected @param tag for 'unreserved'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:163:41: Expected @param tag for 'back'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:164:19: Expected @param tag for 'sec'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Solution.java:164:34: Expected @param tag for 'set'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 45 errors.
+Checkstyle ends with 35 errors.

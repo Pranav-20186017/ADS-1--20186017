@@ -153,11 +153,11 @@ class Solution {
      * fill the merit list with students.
      *
      * @param      list   The list.
-     * @param      vac    The vacancies.
-     * @param      unres  The unreserved seats.
-     * @param      bc     The bc quota seats.
-     * @param      sc     The sc quota seats
-     * @param      st     The st quota seats.
+     * @param      vacant    The vacancies.
+     * @param      unreserved  The unreserved seats.
+     * @param      back     The bc quota seats.
+     * @param      sec     The sc quota seats
+     * @param      set     The st quota seats.
      */
      public static void fillMerit(final Studentinfo[] list, final int vacant,
         final int unreserved, final int back, 
