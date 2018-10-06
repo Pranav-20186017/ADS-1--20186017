@@ -67,8 +67,8 @@ class Studentinfo implements Comparable<Studentinfo> {
      * @param      category  The category
      */
     Studentinfo(final String name, final String dob, final int sub1,
-    	final int sub2, final int sub3,
-    	final int total, final String category) {
+        final int sub2, final int sub3,
+        final int total, final String category) {
         this.sname = name;
         this.bday = dob;
         this.m1 = sub1;
@@ -159,30 +159,31 @@ class Solution {
      * @param      sc     The sc quota seats
      * @param      st     The st quota seats.
      */
-	 public static void fillMerit(Studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
+     public static void fillMerit(Studentinfo[] list, int vac, int unres, int bc, int sc, int st) {
         for (int i = 0; i < list.length && vac > 0; i++) {
             if (unres > 0) {
-                System.out.println(list[i].sname + "," +
-                                   list[i].totalvals + "," +
-                                   list[i].rescat);
+                System.out.println(list[i].sname + ","
+                                   + list[i].totalvals + ","
+                                   + list[i].rescat);
                 unres--;
-            } else if (list[i].rescat.equals("BC") || list[i].rescat.equals("SC") || list[i].rescat.equals("ST")) {
+            } else if (list[i].rescat.equals("BC")
+                || list[i].rescat.equals("SC")
+                || list[i].rescat.equals("ST")) {
                 if (list[i].rescat.equals("BC") && bc > 0) {
-                    System.out.println(list[i].sname + "," +
-                                       list[i].totalvals + "," +
-                                       list[i].rescat);
+                    System.out.println(list[i].sname + ","
+                                       + list[i].totalvals + ","
+                                       + list[i].rescat);
                     bc--;
                 } else if (list[i].rescat.equals("SC") && sc > 0) {
-                    System.out.println(list[i].sname + "," +
-                                       list[i].totalvals + "," +
-                                       list[i].rescat);
+                    System.out.println(list[i].sname + ","
+                                       + list[i].totalvals + ","
+                                       + list[i].rescat);
                     sc--;
                 } else if (list[i].rescat.equals("ST") && st > 0) {
-                    System.out.println(list[i].sname + "," +
-                                       list[i].totalvals + "," +
-                                       list[i].rescat);
+                    System.out.println(list[i].sname + ","
+                                       + list[i].totalvals + ","
+                                       + list[i].rescat);
                     st--;
-                } else {
                 }
             }
         }
@@ -193,7 +194,7 @@ class Solution {
      *
      * @param      list  The list of student objects
      */
-	 public static void print(final Studentinfo[] list) {
+     public static void print(final Studentinfo[] list) {
         for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].sname + ","
                                + list[i].totalvals + ","
