@@ -133,7 +133,6 @@ final class Solution {
                 }
             }
         }
-
         vac--;
     }
     /**
