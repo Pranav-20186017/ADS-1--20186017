@@ -1,18 +1,12 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:5:12: Variable 'sname' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:6:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:6:12: Variable 'bday' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:7:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:7:9: Variable 'm1' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:8:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:8:9: Variable 'm2' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:9:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:9:9: Variable 'm3' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:10:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:10:9: Variable 'totalvals' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:11:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:11:12: Variable 'rescat' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:8:12: Variable 'sname' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:12:12: Variable 'bday' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:16:9: Variable 'm1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:20:9: Variable 'm2' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:24:9: Variable 'm3' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:25: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:28:9: Variable 'totalvals' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m12\Assignment-1\Studentinfo.java:32:12: Variable 'rescat' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 9 errors.

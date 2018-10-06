@@ -2,12 +2,33 @@
  * Class for Studentinfo.
  */
 class Studentinfo implements Comparable<Studentinfo> {
+    /**
+     * name of the student.
+     */
     String sname;
+    /**
+     * date of birth of the student.
+     */
     String bday;
+    /**
+     * marks in subject 1.
+     */
     int m1;
+    /**
+     * marks in subject 2.
+     */
     int m2;
+    /**
+     * marks in subject 3.
+     */
     int m3;
+    /**
+     * total marks;
+     */
     int totalvals;
+    /**
+     * reservation category.
+     */
     String rescat;
     /**
      * Constructs the object.
