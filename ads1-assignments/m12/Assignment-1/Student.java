@@ -1,3 +1,6 @@
+/**
+ * Class for student.
+ */
 class Student implements Comparable<Student> {
 	String name;
 	int m1;
@@ -8,21 +11,31 @@ class Student implements Comparable<Student> {
 	int day;
 	int month;
 	int year;
-
-	Student(String name, String dob, String m1, String m2, String m3, String total, String rescat) {
-		this.name = name;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      name    The name
+	 * @param      dob     The dob
+	 * @param      m1      The m 1
+	 * @param      m2      The m 2
+	 * @param      m3      The m 3
+	 * @param      total   The total
+	 * @param      rescat  The rescat
+	 */
+	Student(String sname, String dob, String mark1, String mark2, String mark3, String totals, String res) {
+		this.name = sname;
 		String[] d = dob.split("-");
 		this.day = Integer.parseInt(d[0]);
 		this.month = Integer.parseInt(d[1]);
 		this.year = Integer.parseInt(d[2]);
-		this.m1 = Integer.parseInt(m1);
-		this.m2 = Integer.parseInt(m2);
-		this.m3 = Integer.parseInt(m3);
-		this.total = Integer.parseInt(total);
-		this.rescat = rescat;
+		this.m1 = Integer.parseInt(mark1);
+		this.m2 = Integer.parseInt(mark2);
+		this.m3 = Integer.parseInt(mark3);
+		this.total = Integer.parseInt(totals);
+		this.rescat = res;
 
 	}
-	public int compareTo(Student other) {
+	public int compareTo(final Student other) {
 		if (this.total > other.total) {
 			return 1;
 		}
@@ -61,14 +74,16 @@ class Student implements Comparable<Student> {
 		}
 		return 0;
 	}
-	public int compare(Student other) {
-		if((this.rescat.equals("SC") || this.rescat.equals("ST") || this.rescat.equals("BC") && other.rescat.equals("Open"))) {
+	public int compare(final Student other) {
+		if((this.rescat.equals("SC") || this.rescat.equals("ST")
+			|| this.rescat.equals("BC") && other.rescat.equals("Open"))) {
 			return 1;
 		}
-		if((other.rescat.equals("SC") || other.rescat.equals("ST") || other.rescat.equals("BC") && this.rescat.equals("Open"))) {
+		if((other.rescat.equals("SC")
+			|| other.rescat.equals("ST") || other.rescat.equals("BC")
+			&& this.rescat.equals("Open"))) {
 			return -1;
 		}
-		
 		return 0;
 	}
 }
