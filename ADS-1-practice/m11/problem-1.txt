@@ -1,0 +1,12 @@
+Trace for quick sort on the data set EASYQUESTION
+
+
+E A S Y Q U E S T I O N
+E A E Y Q U S S T I O N
+E E E Y Q U S S T I O N
+A E E Y Q U S S T I O N
+A E E N Q U S S T I O Y
+A E E I N U S S T Q O Y
+A E E I N O S S T Q U Y
+A E E I N O Q S T S U Y
+A E E I N O Q S S T U Y
