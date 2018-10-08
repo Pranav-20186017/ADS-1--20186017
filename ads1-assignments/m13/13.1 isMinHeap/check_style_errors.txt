@@ -1,9 +1,16 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3:33: Parameter args should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3:7: Name 'minpq' must match pattern '^[A-Z][a-zA-Z0-9]*$'. [TypeName]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:3:12: '<' is preceded with whitespace. [GenericWhitespace]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:4: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:4:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:4:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:4:22: Variable 'list' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:5:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:10: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:10:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:11:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m13\13.1 isMinHeap\Solution.java:11:33: Parameter args should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 13 errors.

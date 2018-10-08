@@ -6,6 +6,7 @@ true
 false
 Your Output: 
 String
+4
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -17,6 +18,7 @@ false
 false
 Your Output: 
 String
+6
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -30,6 +32,7 @@ true
 false
 Your Output: 
 Integer
+8
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -38,6 +41,7 @@ false
 false
 Your Output: 
 Double
+3
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -46,4 +50,5 @@ true
 false
 Your Output: 
 Float
+3
 ----------------------------------------
