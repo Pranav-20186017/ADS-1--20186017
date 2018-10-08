@@ -45,7 +45,16 @@ class MinHeap<Gen extends Comparable<Gen>> {
         return true;
     }
 }
-class Solution {
+/**
+ * class for Solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//unused.
+	}
  public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
