@@ -1,5 +1,10 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for minimum heap.
+ *
+ * @param      <Gen>  Generic type container.
+ */
 class MinHeap<Gen extends Comparable<Gen>> {
     /**
      * Genric array type.
@@ -49,12 +54,12 @@ class MinHeap<Gen extends Comparable<Gen>> {
  * class for Solution.
  */
 final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//unused.
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
  public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
