@@ -28,15 +28,9 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:279:26: Parameter n should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281: Line is longer than 80 characters (found 85). [LineLength]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281:85: '+' should be on a new line. [OperatorWrap]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:26: Parameter n should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:33: Parameter n1 should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:41: Parameter n2 should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:45: Expected @param tag for 'n2'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:49: Parameter n3 should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:293:53: Expected @param tag for 'n3'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:296:12: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:296:23: ';' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:297:15: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:300:22: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:26: Parameter n should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:33: Parameter n1 should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:41: Parameter n2 should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:49: Parameter n3 should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 39 errors.
+Checkstyle ends with 33 errors.

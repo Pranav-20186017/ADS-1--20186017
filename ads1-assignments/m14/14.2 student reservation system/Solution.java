@@ -287,17 +287,19 @@ class HeapSort {
      *
      * @param      n     { parameter_description }
      * @param      n1    The n 1
+     * @param      n2    The n 2
+     * @param      n3    The n 3
      */
     // time complexity of this method is O(N). It iterates through the array to
 // print all the objects in array.
     public void vacancy2(int n, int n1, int n2, int n3) {
         int[] array = new int[n1 + n2 + n3];
         int i = 0;
-        for(int k = n;k < size; k++) {
-            if(students[k].getCategory().equals("BC") && n1 > 0) {
+        for (int k = n; k < size; k++) {
+            if (students[k].getCategory().equals("BC") && n1 > 0) {
                 array[i++] = k;
                 n1--;
-            } else if(students[k].getCategory().equals("SC") && n2 > 0) {
+            } else if (students[k].getCategory().equals("SC") && n2 > 0) {
                 array[i++] = k;
                 n2--;
             } else if (students[k].getCategory().equals("ST") && n3 > 0) {
