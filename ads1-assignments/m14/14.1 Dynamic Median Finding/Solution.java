@@ -1,3 +1,7 @@
+/**
+ * @author : Pranav Surampudi.
+ * Date : 9th October,2018.
+ */
 import java.util.Scanner;
 /**
  * Class for solution.
