@@ -8,11 +8,11 @@ def main():
 		l = len(a)
 		if l % 2 != 0:
 			index = ((l+1) // 2) -1
-			value = float(round(a[index],1))
-			print(value)
+			print(float(a[index]))
 		if l % 2 == 0:
 			i1 = ((l+1) // 2) - 1
 			i2 = ((l+2) // 2) - 1
 			med = (a[i1] + a[i2]) / 2
-			print(float(round(med, 1))
-main()
+			print(float(med))
+if __name__ == "__main__":
+	main()
