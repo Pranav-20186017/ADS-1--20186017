@@ -31,6 +31,6 @@ Solution.py:12:3: C0103: Variable name "i1" doesn't conform to snake_case naming
 Solution.py:13:3: C0103: Variable name "i2" doesn't conform to snake_case naming style (invalid-name)
 Solution.py:4:5: W0612: Unused variable 'i' (unused-variable)
 
----------------------------------------------------------------------
-Your code has been rated at -5.88/10 (previous run: 10.00/10, -15.88)
+--------------------------------------------------------------------
+Your code has been rated at -5.88/10 (previous run: -5.88/10, +0.00)
 
