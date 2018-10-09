@@ -218,7 +218,13 @@ class HeapSort {
             sink(students, 1, n);
         }
     }
-    // time complexity of this method is O(log N). It access the array elements twice
+    /**
+     * time complexity of this method is O(log N).
+     * It access the array elements twice.
+     * @param      students  The students
+     * @param      z         { parameter_description }
+     * @param      n         { parameter_description }
+     */
     public void sink(Student[] students, final int z, final int n) {
         int k = z;
         while (2 * k <= n) {
