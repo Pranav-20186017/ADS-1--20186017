@@ -11,12 +11,9 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:223:18: '*' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:225:45: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:225:46: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:236:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:236:25: Parameter students should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:236:35: 'students' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:236:45: Parameter i should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:236:52: Parameter j should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:247:22: Parameter students should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:247:32: 'students' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:25: Parameter students should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:35: 'students' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:255:22: Parameter students should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:255:32: 'students' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 19 errors.
+Checkstyle ends with 16 errors.

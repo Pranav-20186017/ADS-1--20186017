@@ -232,8 +232,16 @@ class HeapSort {
             k = j;
         }
     }
-    // time complexity of this method is O(1).
-    public boolean less(Student[] students, int i, int j) {
+    /**
+     *  time complexity of this method is O(1)
+     *  returns the comparator value.
+     * @param      students  The students
+     * @param      i         { parameter_description }
+     * @param      j         { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean less(Student[] students, final int i, final int j) {
         return students[i - 1].compareTo(students[ j - 1]) >= 0;
     }
 // time complexity of this method is O(1). It swaps the elements only once.
