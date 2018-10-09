@@ -178,7 +178,7 @@ class HeapSort {
     /**.
      * { var_description }
      */
-    protected int size;
+    private int size;
     /**.
      * Constructs the object.
      */
@@ -209,7 +209,7 @@ class HeapSort {
     // time complexity of this method is O(N log N).
     //It access the array elements twice
     public void sort() {
-        int n = size;
+        int n = size();
         for (int k = n / 2; k >= 1; k--) {
             sink(students, k, n);
         }
@@ -272,7 +272,7 @@ class HeapSort {
     public String toString() {
         // System.out.println("in print");
         String str = "";
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size(); i++) {
             str += students[i].getName() + ","
             + students[i].getTotal()
             + "," + students[i].getCategory() + "\n";
