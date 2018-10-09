@@ -19,9 +19,5 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:233:52: Parameter j should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:22: Parameter students should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:32: 'students' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:42: Parameter j should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:49: Parameter min should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:258:73: '+' should be on a new line. [OperatorWrap]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:270: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 20 errors.

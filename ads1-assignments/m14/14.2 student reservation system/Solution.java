@@ -241,7 +241,7 @@ class HeapSort {
      * @param      j     { parameter_description }
      * @param      min   The minimum
      */
-    public void swap(Student[] students, int j, int min) {
+    public void swap(Student[] students, final int j, final int min) {
         Student temp = students[j - 1];
         students[j - 1] = students[min - 1];
         students[min - 1] = temp;
@@ -255,8 +255,9 @@ class HeapSort {
         // System.out.println("in print");
         String str = "";
         for (int i = 0; i < size; i++) {
-            str += students[i].getName() + "," + students[i].getTotal() +
-             "," + students[i].getCategory() + "\n";
+            str += students[i].getName() + ","
+            + students[i].getTotal()
+            + "," + students[i].getCategory() + "\n";
         }
         return str;
     }
@@ -265,7 +266,7 @@ class HeapSort {
     * checks for an element in a ds and returs a boolean value.
     * @param arr The array
     * @param s   The object s
-    *
+    * @return {returns a boolean value}
     **/
     public boolean contains(final int[] arr, final int s) {
         for (int i : arr) {
