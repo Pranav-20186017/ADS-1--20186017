@@ -167,6 +167,9 @@ class Student {
         }
     }
 }
+/**
+ * Class for heap sort.
+ */
 class HeapSort {
     /**.
      * { var_description }
@@ -185,18 +188,18 @@ class HeapSort {
         this.size = 0;
     }
     /**.
-     * { function_description }
+     * add an element.
      *
      * @param      s     { parameter_description }
      */
     public void add(final Student s) {
         students[size++] = s;
     }
-    /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
+   /**
+    * returns the size of the array.
+    *
+    * @return     { description_of_the_return_value }
+    */
     public int size() {
         return size;
     }
