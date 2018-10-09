@@ -4,6 +4,7 @@ def main():
 	for i in range(n):
 		val = int(input())
 		a.append(val)
+		a.sort()
 		l = len(a)
 		if l % 2 != 0:
 			index =  ((l+1) // 2 ) -1

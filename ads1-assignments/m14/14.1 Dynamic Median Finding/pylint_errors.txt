@@ -7,30 +7,31 @@ Solution.py:6:0: W0312: Found indentation with tabs instead of spaces (mixed-ind
 Solution.py:7:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:8:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:9:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:9:9: C0326: Exactly one space required after assignment
+Solution.py:10:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
+Solution.py:10:9: C0326: Exactly one space required after assignment
 			index =  ((l+1) // 2 ) -1
          ^ (bad-whitespace)
-Solution.py:9:24: C0326: No space allowed before bracket
+Solution.py:10:24: C0326: No space allowed before bracket
 			index =  ((l+1) // 2 ) -1
                         ^ (bad-whitespace)
-Solution.py:10:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:11:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:12:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:13:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:14:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:15:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:17:0: C0304: Final newline missing (missing-final-newline)
-Solution.py:17:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
+Solution.py:16:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
+Solution.py:18:0: C0304: Final newline missing (missing-final-newline)
+Solution.py:18:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:1:0: C0103: Module name "Solution" doesn't conform to snake_case naming style (invalid-name)
 Solution.py:1:0: C0111: Missing module docstring (missing-docstring)
 Solution.py:1:0: C0111: Missing function docstring (missing-docstring)
 Solution.py:2:1: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
 Solution.py:3:1: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:7:2: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:12:3: C0103: Variable name "i1" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:13:3: C0103: Variable name "i2" doesn't conform to snake_case naming style (invalid-name)
+Solution.py:8:2: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
+Solution.py:13:3: C0103: Variable name "i1" doesn't conform to snake_case naming style (invalid-name)
+Solution.py:14:3: C0103: Variable name "i2" doesn't conform to snake_case naming style (invalid-name)
 Solution.py:4:5: W0612: Unused variable 'i' (unused-variable)
 
 --------------------------------------------------------------------
-Your code has been rated at -5.88/10 (previous run: -5.88/10, +0.00)
+Your code has been rated at -5.56/10 (previous run: -5.88/10, +0.33)
 
