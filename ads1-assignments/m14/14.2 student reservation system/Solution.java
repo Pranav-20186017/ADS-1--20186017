@@ -178,7 +178,7 @@ class HeapSort {
     /**.
      * { var_description }
      */
-    int size;
+    protected int size;
     /**.
      * Constructs the object.
      */

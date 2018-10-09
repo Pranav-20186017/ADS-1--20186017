@@ -1,6 +1,6 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:177:15: Variable 'students' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:181:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:181:19: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:228:22: Parameter students should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:228:32: 'students' hides a field. [HiddenField]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:251:25: Parameter students should be final. [FinalParameters]
