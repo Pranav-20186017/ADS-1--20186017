@@ -219,10 +219,11 @@ class HeapSort {
         }
     }
     // time complexity of this method is O(log N). It access the array elements twice
-    public void sink(Student[] students, int k, int n) {
-        while (2*k <= n) {
+    public void sink(Student[] students, final int z, final int n) {
+        int k = z;
+        while (2 * k <= n) {
             int j = 2 * k;
-            if (j < n && less(students, j, j+1))  {
+            if (j < n && less(students, j, j + 1))  {
                 j++;
             }
             if (!less(students, k, j)) {
