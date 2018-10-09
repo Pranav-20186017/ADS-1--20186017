@@ -297,12 +297,10 @@ class HeapSort {
             if(students[k].getCategory().equals("BC") && n1 > 0) {
                 array[i++] = k;
                 n1--;
-            }
-            else if(students[k].getCategory().equals("SC") && n2 > 0) {
+            } else if(students[k].getCategory().equals("SC") && n2 > 0) {
                 array[i++] = k;
                 n2--;
-            }
-            else if(students[k].getCategory().equals("ST") && n3 > 0) {
+            } else if (students[k].getCategory().equals("ST") && n3 > 0) {
                 array[i++] = k;
                 n3--;
             }
@@ -343,6 +341,9 @@ class HeapSort {
        }
     }
 }
+/**
+ * class for Solution.
+ */
 final class Solution {
     /**.
      * Constructs the object.
@@ -372,8 +373,10 @@ final class Solution {
             String line = sc.nextLine();
             String[] tokens = line.split(",");
             Student student = new Student(tokens[0], tokens[1],
-             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[2 + 1]),
-             Integer.parseInt(tokens[2 + 2]), Integer.parseInt(tokens[2 + 2 + 1]),
+             Integer.parseInt(tokens[2]),
+             Integer.parseInt(tokens[2 + 1]),
+             Integer.parseInt(tokens[2 + 2]),
+             Integer.parseInt(tokens[2 + 2 + 1]),
              tokens[2 + 2 + 2]);
             sort.add(student);
         }
