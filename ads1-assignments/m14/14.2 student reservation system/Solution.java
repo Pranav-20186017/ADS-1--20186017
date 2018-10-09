@@ -292,7 +292,12 @@ class HeapSort {
      */
     // time complexity of this method is O(N). It iterates through the array to
 // print all the objects in array.
-    public void vacancy2(int n, int n1, int n2, int n3) {
+    public void vacancy2(final int ni, final int nj,
+        final int nk, final int nl) {
+        int n = ni;
+        int n1 = nj;
+        int n2 = nk;
+        int n3 = nl;
         int[] array = new int[n1 + n2 + n3];
         int i = 0;
         for (int k = n; k < size; k++) {
