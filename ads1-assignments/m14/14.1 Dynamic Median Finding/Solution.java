@@ -31,7 +31,7 @@ final class Solution {
                 maxpq.insert(minpq.delMin());
             }
             if (maxpq.size() - minpq.size() > 1) {
-                minpq.insert(maxpq.delMax());  
+                minpq.insert(maxpq.delMax());
             }
             if (minpq.size() == maxpq.size()) {
                 median = (minpq.min() + maxpq.max()) / 2;

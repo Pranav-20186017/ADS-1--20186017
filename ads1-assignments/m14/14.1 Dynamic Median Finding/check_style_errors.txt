@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:34: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 1 errors.
