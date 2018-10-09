@@ -1,31 +1,20 @@
 ************* Module Solution
-Solution.py:2:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:3:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:4:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:5:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:6:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:7:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
+Solution.py:7:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
 Solution.py:8:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:9:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:10:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:11:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:12:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:13:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:14:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:15:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:16:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-Solution.py:18:0: C0304: Final newline missing (missing-final-newline)
-Solution.py:18:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
 Solution.py:1:0: C0103: Module name "Solution" doesn't conform to snake_case naming style (invalid-name)
 Solution.py:1:0: C0111: Missing module docstring (missing-docstring)
-Solution.py:1:0: C0111: Missing function docstring (missing-docstring)
-Solution.py:2:1: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:3:1: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:8:2: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:13:3: C0103: Variable name "i1" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:14:3: C0103: Variable name "i2" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:4:5: W0612: Unused variable 'i' (unused-variable)
+Solution.py:1:0: C0103: Constant name "n" doesn't conform to UPPER_CASE naming style (invalid-name)
+Solution.py:2:0: C0103: Constant name "ar" doesn't conform to UPPER_CASE naming style (invalid-name)
 
 --------------------------------------------------------------------
-Your code has been rated at -4.44/10 (previous run: -4.44/10, +0.00)
+Your code has been rated at -2.50/10 (previous run: -4.44/10, +1.94)
 
