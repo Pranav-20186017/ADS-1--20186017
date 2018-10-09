@@ -1,0 +1,21 @@
+Suppose that your application will have a huge number of insert operations, but only a few remove the maximum operations. Which priority-queue implementation do you think would be most effective: heap, unordered array, ordered array?
+
+
+Let's look at each of these data structures and the correspoding time complexities of the insert and delete operations
+
+
+Data Structure          insert          Delete
+
+Heap                    O(logN)			O(logN)
+
+Unordered array         O(1)			O(N)
+
+Ordered array			O(N)			O(1)
+
+
+
+Since the number of insert operations is more than that of the delete max operations,
+
+we need an algorithm that has minimum time complexity for the insert operation
+
+and we can clearly observe that the Unordered array is the bset choice for this use-case
