@@ -28,13 +28,5 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:279:26: Parameter n should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281: Line is longer than 80 characters (found 85). [LineLength]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281:85: '+' should be on a new line. [OperatorWrap]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:288:8: Unused @param tag for 'n'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:289:8: Unused @param tag for 'n1'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:290:8: Unused @param tag for 'n2'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:291:8: Unused @param tag for 'n3'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:36: Expected @param tag for 'ni'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:295:50: Expected @param tag for 'nj'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:296:19: Expected @param tag for 'nk'. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:296:33: Expected @param tag for 'nl'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 37 errors.
+Checkstyle ends with 29 errors.

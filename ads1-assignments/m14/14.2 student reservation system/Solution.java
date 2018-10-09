@@ -285,10 +285,10 @@ class HeapSort {
     /**.
      * { function_description }
      *
-     * @param      n     { parameter_description }
-     * @param      n1    The n 1
-     * @param      n2    The n 2
-     * @param      n3    The n 3
+     * @param      ni     { parameter_description }
+     * @param      nj    The n 1
+     * @param      nk    The n 2
+     * @param      nl    The n 3
      */
     // time complexity of this method is O(N). It iterates through the array to
 // print all the objects in array.
