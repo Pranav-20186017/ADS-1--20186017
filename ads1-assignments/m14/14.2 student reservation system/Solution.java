@@ -261,7 +261,13 @@ class HeapSort {
         return str;
     }
     // time complexity of this method is O(N). It iterates through the array to
-    public boolean contains(int[] arr, int s) {
+    /**
+    * checks for an element in a ds and returs a boolean value.
+    * @param arr The array
+    * @param s   The object s
+    *
+    **/
+    public boolean contains(final int[] arr, final int s) {
         for (int i : arr) {
             if (s == i) {
                 return true;
@@ -276,10 +282,11 @@ class HeapSort {
      */
     // time complexity of this method is O(N). It iterates through the array to
 // print all the objects in array.
-    public void vacancy1(int n) {
+    public void vacancy1(final int n) {
         for (int i = 0; i < n; i++) {
-            System.out.println(students[i].getName() + "," + students[i].getTotal() +
-             "," + students[i].getCategory());
+            System.out.println(students[i].getName()
+            + "," + students[i].getTotal()
+            + "," + students[i].getCategory());
         }
     }
     /**.

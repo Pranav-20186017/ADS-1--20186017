@@ -22,11 +22,6 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:42: Parameter j should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:244:49: Parameter min should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:258:73: '+' should be on a new line. [OperatorWrap]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:264:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:264:29: Parameter arr should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:264:40: Parameter s should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:279:26: Parameter n should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:281:85: '+' should be on a new line. [OperatorWrap]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m14\14.2 student reservation system\Solution.java:270: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 29 errors.
+Checkstyle ends with 24 errors.
