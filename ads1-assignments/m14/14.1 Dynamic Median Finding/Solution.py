@@ -15,5 +15,4 @@ def main():
 			i2 = ((l+2) // 2) - 1
 			med = (a[i1] + a[i2]) / 2
 			print(float(round(med, 1))
-if __name__ == "__main__":
-	main()
+main()
