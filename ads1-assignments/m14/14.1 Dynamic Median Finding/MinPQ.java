@@ -1,7 +1,6 @@
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 /**
  *  The {@code MinPQ} class represents a priority queue of generic keys.
  *  It supports the usual <em>insert</em> and <em>delete-the-minimum</em>
@@ -28,7 +27,6 @@ public class MinPQ<Key> implements Iterable<Key> {
     private Key[] pq;                    // store items at indices 1 to n
     private int n;                       // number of items on priority queue
     private Comparator<Key> comparator;  // optional comparator
-
     /**
      * Initializes an empty priority queue with the given initial capacity.
      *
@@ -38,14 +36,12 @@ public class MinPQ<Key> implements Iterable<Key> {
         pq = (Key[]) new Object[initCapacity + 1];
         n = 0;
     }
-
     /**
      * Initializes an empty priority queue.
      */
     public MinPQ() {
         this(1);
     }
-
     /**
      * Initializes an empty priority queue with the given initial capacity,
      * using the given comparator.
@@ -58,7 +54,6 @@ public class MinPQ<Key> implements Iterable<Key> {
         pq = (Key[]) new Object[initCapacity + 1];
         n = 0;
     }
-
     /**
      * Initializes an empty priority queue using the given comparator.
      *
@@ -67,7 +62,6 @@ public class MinPQ<Key> implements Iterable<Key> {
     public MinPQ(Comparator<Key> comparator) {
         this(1, comparator);
     }
-
     /**
      * Initializes a priority queue from the array of keys.
      * <p>
@@ -84,7 +78,6 @@ public class MinPQ<Key> implements Iterable<Key> {
             sink(k);
         assert isMinHeap();
     }
-
     /**
      * Returns true if this priority queue is empty.
      *
@@ -94,7 +87,6 @@ public class MinPQ<Key> implements Iterable<Key> {
     public boolean isEmpty() {
         return n == 0;
     }
-
     /**
      * Returns the number of keys on this priority queue.
      *
@@ -103,7 +95,6 @@ public class MinPQ<Key> implements Iterable<Key> {
     public int size() {
         return n;
     }
-
     /**
      * Returns a smallest key on this priority queue.
      *
@@ -114,7 +105,6 @@ public class MinPQ<Key> implements Iterable<Key> {
         if (isEmpty()) throw new NoSuchElementException("Priority queue underflow");
         return pq[1];
     }
-
     // helper function to double the size of the heap array
     private void resize(int capacity) {
         assert capacity > n;
@@ -124,7 +114,6 @@ public class MinPQ<Key> implements Iterable<Key> {
         }
         pq = temp;
     }
-
     /**
      * Adds a new key to this priority queue.
      *
@@ -133,13 +122,11 @@ public class MinPQ<Key> implements Iterable<Key> {
     public void insert(Key x) {
         // double size of array if necessary
         if (n == pq.length - 1) resize(2 * pq.length);
-
         // add x, and percolate it up to maintain heap invariant
         pq[++n] = x;
         swim(n);
         assert isMinHeap();
     }
-
     /**
      * Removes and returns a smallest key on this priority queue.
      *
@@ -156,19 +143,15 @@ public class MinPQ<Key> implements Iterable<Key> {
         assert isMinHeap();
         return min;
     }
-
-
    /***************************************************************************
     * Helper functions to restore the heap invariant.
     ***************************************************************************/
-
     private void swim(int k) {
         while (k > 1 && greater(k/2, k)) {
             exch(k, k/2);
             k = k/2;
         }
     }
-
     private void sink(int k) {
         while (2*k <= n) {
             int j = 2*k;
@@ -178,7 +161,6 @@ public class MinPQ<Key> implements Iterable<Key> {
             k = j;
         }
     }
-
    /***************************************************************************
     * Helper functions for compares and swaps.
     ***************************************************************************/
@@ -190,18 +172,15 @@ public class MinPQ<Key> implements Iterable<Key> {
             return comparator.compare(pq[i], pq[j]) > 0;
         }
     }
-
     private void exch(int i, int j) {
         Key swap = pq[i];
         pq[i] = pq[j];
         pq[j] = swap;
     }
-
     // is pq[1..N] a min heap?
     private boolean isMinHeap() {
         return isMinHeap(1);
     }
-
     // is subtree of pq[1..n] rooted at k a min heap?
     private boolean isMinHeap(int k) {
         if (k > n) return true;
@@ -211,8 +190,6 @@ public class MinPQ<Key> implements Iterable<Key> {
         if (right <= n && greater(k, right)) return false;
         return isMinHeap(left) && isMinHeap(right);
     }
-
-
     /**
      * Returns an iterator that iterates over the keys on this priority queue
      * in ascending order.
@@ -224,11 +201,9 @@ public class MinPQ<Key> implements Iterable<Key> {
     public Iterator<Key> iterator() {
         return new HeapIterator();
     }
-
     private class HeapIterator implements Iterator<Key> {
         // create a new pq
         private MinPQ<Key> copy;
-
         // add all items to copy of heap
         // takes linear time since already in heap order so no keys move
         public HeapIterator() {
@@ -237,16 +212,13 @@ public class MinPQ<Key> implements Iterable<Key> {
             for (int i = 1; i <= n; i++)
                 copy.insert(pq[i]);
         }
-
         public boolean hasNext()  { return !copy.isEmpty();                     }
         public void remove()      { throw new UnsupportedOperationException();  }
-
         public Key next() {
             if (!hasNext()) throw new NoSuchElementException();
             return copy.delMin();
         }
     }
-
     /**
      * Unit tests the {@code MinPQ} data type.
      *
@@ -263,4 +235,3 @@ public class MinPQ<Key> implements Iterable<Key> {
     // }
 
 }
-
