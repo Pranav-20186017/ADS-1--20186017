@@ -1,0 +1,14 @@
+Question:
+Which of the symbol-table implementations in this section would you use for an application that does 10^6 put() operations and 10^3 get() operations, randomly intermixed?
+
+Answer:
+	Using Symbol Table implementation using Binary Search Tree because it is simply faster ergo has less time complexity.
+In Linked List:
+	Complexity for put() : O(N)
+	Complexity for get() : O(N)
+
+In Binary Search Tree:
+	Complexity for put() : O(logN)
+	Complexity for get() : O(logN)
+
+For larger operations like 10^6 and 10^3 it would be efficient of using Binary Search Tree to implement Symbol Table.
