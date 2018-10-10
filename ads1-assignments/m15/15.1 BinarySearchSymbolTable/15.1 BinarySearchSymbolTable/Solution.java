@@ -18,13 +18,13 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      * size of the ds.
      */
     private int size = 0;
-    
     /**.
      * Constructs the object.
      */
     public BinarySearchST() {
-        keys = (Key[]) new Comparable[20];
-        vals = (Value[]) new Object[20];
+        final int twenty = 20;
+        keys = (Key[]) new Comparable[twenty];
+        vals = (Value[]) new Object[twenty];
     }
 
     /**.
