@@ -1,13 +1,8 @@
 Starting audit...
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:24:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:48: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:117: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:165: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:173: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:189: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:207:29: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:207:30: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:190: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:208:29: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:208:30: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:209:29: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m15\15.1 BinarySearchSymbolTable\15.1 BinarySearchSymbolTable\Solution.java:209:30: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 5 errors.

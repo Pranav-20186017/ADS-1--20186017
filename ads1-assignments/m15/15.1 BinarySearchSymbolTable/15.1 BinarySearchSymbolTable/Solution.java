@@ -21,7 +21,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     /**.
      * Constructs the object.
      */
-    public BinarySearchST() {
+    BinarySearchST() {
         final int twenty = 20;
         keys = (Key[]) new Comparable[twenty];
         vals = (Value[]) new Object[twenty];
@@ -45,7 +45,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         int i = rank(k);
         if (i < size && keys[i].compareTo(k) == 0) {
             vals[i] = v;
-            return; 
+            return;
         }
         for (int j = size; j > i; j--) {
             keys[j] = keys[j - 1];
@@ -114,7 +114,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (isEmpty()) {
             return null;
         }
-        int i = rank(key); 
+        int i = rank(key);
         if (i < size && keys[i].compareTo(key) == 0) {
             return vals[i];
         }
@@ -162,15 +162,16 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         } else {
             return keys[i - 1];
         }
-    } 
-
+    }
     /**.
      * deletes the mininum element in a BST.
      * Time complexity : O(logn)
      */
     public void deleteMin() {
         if (isEmpty()) {
-            System.out.println("No elements are available in the Symbol table to perform deletion");
+            String str = "No elements are available in the Symbol table";
+            String str1 = " to perform deletion";
+            System.out.println(str + str1);
         }
         delete(min());
     }
