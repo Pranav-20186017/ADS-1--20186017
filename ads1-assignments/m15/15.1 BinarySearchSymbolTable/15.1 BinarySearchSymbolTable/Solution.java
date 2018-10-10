@@ -187,7 +187,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (isEmpty()) {
             System.out.println("empty symbol table");
         }
-        return keys[0]; 
+        return keys[0];
     }
 
     /**.
@@ -205,8 +205,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
             return;
         }
         for (int j = i; j < size - 1; j++)  {
-            keys[j] = keys[j+1];
-            vals[j] = vals[j+1];
+            keys[j] = keys[j + 1];
+            vals[j] = vals[j + 1];
         }
         size--;
         keys[size] = null;
