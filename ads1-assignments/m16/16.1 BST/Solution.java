@@ -110,9 +110,9 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
  * @param      <Value>  The value
  */
 class BookList<Key extends Comparable<Key>,Value> {
-    String name;
-    String author;
-    Float cost;
+    private String name;
+    private String author;
+    private Float cost;
     /**
      * Constructs the object.
      *
@@ -139,7 +139,7 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @param      namestr  The name
      */
-    public void setName(String namestr) {
+    public void setName(final String namestr) {
         this.name = namestr;
     }
     /**
