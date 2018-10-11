@@ -117,14 +117,14 @@ class BookList<Key extends Comparable<Key>,Value> {
     /**
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      author  The author
-     * @param      cost    The cost
+     * @param      namestr    The name
+     * @param      authorname  The author
+     * @param      costval    The cost
      */
-    BookList(String name, String author, Float cost) {
-        this.name = name;
-        this.author = author;
-        this.cost = cost;
+    BookList(String namestr, String authorname, Float costval) {
+        this.name = namestr;
+        this.author = authorname;
+        this.cost = costval;
     }
     /**
      * Gets the name.
@@ -139,8 +139,8 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @param      name  The name
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String namestr) {
+        this.name = namestr;
     }
     /**
      * Gets the author.
@@ -155,8 +155,8 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @param      author  The author
      */
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthor(final String authorname) {
+        this.author = authorname;
     }
     /**
      * Gets the cost.
@@ -169,9 +169,9 @@ class BookList<Key extends Comparable<Key>,Value> {
     /**
      * Sets the cost.
      *
-     * @param      cost  The cost
+     * @param      costvalue  The cost
      */
-    public void setCost(float costvalue) {
+    public void setCost(final float costvalue) {
         this.cost = costvalue;
     }
     /**
