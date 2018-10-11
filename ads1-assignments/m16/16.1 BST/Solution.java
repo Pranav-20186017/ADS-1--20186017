@@ -1,24 +1,48 @@
 import java.util.Scanner;
-class BinarySearchTree<Key extends Comparable<Key>,Value> {
+/**
+ * Class for binary search tree.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
+class BinarySearchTree<Key extends Comparable<Key>, Value> {
     private Node root;
     private int size;
-
+    /**
+     * Class for node.
+     */
     private class Node {
         private BookList key;
         private Value val;
         private Node left, right;
-
+        /**
+         * Constructs the object.
+         */
         public Node () {
+            //unused.
         }
     }
-
-    public void put(BookList key, Value val) {
+    /**
+     * puts the element onto the BST.
+     *
+     * @param      key   The key
+     * @param      val   The value
+     */
+    public void put(final BookList key, final Value val) {
         if (key == null) {
             System.out.println("key is null");
         }
         root = put(root, key, val);
     }
-
+    /**
+     * puts the element on to the BST.
+     *
+     * @param      head  The head
+     * @param      key   The key
+     * @param      val   The value
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node put(Node head, BookList key, Value val) {
         if (head == null) {
             Node node = new Node();
@@ -38,11 +62,24 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         }
         return head;
     }
-
+    /**
+     * fetches the value associated with the key.
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Value get(BookList key) {
         return get(root, key);
     }
-
+    /**
+     * fetches the value associated with the key.
+     *
+     * @param      root  The root
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Value get(Node root, BookList key) {
         if (key == null) {
             System.out.println("key is null");
@@ -61,41 +98,83 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         }
     }
 }
+/**
+ * List of books.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class BookList<Key extends Comparable<Key>,Value> {
     String name;
     String author;
     Float cost;
-
+    /**
+     * Constructs the object.
+     *
+     * @param      name    The name
+     * @param      author  The author
+     * @param      cost    The cost
+     */
     BookList(String name, String author, Float cost) {
         this.name = name;
         this.author = author;
         this.cost = cost;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.name;
     }
-
+    /**
+     * Sets the name.
+     *
+     * @param      name  The name
+     */
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
+     * Gets the author.
+     *
+     * @return     The author.
+     */
     public String getAuthor() {
         return this.author;
     }
-
+    /**
+     * Sets the author.
+     *
+     * @param      author  The author
+     */
     public void setAuthor(String author) {
         this.author = author;
     }
-
+    /**
+     * Gets the cost.
+     *
+     * @return     The cost.
+     */
     public float getCost() {
         return this.cost;
     }
-
+    /**
+     * Sets the cost.
+     *
+     * @param      cost  The cost
+     */
     public void setCost(float cost) {
         this.cost = cost;
     }
-
+    /**
+     * compares two objects.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int compareTo(BookList that) {
         if (this.getName().compareTo(that.getName()) > 0) {
             return 1;
