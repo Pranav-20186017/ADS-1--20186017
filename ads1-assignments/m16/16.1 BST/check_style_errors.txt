@@ -13,7 +13,7 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:89:28: 'root' hides a field. [HiddenField]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:89:34: Parameter key should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:93: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:102:15: 'else' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:102:15: 'else' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:102:15: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:113:44: ',' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:114:5: Missing a Javadoc comment. [JavadocVariable]
@@ -32,8 +32,9 @@ Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:142:32: 'name' hides a field. [HiddenField]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:158:27: Parameter author should be final. [FinalParameters]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:158:34: 'author' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:174:25: Parameter cost should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:174:31: 'cost' hides a field. [HiddenField]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:184:26: Parameter that should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:172:8: Unused @param tag for 'cost'. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:174:25: Parameter cost_value should be final. [FinalParameters]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:174:31: Expected @param tag for 'cost_value'. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:174:31: Name 'cost_value' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
 Audit done.
-Checkstyle ends with 36 errors.
+Checkstyle ends with 37 errors.

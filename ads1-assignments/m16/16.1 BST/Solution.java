@@ -171,8 +171,8 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @param      cost  The cost
      */
-    public void setCost(float cost) {
-        this.cost = cost;
+    public void setCost(float cost_value) {
+        this.cost = cost_value;
     }
     /**
      * compares two objects.
@@ -181,7 +181,7 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo(BookList that) {
+    public int compareTo(final BookList that) {
         if (this.getName().compareTo(that.getName()) > 0) {
             return 1;
         } else if (this.getName().compareTo(that.getName()) < 0) {
