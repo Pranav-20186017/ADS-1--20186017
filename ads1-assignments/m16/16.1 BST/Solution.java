@@ -90,7 +90,6 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         if (key == null) {
             System.out.println("key is null");
         }
-        
         if (root == null) {
             return null;
         }
@@ -121,7 +120,8 @@ class BookList<Key extends Comparable<Key>,Value> {
      * @param      authorname  The author
      * @param      costval    The cost
      */
-    BookList(String namestr, String authorname, Float costval) {
+    BookList(final String namestr,
+    	final String authorname, final Float costval) {
         this.name = namestr;
         this.author = authorname;
         this.cost = costval;
@@ -137,7 +137,7 @@ class BookList<Key extends Comparable<Key>,Value> {
     /**
      * Sets the name.
      *
-     * @param      name  The name
+     * @param      namestr  The name
      */
     public void setName(String namestr) {
         this.name = namestr;
@@ -153,7 +153,7 @@ class BookList<Key extends Comparable<Key>,Value> {
     /**
      * Sets the author.
      *
-     * @param      author  The author
+     * @param      authorname  The author
      */
     public void setAuthor(final String authorname) {
         this.author = authorname;
