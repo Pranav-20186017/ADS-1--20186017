@@ -1,6 +1,6 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:69:36: Inner assignments should be avoided. [InnerAssignment]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:101:34: 'root' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:102:14: 'root' hides a field. [HiddenField]
 Audit done.
 Checkstyle ends with 3 errors.

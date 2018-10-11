@@ -93,12 +93,13 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * fetches the value associated with the key.
      *
-     * @param      root  The root
+     * @param      roots  The root
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      */
-    private Value get(final Node root, final BookList key) {
+    private Value get(final Node roots, final BookList key) {
+        Node root = roots;
         if (key == null) {
             System.out.println("key is null");
         }
