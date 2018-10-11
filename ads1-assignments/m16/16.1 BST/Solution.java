@@ -86,7 +86,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Value get(Node root, BookList key) {
+    private Value get(final Node root, final BookList key) {
         if (key == null) {
             System.out.println("key is null");
         }
@@ -98,7 +98,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
             return get(root.left, key);
         } else if (compare > 0) {
             return get(root.right, key);
-        } else{
+        } else {
             return root.val;
         }
     }
@@ -109,9 +109,18 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-class BookList<Key extends Comparable<Key>,Value> {
+class BookList<Key extends Comparable<Key>, Value> {
+	/**
+	 * name of the book.
+	 */
     private String name;
+    /**
+     * name of the author.
+     */
     private String author;
+    /**
+     * cost of the book.
+     */
     private Float cost;
     /**
      * Constructs the object.
