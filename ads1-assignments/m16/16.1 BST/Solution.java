@@ -75,7 +75,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
-    public Value get(BookList key) {
+    public Value get(final BookList key) {
         return get(root, key);
     }
     /**
