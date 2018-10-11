@@ -52,13 +52,16 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * puts the element on to the BST.
      *
-     * @param      head  The head
-     * @param      key   The key
-     * @param      val   The value
+     * @param      heads  The head
+     * @param      keys   The key
+     * @param      vals   The value
      *
      * @return     { description_of_the_return_value }
      */
-    public Node put(Node head, BookList key, Value val) {
+    public Node put(final Node heads, final BookList keys, final Value vals) {
+        Node head = heads;
+        BookList key = keys;
+        Value val = vals;
         if (head == null) {
             Node node = new Node();
             node.key = key;

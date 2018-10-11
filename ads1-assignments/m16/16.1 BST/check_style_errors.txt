@@ -1,9 +1,6 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:61:21: Parameter head should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:61:32: Parameter key should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:61:46: Parameter val should be final. [FinalParameters]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:66:36: Inner assignments should be avoided. [InnerAssignment]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:98:34: 'root' hides a field. [HiddenField]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:69:36: Inner assignments should be avoided. [InnerAssignment]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m16\16.1 BST\Solution.java:101:34: 'root' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 3 errors.
