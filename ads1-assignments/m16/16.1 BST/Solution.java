@@ -6,7 +6,13 @@ import java.util.Scanner;
  * @param      <Value>  The value
  */
 class BinarySearchTree<Key extends Comparable<Key>, Value> {
+	/**
+	 * root of the BST.
+	 */
     private Node root;
+    /**
+     * size of the DS.
+     */
     private int size;
     /**
      * Class for node.
@@ -18,7 +24,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         /**
          * Constructs the object.
          */
-        public Node () {
+        Node() {
             //unused.
         }
     }
