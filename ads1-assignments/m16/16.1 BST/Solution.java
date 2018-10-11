@@ -171,8 +171,8 @@ class BookList<Key extends Comparable<Key>,Value> {
      *
      * @param      cost  The cost
      */
-    public void setCost(float cost_value) {
-        this.cost = cost_value;
+    public void setCost(float costvalue) {
+        this.cost = costvalue;
     }
     /**
      * compares two objects.
