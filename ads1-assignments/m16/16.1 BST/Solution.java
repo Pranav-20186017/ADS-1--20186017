@@ -6,9 +6,9 @@ import java.util.Scanner;
  * @param      <Value>  The value
  */
 class BinarySearchTree<Key extends Comparable<Key>, Value> {
-	/**
-	 * root of the BST.
-	 */
+    /**
+     * root of the BST.
+     */
     private Node root;
     /**
      * size of the DS.
@@ -18,8 +18,17 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * Class for node.
      */
     private class Node {
+        /**
+         * key for booklist.
+         */
         private BookList key;
+        /**
+         * value for booklist.
+         */
         private Value val;
+        /**
+         * pointers for left and right nodes.
+         */
         private Node left, right;
         /**
          * Constructs the object.
@@ -110,9 +119,9 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
  * @param      <Value>  The value
  */
 class BookList<Key extends Comparable<Key>, Value> {
-	/**
-	 * name of the book.
-	 */
+    /**
+     * name of the book.
+     */
     private String name;
     /**
      * name of the author.
@@ -130,7 +139,7 @@ class BookList<Key extends Comparable<Key>, Value> {
      * @param      costval    The cost
      */
     BookList(final String namestr,
-    	final String authorname, final Float costval) {
+        final String authorname, final Float costval) {
         this.name = namestr;
         this.author = authorname;
         this.cost = costval;
