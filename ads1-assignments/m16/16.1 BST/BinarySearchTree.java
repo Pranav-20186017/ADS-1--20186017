@@ -38,7 +38,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**
      * puts the element onto the BST.
-     *
+     * 
      * @param      key   The key
      * @param      val   The value
      */
@@ -50,7 +50,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**
      * puts the element on to the BST.
-     *
+     * Time Complexity : O(logN)
      * @param      heads  The head
      * @param      keys   The key
      * @param      vals   The value
@@ -81,7 +81,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**
      * fetches the value associated with the key.
-     *
+     * Time Complexity : O(logN)
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
@@ -91,7 +91,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**
      * fetches the value associated with the key.
-     *
+     * Time Complexity : O(logN)
      * @param      roots  The root
      * @param      key   The key
      *
