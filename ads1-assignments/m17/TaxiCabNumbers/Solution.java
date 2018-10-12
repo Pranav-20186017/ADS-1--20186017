@@ -84,25 +84,25 @@ final class Solution {
                 pq.insert(new Taxicab(i, i));
             }
             int pair = 1;
-            Taxicab prev = new Taxicab(0, 0);
+            Taxicab previous = new Taxicab(0, 0);
             int pairCount = 0;
             while (!pq.isEmpty()) {
-                Taxicab curr = pq.delMin();
-                if (prev.getSum() == curr.getSum()) {
+                Taxicab current = pq.delMin();
+                if (previous.getSum() == current.getSum()) {
                     pair++;
                     if (pair == b) {
                         pairCount = pairCount + 1;
                     }
                     if (pairCount == a) {
-                        System.out.println(prev.getSum());
+                        System.out.println(previous.getSum());
                         break;
                     }
                 } else {
                     pair = 1;
                 }
-                prev = curr;
-                if (curr.getj() < n) {
-                    pq.insert(new Taxicab(curr.geti(), curr.getj() + 1));
+                previous = current;
+                if (current.getj() < n) {
+                    pq.insert(new Taxicab(current.geti(), current.getj() + 1));
                 }
             }
         }
