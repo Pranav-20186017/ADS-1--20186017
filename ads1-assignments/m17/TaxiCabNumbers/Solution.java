@@ -58,7 +58,7 @@ class Taxicab implements Comparable<Taxicab> {
             return -1;
         } else if (this.sum > that.sum) {
             return 1;
-        } 
+        }
         return 0;
     }
 }
