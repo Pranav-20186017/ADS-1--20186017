@@ -1,57 +1,107 @@
-import java.util.*;
-class CubeSum implements Comparable<CubeSum> {
-    long sum;
-    long i;
-    long j;
-
-    public CubeSum(long lb, long ub) {
-        this.sum = (lb * lb * lb) + (ub * ub * ub);
-        this.i = lb;
-        this.j = ub;
+import java.util.Scanner;
+class Taxicab implements Comparable<Taxicab> {
+    /**
+     * { variables i & j }.
+     */
+    private int i, j;
+    /**
+     * { variable for sum }.
+     */
+    private long sum;
+    /**
+     * { gets i }.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int geti() {
+        return i;
     }
-    public int compareTo(CubeSum that) {
-        if (this.sum < that.sum) return -1;
-        if (this.sum > that.sum) return +1;
+    /**
+     * { gets j }.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int getj() {
+        return j;
+    }
+    /**
+     * { Gets the sum }.
+     *
+     * @return     The sum.
+     */
+    long getSum() {
+        return sum;
+    }
+    /**
+     * Constructs the object.
+     *
+     * @param      i1     { parameter_description }
+     * @param      j1     { parameter_description }
+     */
+    Taxicab(final int i1, final int j1) {
+        this.sum = (long) i1 * i1 * i1 + (long) j1 * j1 * j1;
+        this.i = i1;
+        this.j = j1;
+    }
+    /**
+     * { compares the sum value and returns the greatest }.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int compareTo(final Taxicab that) {
+        if (this.sum < that.sum) {
+            return -1;
+        } else if (this.sum > that.sum) {
+            return 1;
+        } 
         return 0;
     }
-    public long sum() {
-    	return sum;
-    }
 }
-
-class Solution {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int m = sc.nextInt();
-		MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 1; i <= 1000; i++) {
-            pq.insert(new CubeSum(i, i));
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
+    /**
+     * Main Function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int n = 1000;
+        while (sc.hasNextLine()) {
+            String[] input = sc.nextLine().split(" ");
+            int a = Integer.parseInt(input[0]);
+            int b = Integer.parseInt(input[1]);
+            MinPQ<Taxicab> pq = new MinPQ<Taxicab>();
+            for (int i = 1; i <= n; i++) {
+                pq.insert(new Taxicab(i, i));
+            }
+            int pair = 1;
+            Taxicab prev = new Taxicab(0, 0);
+            int pairCount = 0;
+            while (!pq.isEmpty()) {
+                Taxicab curr = pq.delMin();
+                if (prev.getSum() == curr.getSum()) {
+                    pair++;
+                    if (pair == b) {
+                        pairCount = pairCount + 1;
+                    }
+                    if (pairCount == a) {
+                        System.out.println(prev.getSum());
+                        break;
+                    }
+                } else {
+                    pair = 1;
+                }
+                prev = curr;
+                if (curr.getj() < n) {
+                    pq.insert(new Taxicab(curr.geti(), curr.getj() + 1));
+                }
+            }
         }
-        CubeSum prev = new CubeSum(0, 0);
-        long sum = 0;
-        int p = 1;
-        int k = 0;
-    	while (!pq.isEmpty()) {
-    		CubeSum c = pq.delMin();
-        	if (prev.sum() == c.sum()) {
-        		p++;
-        		if (p == m)
-    			{
-    				sum = c.sum();
-    				if (++k == n) {
-    					break;
-    				}
-	        	}
-        	}
-        	else {
-        		p = 1;
-        	}
-        	prev = c;
-        	if (c.j < 1500) {
-            	pq.insert(new CubeSum(c.i, c.j + 1));
-        	}
-        }
-        System.out.println(sum);
-	}
+    }
 }
