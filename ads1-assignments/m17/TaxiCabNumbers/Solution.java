@@ -4,6 +4,7 @@ class CubeSum implements Comparable<CubeSum> {
     long i;
     long j;
     public CubeSum(long lb, long ub) {
+        this.sum = lb * lb * lb + ub * ub * ub;
         this.i = lb;
         this.j = lb;
     }
