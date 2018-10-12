@@ -62,6 +62,9 @@ class Taxicab implements Comparable<Taxicab> {
         return 0;
     }
 }
+/**
+ * Class for solution.
+ */
 final class Solution {
     /**
      * Constructs the object.
