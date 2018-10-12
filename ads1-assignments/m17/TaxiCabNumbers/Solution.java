@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for taxicab.
+ */
 class Taxicab implements Comparable<Taxicab> {
     /**
      * { variables i & j }.
