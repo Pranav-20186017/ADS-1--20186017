@@ -1,78 +1,8 @@
 import java.util.Scanner;
-import java.util.Arrays;
-/**
- * Class for stock.
- */
-class Stock implements Comparable<Stock> {
-    /**
-     * name of the stock.
-     */
-    private String ticker;
-    /**
-     * change in stock value.
-     */
-    private float change;
-    /**
-     * Constructs the object.
-     *
-     * @param      name     The name of the stock.
-     * @param      percent  The percent change.
-     */
-    Stock(final String name, final float percent) {
-        this.ticker = name;
-        this.change = percent;
-    }
-    /**
-     * Gets the name of the stock.
-     *
-     * @return     The name.
-     */
-    public String getName() {
-        return this.ticker;
-    }
-    /**
-     * Gets the change in stock value.
-     *
-     * @return     The change.
-     */
-    public float getChange() {
-        return this.change;
-    }
-    /**
-     * compares two objects.
-     *
-     * @param      other  The other
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int compareTo(final Stock other) {
-        if (this.change > other.change) {
-            return 1;
-        }
-        if (this.change < other.change) {
-            return -1;
-        }
-        if (this.ticker.compareTo(other.ticker) > 0) {
-            return 1;
-        }
-        if (this.ticker.compareTo(other.ticker) < 0) {
-            return -1;
-        }
-        return 0;
-    }
-    /**
-     * Returns a string representation of the object.
-     *
-     * @return     String representation of the object.
-     */
-    public String toString() {
-        return this.ticker + " " + this.change;
-    }
-}
 /**
  * Class for solution.
  */
-final class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -80,65 +10,99 @@ final class Solution {
         //unused.
     }
     /**
-     * main function.
+     * { function_description }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        final int six = 6;
         final int five = 5;
-        int num = Integer.parseInt(scan.nextLine());
-        for (int i = 0; i < six; i++) {
-            int count = 0;
-            MinPQ<Stock> minpq = new MinPQ<>();
-            MaxPQ<Stock> maxpq = new MaxPQ<>();
-            while (count < num) {
-                String[] tokens = scan.nextLine().split(",");
-                Stock stock = new Stock(tokens[0], Float.parseFloat(tokens[1]));
-                minpq.insert(stock);
-                maxpq.insert(stock);
-                count++;
+        final int six = 6;
+        int n = Integer.parseInt(scan.nextLine());
+        BinarySearchST<String, Integer> maxs = new BinarySearchST<>();
+        BinarySearchST<String, Integer> mins = new BinarySearchST<>();
+        String[] line;
+        int hours = six;
+        while (hours > 0) {
+            int k = n;
+            MinPQ<Stock> globalmin = new MinPQ<Stock>();
+            MaxPQ<Stock> globalmax = new MaxPQ<Stock>();
+            while (k > 0) {
+                line = scan.nextLine().split(",");
+                globalmin.insert(new Stock(line[0], line[1]));
+                globalmax.insert(new Stock(line[0], line[1]));
+                k--;
             }
-            BinarySearchTree<String, Float> stockbest =
-            new  BinarySearchTree<>();
-            BinarySearchTree<String, Float> stockworst
-            = new BinarySearchTree<>();
-            for (int j = 0; j < five; j++) {
-                Stock maxpqbest = maxpq.delMax();
-                System.out.println(maxpqbest);
-                stockbest.put(maxpqbest.getName(), maxpqbest.getChange());
+            int peak = five;
+            while (peak > 0) {
+                Stock s = globalmax.delMax();
+                if (maxs.contains(s.name)) {
+                    maxs.put(s.name, maxs.get(s.name) + 1);
+                } else {
+                    maxs.put(s.name, 1);
+                }
+                System.out.println(s.name + " " + s.val);
+                peak--;
             }
             System.out.println();
-            for (int k = 0; k < five; k++) {
-                Stock minpqworst = minpq.delMin();
-                System.out.println(minpqworst);
-                stockworst.put(minpqworst.getName(), minpqworst.getChange());
+            int low = five;
+            while (low > 0) {
+                Stock s = globalmin.delMin();
+                if (mins.contains(s.name)) {
+                    mins.put(s.name, mins.get(s.name) + 1);
+                } else {
+                    mins.put(s.name, 1);
+                }
+                System.out.println(s.name + " " + s.val);
+                low--;
             }
             System.out.println();
+            hours--;
         }
-        int query = Integer.parseInt(scan.nextLine());
-        if (query <= 0) {
-            return;
-        }
-        else {
-            for (int i = 0; i < query; i ++) {
-                String line = scan.nextLine();
-                String[] qrs = line.split(",");
-                System.out.println(Arrays.toString(qrs));
-                String function = qrs[0];
-                // String op = qrs[1];
-                // String c_name = qrs[2];
-                switch (function) {
-                    case "get": System.out.println("inside get");
-                                break;
+        int comms = Integer.parseInt(scan.nextLine());
+        while (comms > 0) {
+            String[] tokens = scan.nextLine().split(",");
+            switch (tokens[0]) {
+            case "get" :
+                if (tokens[1].equals("maxST")) {
+                    if (maxs.contains(tokens[2])) {
+                        System.out.println(maxs.get(
+                            tokens[2]));
+                    } else {
+                        System.out.println("0");
+                    }
 
-                    case "intersection": System.out.println("inside intersection");
-                                         break;
-                    default: break;
+                } else {
+                    if (mins.contains(tokens[2])) {
+                        System.out.println(mins.get(
+                            tokens[2]));
+                    } else {
+                        System.out.println("0");
+                    }
                 }
 
+                break;
+            case "intersection" :
+                int size1 = maxs.size();
+                int size2 = mins.size();
+                if (size2 > size1) {
+                    for (String each : mins.keys()) {
+                        if (maxs.contains(each)) {
+                            System.out.println(each);
+                        }
+                    }
+                } else {
+                    for (String each : maxs.keys()) {
+                        if (mins.contains(each)) {
+                            System.out.println(each);
+                        }
+                    }
+                }
+                break;
+                default :
             }
+            comms--;
         }
+
     }
 }
