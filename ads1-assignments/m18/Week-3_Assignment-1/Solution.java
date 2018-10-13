@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for stock.
  */
@@ -115,6 +116,18 @@ final class Solution {
                 stockworst.put(minpqworst.getName(), minpqworst.getChange());
             }
             System.out.println();
+        }
+        int query = Integer.parseInt(scan.nextLine());
+        if (query <= 0) {
+            return;
+        }
+        else {
+            for (int i = 0; i < query; i ++) {
+                String line = scan.nextLine();
+                String[] qrs = line.split(",");
+                System.out.println(Arrays.toString(qrs));
+
+            }
         }
     }
 }
