@@ -126,6 +126,17 @@ final class Solution {
                 String line = scan.nextLine();
                 String[] qrs = line.split(",");
                 System.out.println(Arrays.toString(qrs));
+                String function = qrs[0];
+                String op = qrs[1];
+                String c_name = qrs[2];
+                switch (function) {
+                    case "get": System.out.println("inside get");
+                                break;
+
+                    case "intersection": System.out.println("inside intersection");
+                                         break;
+                    default: break;
+                }
 
             }
         }
