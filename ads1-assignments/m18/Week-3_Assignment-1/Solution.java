@@ -127,8 +127,8 @@ final class Solution {
                 String[] qrs = line.split(",");
                 System.out.println(Arrays.toString(qrs));
                 String function = qrs[0];
-                String op = qrs[1];
-                String c_name = qrs[2];
+                // String op = qrs[1];
+                // String c_name = qrs[2];
                 switch (function) {
                     case "get": System.out.println("inside get");
                                 break;

@@ -793,6 +793,5 @@ inside get
 [get, maxST, Sanofi India]
 inside get
 [intersection]
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Solution.main(Solution.java:130)
+inside intersection
 ----------------------------------------
