@@ -66,16 +66,16 @@ public final class Solution {
             case "get" :
                 if (tokens[1].equals("maxST")) {
                     if (maxs.contains(tokens[2])) {
-                        System.out.println(maxs.get
-                                           (tokens[2]));
+                        System.out.println(maxs.get(
+                            tokens[2]));
                     } else {
                         System.out.println("0");
                     }
 
                 } else {
                     if (mins.contains(tokens[2])) {
-                        System.out.println(mins.get
-                                           (tokens[2]));
+                        System.out.println(mins.get(
+                            tokens[2]));
                     } else {
                         System.out.println("0");
                     }
