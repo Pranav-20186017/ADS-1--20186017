@@ -109,7 +109,7 @@ final class Solution {
                 stockbest.put(maxpqbest.getName(), maxpqbest.getChange());
             }
             System.out.println();
-            for(int k = 0; k < five; k++) {
+            for (int k = 0; k < five; k++) {
                 Stock minpqworst = minpq.delMin();
                 System.out.println(minpqworst);
                 stockworst.put(minpqworst.getName(), minpqworst.getChange());
