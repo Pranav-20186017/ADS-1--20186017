@@ -1,37 +1,22 @@
-import java.util.Scanner;
 import java.util.Arrays;
-class Stock {
-	String name;
-	double percent;
-	Stock(final String ticker, final float pchange) {
-		this.name = ticker;
-		this.percent = pchange;
-	}
-	public String toString() {
-		return name + " " + percent;
-	}
-}
-/**
- * Class for solution.
- */
-class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//unused.
-	}
+import java.util.Scanner;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+public class Solution {
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int n = s.nextInt();
-		for (int i = 0 ; i < n; i++) {
-			String line = s.nextLine();
-			String[] tokens = line.split(", ");
-			System.out.println(Arrays.toString(tokens));
-			// String ticker = tokens[0];
-			// float percent = Float.parseFloat(tokens[1]);
-			// Stock stock = new Stock(ticker, percent);
-			// System.out.println(stock.toString());
+		Scanner scan = new Scanner(System.in);
+		int n = Integer.parseInt(scan.nextLine());
+		while(n > 0) {
+			int hours = 6;
+			while(hours > 0) {
+				String[] line = scan.nextLine().split(",");
+				System.out.println(line[0] + " - " +line[1]);
+				
+				hours--;
+			}
+			System.out.println();
+			n--;
 		}
 	}
 }
