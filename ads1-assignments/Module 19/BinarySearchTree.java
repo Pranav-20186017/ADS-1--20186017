@@ -55,14 +55,15 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     /**
      * { function_description }
      *
-     * @param      head  The head
+     * @param      top  The head
      * @param      key   The key
      * @param      val   The value
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logn)
      */
-    public Node put(Node head, final BookList key, final Value val) {
+    public Node put(Node top, final BookList key, final Value val) {
+        Node head = top;
         if (head == null) {
             Node node = new Node();
             node.key = key;
