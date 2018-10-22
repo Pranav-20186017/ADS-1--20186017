@@ -1,0 +1,11 @@
+[master 8a64f7e] "ads1_m14_a2: 6/6 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 8 files changed, 425 insertions(+), 433 deletions(-)
+ rewrite ads1-assignments/m14/14.2 student reservation system/HeapSort.class (78%)
+ create mode 100644 ads1-assignments/m14/14.2 student reservation system/HeapSort.java
+ rewrite ads1-assignments/m14/14.2 student reservation system/Solution.java (91%)
+ create mode 100644 ads1-assignments/m14/14.2 student reservation system/Student.java
+ rewrite ads1-assignments/m14/14.2 student reservation system/check_style_errors.txt (97%)
+ rewrite ads1-assignments/m14/14.2 student reservation system/result/score.json (76%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-1--20186017.git
+   9205734..8a64f7e  master -> master

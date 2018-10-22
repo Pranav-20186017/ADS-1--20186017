@@ -1,0 +1,24 @@
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+	modified:   ../../m17/git_output.txt
+	modified:   ../../m17/result/score.json
+	modified:   ../../../ads1-assignments/m14/14.1 Dynamic Median Finding/git_output.txt
+	modified:   ../../../ads1-assignments/m14/14.1 Dynamic Median Finding/result/score.json
+	modified:   ../../../ads1-assignments/m14/14.2 student reservation system/git_output.txt
+	modified:   ../../../ads1-assignments/m14/14.2 student reservation system/result/score.json
+	modified:   ../../../ads1-assignments/m15/15.1 BinarySearchSymbolTable/15.1 BinarySearchSymbolTable/git_output.txt
+	modified:   ../../../ads1-assignments/m15/15.1 BinarySearchSymbolTable/15.1 BinarySearchSymbolTable/result/score.json
+	modified:   ../../../ads1-assignments/m16/16.1 BST/git_output.txt
+	modified:   ../../../ads1-assignments/m16/16.1 BST/result/score.json
+	modified:   ../../../ads1-assignments/m17/TaxiCabNumbers/git_output.txt
+	modified:   ../../../ads1-assignments/m17/TaxiCabNumbers/result/score.json
+	modified:   ../../../ads1-assignments/m18/Week-3_Assignment-1/Solution.java
+	modified:   ../../../ads1-assignments/m18/Week-3_Assignment-1/git_output.txt
+	modified:   ../../../ads1-assignments/m18/Week-3_Assignment-1/result/score.json
+	modified:   ../../../ads1-assignments/m19/19.1 BST/git_output.txt
+
+no changes added to commit
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Everything up-to-date

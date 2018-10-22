@@ -80,7 +80,6 @@ public final class Solution {
                         System.out.println("0");
                     }
                 }
-
                 break;
             case "intersection" :
                 int size1 = maxs.size();
@@ -103,6 +102,5 @@ public final class Solution {
             }
             comms--;
         }
-
     }
 }

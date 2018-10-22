@@ -1,0 +1,14 @@
+[master cfd7f8a] "taxi_cab_numbers: 5/5 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 12 files changed, 528 insertions(+), 348 deletions(-)
+ create mode 100644 ADS-1-practice/m17/CubeSum.class
+ rewrite ADS-1-practice/m17/MinPQ.java (69%)
+ create mode 100644 ADS-1-practice/m17/Solution.class
+ create mode 100644 ADS-1-practice/m17/Solution.java
+ create mode 100644 ADS-1-practice/m17/Taxicab.class
+ delete mode 100644 ADS-1-practice/m17/Taxicab.java
+ create mode 100644 ADS-1-practice/m17/readme.txt
+ rewrite ADS-1-practice/m17/result/score.json (74%)
+ rewrite ADS-1-practice/m17/testcases_output.txt (63%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-1--20186017.git
+   ab5eecb..cfd7f8a  master -> master

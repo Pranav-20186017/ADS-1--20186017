@@ -1,0 +1,6 @@
+[master 7a358b5] "ads1_m15_a1: 5/5 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ rewrite ads1-assignments/m15/15.1 BinarySearchSymbolTable/15.1 BinarySearchSymbolTable/result/score.json (74%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-1--20186017.git
+   351e472..7a358b5  master -> master
