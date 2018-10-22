@@ -4,7 +4,7 @@
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-class BinarySearchTree<Key extends Comparable<Key>,Value> {
+final class BinarySearchTree<Key extends Comparable<Key>,Value> {
     /**.
      * { var_description }
      */
