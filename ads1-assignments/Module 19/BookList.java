@@ -8,26 +8,26 @@ class BookList<Key extends Comparable<Key>,Value> {
     /**.
      * Book name
      */
-    String name;
+    private String name;
     /**.
      * Author name
      */
-    String author;
+    private String author;
     /**.
      * Cost of the book.
      */
-    Float cost;
+    private Float cost;
     /**.
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      author  The author
-     * @param      cost    The cost
+     * @param      namestr    The name
+     * @param      auth  The author
+     * @param      val    The cost
      */
-    BookList(String name, String author, Float cost) {
-        this.name = name;
-        this.author = author;
-        this.cost = cost;
+    BookList(final String namestr, final String auth, final Float val) {
+        this.name = namestr;
+        this.author = auth;
+        this.cost = val;
     }
     /**.
      * Gets the name.
