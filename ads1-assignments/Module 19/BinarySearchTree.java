@@ -246,36 +246,16 @@ final class BinarySearchTree<Key extends Comparable<Key>,Value> {
         }
         return ceiling(x.right, key);
     }
-
-    // public int rank(BookList key) {
-    //     return rank(root, key);
-    // }
-
-    // public int rank(Node x, BookList key) {
-    //     if (x == null) {
-    //         return 0;
-    //     }
-    //     int compare = key.compareTo(x.key);
-    //     if (compare < 0) {
-    //         return rank(x.left, key);
-    //     } else if (compare > 0) {
-    //         return 1 + size(x.left) + rank(x.right, key);
-    //     } else {
-    //         return size(x.left);
-    //     }
-    // }
-    
-    /**.
-     * { function_description }
+    /**
+     * size of the BST.
      *
      * @return     { description_of_the_return_value }
      */
-
     public int size() {
         return size(root);
     }
     /**.
-     * { function_description }
+     * { function_description }.
      *
      * @param      x     { parameter_description }
      *
