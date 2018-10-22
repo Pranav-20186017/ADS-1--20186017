@@ -107,4 +107,12 @@ class BookList<Key extends Comparable<Key>, Value> {
             }
         }
     }
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return getName() + ", " + getAuthor() + ", " + getCost();
+    }
 }
