@@ -13,14 +13,16 @@ public class Solution {
 	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		SeparateChainingHashST<String, Integer> hashMag = new SeparateChainingHashST<>();
+		SeparateChainingHashST<String, Integer> hashMag
+		= new SeparateChainingHashST<>();
 		int mag = scan.nextInt();
 		int notes = scan.nextInt();
 		scan.nextLine();
 		String[] mag_words = scan.nextLine().split(" ");
 		for (int l = 0; l < mag_words.length; l++) {
 			if (hashMag.contains(mag_words[l])) {
-				hashMag.put(mag_words[l], hashMag.get(mag_words[l]) + 1);
+				hashMag.put(mag_words[l],
+					hashMag.get(mag_words[l]) + 1);
 			} else {
 				hashMag.put(mag_words[l], 1);
 			}
@@ -32,7 +34,8 @@ public class Solution {
 					System.out.println("No");
 					return;
 				} else {
-					hashMag.put(notes_arr[j], hashMag.get(notes_arr[j]) - 1);
+					hashMag.put(notes_arr[j],
+						hashMag.get(notes_arr[j]) - 1);
 				}
 			} else {
 				System.out.print("No");
