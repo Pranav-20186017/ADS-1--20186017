@@ -1,4 +1,12 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:16: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:20:26: Name 'mag_words' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:23: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:28:26: Name 'notes_arr' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:35: Line is longer than 80 characters (found 97). [LineLength]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 9 errors.

@@ -1,52 +1,36 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Yes
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at Solution.main(Solution.java:40)
+Yes
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at HashTable.contains(HashTable.java:107)
-	at Solution.main(Solution.java:30)
+No
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at Solution.main(Solution.java:40)
+No
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at HashTable.contains(HashTable.java:107)
-	at Solution.main(Solution.java:30)
+No
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 Yes
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at HashTable.contains(HashTable.java:107)
-	at Solution.main(Solution.java:30)
+Yes
 ----------------------------------------
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 Yes
 Your Output: 
-Exception in thread "main" java.lang.IllegalAccessError: tried to access field HashTable$Node.key from class HashTable
-	at HashTable.get(HashTable.java:92)
-	at HashTable.contains(HashTable.java:107)
-	at Solution.main(Solution.java:30)
+Yes
 ----------------------------------------

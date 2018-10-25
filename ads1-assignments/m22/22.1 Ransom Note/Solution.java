@@ -1,64 +1,44 @@
-/**.
- * { item_description }
- */
 import java.util.Scanner;
-/**.
- * { item_description }
+/**
+ * Class for solution.
  */
-public final class Solution {
-    /**.
-     * Constructs the object.
-     */
-    private Solution() {
-        /**.
-         * { item_description }
-         */
-    }
-    /**.
-     * { function_description }
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        HashTable ht = new HashTable();
-        String input = sc.nextLine();
-        String[] tokens = input.split(" ");
-        String line = sc.nextLine();
-        String[] tokens1 = line.split(" ");
-        for (int i = 0; i < tokens1.length; i++) {
-            if (ht.contains(tokens1[i])) {
-                ht.put(tokens1[i], ht.get(tokens1[i]) + 1);
-            } else {
-                ht.put(tokens1[i], 1);
-            }
-        }
-        String line2 = sc.nextLine();
-        String[] tokens2 = line2.split(" ");
-        int[] array = new int[tokens2.length];
-        for (int i = 0; i < tokens2.length; i++) {
-            int value = ht.get(tokens2[i]);
-            if (ht.contains(tokens2[i])) {
-                array[i] = --value;
-                ht.put(tokens2[i], value);
-            } else {
-                array[i] = value;
-            }
-        }
-
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < 0) {
-                count++;
-                break;
-            } else {
-                count = 0;
-            }
-        }
-        if (count == 0) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
-    }
+public class Solution {
+	Solution() {
+		//unused.
+	}
+	/**
+	 * Main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
+		Scanner scan = new Scanner(System.in);
+		SeparateChainingHashST<String, Integer> hashMag = new SeparateChainingHashST<>();
+		int mag = scan.nextInt();
+		int notes = scan.nextInt();
+		scan.nextLine();
+		String[] mag_words = scan.nextLine().split(" ");
+		for (int l = 0; l < mag_words.length; l++) {
+			if (hashMag.contains(mag_words[l])) {
+				hashMag.put(mag_words[l], hashMag.get(mag_words[l]) + 1);
+			} else {
+				hashMag.put(mag_words[l], 1);
+			}
+		}
+		String[] notes_arr = scan.nextLine().split(" ");
+		for (int j = 0; j < notes_arr.length; j++) {
+			if (hashMag.contains(notes_arr[j])) {
+				if (hashMag.get(notes_arr[j]) == 0) {
+					System.out.println("No");
+					return;
+				} else {
+					hashMag.put(notes_arr[j], hashMag.get(notes_arr[j]) - 1);
+				}
+			} else {
+				System.out.print("No");
+				return;
+			}
+		}
+		System.out.println("Yes");
+	}
 }
