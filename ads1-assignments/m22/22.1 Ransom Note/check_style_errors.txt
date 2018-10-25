@@ -1,8 +1,6 @@
 Starting audit...
 [ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:21:26: Name 'mag_words' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:30:26: Name 'notes_arr' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:24:18: Name 'mag_words' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] D:\MSIT\ADS-1--20186017\ads1-assignments\m22\22.1 Ransom Note\Solution.java:33:18: Name 'notes_arr' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 3 errors.
