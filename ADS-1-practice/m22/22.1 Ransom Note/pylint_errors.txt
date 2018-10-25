@@ -1,14 +1,4 @@
-************* Module Solution
-Solution.py:1:0: C0103: Module name "Solution" doesn't conform to snake_case naming style (invalid-name)
-Solution.py:1:0: C0111: Missing module docstring (missing-docstring)
-Solution.py:1:0: C0103: Constant name "length" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:2:0: C0103: Constant name "length" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:3:0: C0103: Constant name "mag_length" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:4:0: C0103: Constant name "note_length" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:5:0: C0103: Constant name "mag" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:6:0: C0103: Constant name "ransom" doesn't conform to UPPER_CASE naming style (invalid-name)
-Solution.py:7:0: C0103: Constant name "counter" doesn't conform to UPPER_CASE naming style (invalid-name)
 
--------------------------------------------------------------------
-Your code has been rated at 4.00/10 (previous run: -1.33/10, +5.33)
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
