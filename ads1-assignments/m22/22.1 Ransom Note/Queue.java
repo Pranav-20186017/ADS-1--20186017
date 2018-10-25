@@ -1,5 +1,9 @@
 import java.util.Iterator;
-
+/**
+ * Class for Queue.
+ *
+ * @param      <E>   { parameter_description }
+ */
 public class Queue<E> implements Iterable<E> {
 	private class Node {
 		E data;
@@ -31,22 +35,32 @@ public class Queue<E> implements Iterable<E> {
 	public Iterator iterator() {
 		return new MyIterator(head);
 	}
-
+	/**
+	 * Class for my iterator.
+	 */
 	private class MyIterator implements Iterator {
 		Node current;
-
-		public MyIterator(Node first) {
+		/**
+		 * Constructs the object.
+		 *
+		 * @param      first  The first
+		 */
+		public MyIterator(final Node first) {
 			current = first;
 		}
-
+		/**
+		 * Determines if it has next.
+		 *
+		 * @return     True if has next, False otherwise.
+		 */
 		public boolean hasNext() {
 			return current !=  null;
 		}
-
-		public void remove() {
-
-		}
-
+		/**
+		 * { function_description }
+		 *
+		 * @return     { description_of_the_return_value }
+		 */
 		public E next() {
 			E data = current.data;
 			current = current.next;
