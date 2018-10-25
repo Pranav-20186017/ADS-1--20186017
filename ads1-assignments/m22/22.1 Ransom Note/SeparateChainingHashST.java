@@ -6,12 +6,9 @@
  */
 public class SeparateChainingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
-
     private int n;                                // number of key-value pairs
     private int m;                                // hash table size
     private SequentialSearchST<Key, Value>[] st;  // array of linked-list symbol tables
-
-
     /**
      * Initializes an empty symbol table.
      */
@@ -119,7 +116,6 @@ public class SeparateChainingHashST<Key, Value> {
         if (!st[i].contains(key)) n++;
         st[i].put(key, val);
     }
-
     /**
      * Removes the specified key and its associated value from this symbol table
      * (if the key is in this symbol table).
