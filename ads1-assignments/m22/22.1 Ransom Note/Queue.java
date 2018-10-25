@@ -5,6 +5,9 @@ import java.util.Iterator;
  * @param      <E>   { parameter_description }
  */
 public class Queue<E> implements Iterable<E> {
+	/**
+	 * Class for node.
+	 */
 	private class Node {
 		E data;
 		Node next;
