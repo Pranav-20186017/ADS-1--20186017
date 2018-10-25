@@ -17,7 +17,7 @@ class HashTable {
     /**.
      * { var_description }
      */
-    public int num1 = fifty;
+    private final int num1 = fifty;
     /**.
      * { var_description }
      */
@@ -52,8 +52,8 @@ class HashTable {
         }
     }
     /**.
-     * computes the index.
-     * Complexity: O(1).
+     * { function_description }
+     *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
@@ -62,10 +62,11 @@ class HashTable {
         return (key.hashCode() & hex) % num1;
     }
     /**.
-     * inserts data into the hash table.
-     * Complexity: O(logN).
+     * { function_description }
+     *
      * @param      key   The key
      * @param      val   The value
+     * Time Complexity: O(logN)
      */
     public void put(final String key, final int val) {
         int i = hash(key);
@@ -78,11 +79,12 @@ class HashTable {
         s[i] = new Node(key, val, s[i]);
     }
     /**.
-     * fetches data from the ds.
-     * Complexity : O(logN)
+     * { function_description }
+     *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time Complexity: O(logN)
      */
     public int get(final String key) {
         int i = hash(key);
@@ -94,12 +96,12 @@ class HashTable {
         return minusone;
     }
     /**.
-     * checks whether or not an element is present in the hash table.
-     * Complexity : O(logN)
+     * { function_description }
      *
      * @param      k     { parameter_description }
      *
      * @return     { description_of_the_return_value }
+     * Time Complexity: O(logN)
      */
     public boolean contains(final String k) {
         return get(k) != minusone;
