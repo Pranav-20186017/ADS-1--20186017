@@ -1,0 +1,7 @@
+[master 6b61e4f] "ads1_m22_a1: 6/6 testcases passed. Cannot run hidden testcases as Server is unreachablepylint score: 10/10 "
+ 3 files changed, 22 insertions(+), 28 deletions(-)
+ rewrite ADS-1-practice/m22/22.1 Ransom Note/pylint_errors.txt (93%)
+ rewrite ADS-1-practice/m22/22.1 Ransom Note/result/score.json (77%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Pranav-20186017/ADS-1--20186017.git
+   e9087ef..6b61e4f  master -> master
