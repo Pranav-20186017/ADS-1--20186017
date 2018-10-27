@@ -92,7 +92,9 @@ final class Solution {
                     if (chainobj.get(Integer.parseInt(query[1])) == null) {
                         System.out.println("Student doesn't exists...");
                     } else {
-                        System.out.println(chainobj.get(Integer.parseInt(query[1])).getmarks());
+                        System.out.println(
+                            chainobj.get(
+                                Integer.parseInt(query[1])).getmarks());
                     }
                 }
             }
