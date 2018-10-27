@@ -5,8 +5,7 @@ Rivest
 Dan
 Abegg
 Your Output: 
-Error: Could not find or load main class Solution
-Caused by: java.lang.ClassNotFoundException: Solution
+
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -56,8 +55,7 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-Error: Could not find or load main class Solution
-Caused by: java.lang.ClassNotFoundException: Solution
+
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -124,8 +122,7 @@ Neil Cadigan
 Megon
 Meili Cady
 Your Output: 
-Error: Could not find or load main class Solution
-Caused by: java.lang.ClassNotFoundException: Solution
+
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -844,6 +841,5 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-Error: Could not find or load main class Solution
-Caused by: java.lang.ClassNotFoundException: Solution
+
 ----------------------------------------
