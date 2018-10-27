@@ -70,7 +70,8 @@ final class Solution {
         = new SeparateChainingHashST<>();
         for (int i = 0; i < putnumber; i++) {
             String[] tokens = scan.nextLine().split(",");
-            Student stobj = new Student(tokens[1], Double.parseDouble(tokens[2]));
+            Student stobj
+            = new Student(tokens[1], Double.parseDouble(tokens[2]));
             chainobj.put(Integer.parseInt(tokens[0]), stobj);
         }
         int querynum = Integer.parseInt(scan.nextLine());
@@ -82,7 +83,9 @@ final class Solution {
                         == null) {
                         System.out.println("Student doesn't exists...");
                     } else {
-                        System.out.println(chainobj.get(Integer.parseInt(query[1])).getname());
+                        System.out.println(
+                            chainobj.get(
+                                Integer.parseInt(query[1])).getname());
                     }
 
                 } else {
