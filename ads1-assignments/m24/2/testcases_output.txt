@@ -5,7 +5,9 @@ Rivest
 Dan
 Abegg
 Your Output: 
-
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field RedBlackBST$Node.color from class RedBlackBST
+	at RedBlackBST.put(Solution.java:200)
+	at Solution.main(Solution.java:14)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -55,7 +57,9 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field RedBlackBST$Node.color from class RedBlackBST
+	at RedBlackBST.put(Solution.java:200)
+	at Solution.main(Solution.java:14)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -122,7 +126,9 @@ Neil Cadigan
 Megon
 Meili Cady
 Your Output: 
-
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field RedBlackBST$Node.color from class RedBlackBST
+	at RedBlackBST.put(Solution.java:200)
+	at Solution.main(Solution.java:14)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -841,5 +847,7 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-
+Exception in thread "main" java.lang.IllegalAccessError: tried to access field RedBlackBST$Node.color from class RedBlackBST
+	at RedBlackBST.put(Solution.java:200)
+	at Solution.main(Solution.java:14)
 ----------------------------------------
