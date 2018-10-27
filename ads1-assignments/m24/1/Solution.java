@@ -17,16 +17,31 @@ class Student {
      * @param      name   The name
      * @param      marks  The marks
      */
-    Student(String name, double marks) {
+    Student(final String name, final double marks) {
         this.studentname = name;
         this.totalmarks = marks;
     }
+    /**
+     * fetches the name of the student.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getname() {
         return this.studentname;
     }
+    /**
+     * fetches the marks of the student.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public double getmarks() {
         return this.totalmarks;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str = "";
         str = str + this.studentname + this.totalmarks;
